@@ -109,7 +109,7 @@ M2CONFIG = {
 			# ("CHECK_VERSION_SERVER: %u", (True)),
 			# ("CHECK_VERSION_VALUE: %u", (1215955205)),
 			("CHANGE_ATTR_TIME_LIMIT: %u", (False)),
-			("EMOTION_MASK_REQUIRE: %u", (False)),
+			("EMOTION_MASK_REQUIRE: %u", (True)),
 			("PRISM_ITEM_REQUIRE: %u", (False)),
 			("SHOP_PRICE_3X_TAX: %u", (False)),
 			("GLOBAL_SHOUT: %u", (True)),
