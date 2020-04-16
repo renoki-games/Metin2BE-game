@@ -119,9 +119,9 @@ M2CONFIG = {
 			("SHOUT_LIMIT_LEVEL: %u", (15)),
 			("DB_LOG_LEVEL: %u", (1)),
 			("EMPIRE_LANGUAGE_CHECK: %u", (False)),
-			# ("ITEM_DESTROY_TIME_AUTOGIVE: %u", (30)),
-			# ("ITEM_DESTROY_TIME_DROPITEM: %u", (30)),
-			# ("ITEM_DESTROY_TIME_DROPGOLD: %u", (30)),
+			("ITEM_DESTROY_TIME_AUTOGIVE: %u", (600)),
+			("ITEM_DESTROY_TIME_DROPITEM: %u", (600)),
+			("ITEM_DESTROY_TIME_DROPGOLD: %u", (150)),
 		),
 	},
 }
