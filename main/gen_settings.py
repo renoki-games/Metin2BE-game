@@ -103,7 +103,7 @@ M2CONFIG = {
 			# ("PK_SERVER: %d", (True)),
 			("ADMINPAGE_IP1: %s", (v_adminPageLocalIP)),
 			("ADMINPAGE_PASSWORD: %s", (v_adminPagePassword)),
-			("MAX_LEVEL: %u", (120)),
+			("MAX_LEVEL: %u", (100)),
 		),
 		"extra": (
 			# ("CHECK_VERSION_SERVER: %u", (True)),
@@ -114,7 +114,7 @@ M2CONFIG = {
 			("SHOP_PRICE_3X_TAX: %u", (False)),
 			("GLOBAL_SHOUT: %u", (True)),
 			("ITEM_COUNT_LIMIT: %u", (250)),
-			("STATUS_POINT_GET_LEVEL_LIMIT: %u", (120)),
+			("STATUS_POINT_GET_LEVEL_LIMIT: %u", (100)),
 			("STATUS_POINT_SET_MAX_VALUE: %u", (90)),
 			("SHOUT_LIMIT_LEVEL: %u", (15)),
 			("DB_LOG_LEVEL: %u", (1)),
