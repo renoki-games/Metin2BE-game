@@ -115,7 +115,7 @@ M2CONFIG = {
 			("GLOBAL_SHOUT: %u", (True)),
 			("ITEM_COUNT_LIMIT: %u", (250)),
 			("STATUS_POINT_GET_LEVEL_LIMIT: %u", (100)),
-			("STATUS_POINT_SET_MAX_VALUE: %u", (90)),
+			("STATUS_POINT_SET_MAX_VALUE: %u", (100)),
 			("SHOUT_LIMIT_LEVEL: %u", (15)),
 			("DB_LOG_LEVEL: %u", (1)),
 			("EMPIRE_LANGUAGE_CHECK: %u", (False)),
