@@ -64,6 +64,8 @@ end
 function makequestbutton(name)
     raw_script("[QUESTBUTTON idx;")
     raw_script(""..q.getcurrentquestindex()) 
+    raw_script("|quest_name;")
+    raw_script(""..q.getcurrentquestname())
     raw_script("|name;")
     raw_script(name) raw_script("]")
 end
@@ -73,6 +75,8 @@ function make_quest_button_ex(name, icon_type, icon_name)
     test_chat(icon_name)
     raw_script("[QUESTBUTTON idx;")
     raw_script(""..q.getcurrentquestindex()) 
+    raw_script("|quest_name;")
+    raw_script(""..q.getcurrentquestname())
     raw_script("|name;")
     raw_script(name)
     raw_script("|icon_type;")
@@ -1835,3 +1839,5 @@ function drop_gamble_with_flag(drop_flag)
         end
         return dp >= number(1, range)
 end
+
+dofile(get_locale_base_path() .. "/quest/questing.lua")

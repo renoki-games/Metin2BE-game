@@ -146,10 +146,6 @@ meta.__index = function(me,index)
 end    
 setmetatable(_G,meta)
 
-function define(name,func)  -- func is a function or some value
-    _G.__data[name] = func
-end
-
 
 --[[
     @name   duration
