@@ -24,3 +24,5 @@ ride.quest
 ## SKIPPED - if commented with "#", it will be skipped just like these:
 
 # sample__mob_drop_item.quest
+
+basic_skill_groups.lua
