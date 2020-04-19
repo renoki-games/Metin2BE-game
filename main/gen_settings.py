@@ -99,7 +99,7 @@ M2CONFIG = {
 			("DB_ADDR: %s", (v_dbHostname)),
 			("COMMON_SQL: %s %s %d", (v_serverData, M2SD["common"], v_mysqlport)),
 			("LOG_SQL: %s %s %d", (v_serverData, M2SD["log"], v_mysqlport)),
-			# ("TEST_SERVER: %d", (True)),
+			("TEST_SERVER: %d", (True)),
 			# ("PK_SERVER: %d", (True)),
 			("ADMINPAGE_IP1: %s", (v_adminPageLocalIP)),
 			("ADMINPAGE_PASSWORD: %s", (v_adminPagePassword)),
