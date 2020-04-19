@@ -91,17 +91,17 @@ quest warpring begin
 			end
 			local warpneedstrings = warpring.get_warpneedstrings(tbl)
 			if table.getn(warpneedstrings) > 0 then
-				say("Um diese Map zu betreten benÃ¶tigst du folgende")
+				say("Um diese Map zu betreten benötigst du folgende")
 				say("Dinge:")
 				for _,v in ipairs(warpneedstrings) do
 					say(v)
 				end
 				say("")
-				say("MÃ¶chtest du trotzdem fortfahren?")
+				say("Möchtest du trotzdem fortfahren?")
 				if select("Teleportieren", "Abbrechen") == 2 then return end
 			end
 			if not warpring.check_and_remove_warpneeds(tbl) then
-				say("Dir fehlt mindestens eins der benÃ¶tigten Dinge.")
+				say("Dir fehlt mindestens eins der benötigten Dinge.")
 				select("Abbrechen")
 				return
 			end
