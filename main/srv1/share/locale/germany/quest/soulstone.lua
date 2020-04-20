@@ -100,10 +100,8 @@ quest soulstone begin
 					pc.change_alignment(-number(need_alignment/3 , need_alignment/2)) 
 				end 
 			end 
-			item.remove()
-			if number(1, 3) == 1 then
-				pc.give_item2(31059)
-			end
+
+			pc.remove_item(50513, 1)
 		end
 		function BuildGrandMasterSkillList(job, group)
 			GRAND_MASTER_SKILL_LEVEL = 30
