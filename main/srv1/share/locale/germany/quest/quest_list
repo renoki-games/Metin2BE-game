@@ -25,9 +25,10 @@ ride.quest
 
 # sample__mob_drop_item.quest
 
-basic_skill_groups.lua
+first_login.lua
 warpring.lua
 horse_summon.lua
 skill_group.lua
 rainbowstone.lua
 warehouse_item_destroyer.lua
+soulstone.lua

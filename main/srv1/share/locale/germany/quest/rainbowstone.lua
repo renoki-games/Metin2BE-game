@@ -71,7 +71,7 @@ quest rainbowstone begin
 				pc.set_skill_level((vnum) ,40) 
 				say_reward("Deine Fertigkeit wurde auf P gesetzt.")
 				say_reward("Viel Spaﬂ weiterhin auf Metin2 - Oldin.")
-				notice_all(string.format("%s hat %sauf P geskillt.", pc.get_name(), name))
+				notice_all(string.format("[Server] %s hat %sauf P geskillt.", pc.get_name(), name))
 				pc.removeitem("50512", 1)
 				end
 			end
