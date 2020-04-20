@@ -7,7 +7,7 @@ quest horse_summon begin
 				horse.unsummon()
 			else
 				notice("Dein Pferd wurde erfolgreich gerufen.")
-				horse.summon()
+				horse.summon(false, item.get_value(5))
 			end
 		end
 	end
