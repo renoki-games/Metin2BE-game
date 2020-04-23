@@ -1,6 +1,6 @@
 quest horse_summon begin
 	state start begin
-		when 50053.use or 50083.use begin
+		when 50053.use or 50083.use or 50069.use begin
 			if horse.is_riding() then
 				horse.unride()
 			elseif horse.is_summon() then

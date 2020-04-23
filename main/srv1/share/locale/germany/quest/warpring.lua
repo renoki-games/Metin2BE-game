@@ -2,73 +2,144 @@ quest warpring begin
 	state start begin
 		when button begin
 			local warp = {--koord Pflicht, rest optional!
-				{--Map1
+				{
 					name = "Map 1",
-					{--Rotes Reich
-						name = "Rotes Reich",
-						koord = {965784, 275242},
-						minlevel = 50,
-						maxlevel = 80,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Shinsoo",
+						koord = {469234, 964236},
 					},
-					{--Gelbes Reich
-						name = "Gelbes Reich",
-						koord = {965784, 275242},
-						minlevel = 10,
-						maxlevel = 105,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Chunjo",
+						koord = {55743, 157929},
 					},
-					{--Blaues Reich
-						name = "Blaues Reich",
-						koord = {965784, 275242},
-						minlevel = 1,
-						maxlevel = 105,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Jinno",
+						koord = {969479, 278446},
 					},
 				},
-				{--Map2
+				{
 					name = "Map 2",
-					{--Rotes Reich
-						name = "Rotes Reich",
-						koord = {965784, 275242},
-						minlevel = 1,
-						maxlevel = 30,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Shinsoo",
+						koord = {353028, 882735},
 					},
-					{--Gelbes Reich
-						name = "Gelbes Reich",
-						koord = {965784, 275242},
-						minlevel = 1,
-						maxlevel = 105,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Chunjo",
+						koord = {145521, 239832},
 					},
-					{--Blaues Reich
-						name = "Blaues Reich",
-						koord = {965784, 275242},
-						minlevel = 1,
-						maxlevel = 105,
-						itemneed = {
-							{189, 1}
-						},
-						goldneed = 10000
+					{
+						name = "Jinno",
+						koord = {864090, 245922},
 					},
+				},
+				{
+					name = "Orktal",
+					{
+						name = "Anfang",
+						koord = {
+									{402100, 673900},
+									{270400, 739900},
+									{321300, 808000},
+								},
+						empire_specific = true,
+					},
+					{
+						name = "Mitte",
+						koord = {332800, 745600},
+					},
+				},
+				{
+					name = "Wüste",
+					{
+						name = "Anfang",
+						koord = {
+									{217800, 627200},
+									{221900, 502700},
+									{344000, 502500},
+								},
+						empire_specific = true,
+					},
+					{
+						name = "Mitte",
+						koord = {296800, 547100},
+					},
+				},
+				{
+					name = "Eisland",
+					{
+						name = "Anfang",
+						koord = {
+									{434200, 290600},
+									{375200, 174900},
+									{491800, 173600},
+								},
+						empire_specific = true,
+					},
+					{
+						name = "Mitte",
+						koord = {436500, 215400},
+					},
+				},
+				{
+					name = "Feuerland",
+					{
+						name = "Anfang",
+						koord = {
+									{599400, 756300},
+									{597800, 622200},
+									{730700, 689800},
+								},
+						empire_specific = true,
+					},
+					{
+						name = "Mitte",
+						koord = {600800, 687100},
+					},
+				},
+				{
+					name = "Dämonenturm",
+					koord = {591120, 109490},
+				},
+				{
+					name = "Devil's Catacomb",
+					koord = {591818, 100316},
+				},
+				{
+					name = "Grotte der Verbannung",
+					koord = {284191, 808909},
+				},
+				{
+					name = "Spinnendungeon",
+					koord = {92404, 525296},
+				},
+				{
+					name = "Geisterwald",
+					{
+						name = "Anfang",
+						koord = {291303, 5626},
+					},
+					{
+						name = "Mitte",
+						koord = {286400, 44200},
+					},
+				},
+				{
+					name = "Roter Wald",
+					{
+						name = "Anfang",
+						koord = {1119900, 70800},
+					},
+					{
+						name = "Mitte",
+						koord = {1119100, 7700},
+					},
+				},
+				{
+					name = "Land der Riesen",
+					koord = {819200, 716800},
 				},
 			}
+
 			warpring.showwarps(warp)
 		end
 		function warp(tbl)
@@ -105,7 +176,15 @@ quest warpring begin
 				select("Abbrechen")
 				return
 			end
-			pc.warp(tbl.koord[1], tbl.koord[2])
+
+			local x, y = 0
+			if tbl.empire_specific then
+				x, y = tbl.koord[pc.get_empire()][1], tbl.koord[pc.get_empire()][2]
+			else
+				x, y = tbl.koord[1], tbl.koord[2]
+			end
+
+			pc.warp(x, y)
 		end
 		function get_warpneedstrings(tbl)
 			local warpneeds = {}
