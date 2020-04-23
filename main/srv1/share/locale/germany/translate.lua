@@ -1,5 +1,15 @@
 exportTestForCharset = "üöäÜÖÄß "
 gameforge = {}
+gameforge.changename = {}
+gameforge.changename.title = "Namen ändern"
+gameforge.changename.help_1 = "Mithilfe dieses Items kannst du deinen Namen"
+gameforge.changename.help_2 = "ändern, also überlege es dir sehr gut!"
+gameforge.changename.help_3 = "Möchtest du dies immernoch tuhen?"
+gameforge.changename.change_1 = "Gib deinen neuen Namen hier ein:"
+gameforge.changename.namenot_1 = "Der Name ist leider nicht verfügbar!"
+gameforge.changename.field_is_empty = "Das Feld darf nicht leer sein."
+gameforge.changename.field_is_too_high = "Der Name darf höchstens 18 Zeichen lang sein."
+gameforge.changename.field_has_forbidden_chars = "Der Name darf keine Sonderzeichen enthalten."
 gameforge.arena_manager = {}
 gameforge.arena_manager._100_say = "Du willst gegen dich selbst kämpfen?[ENTER]Bitte sehr, aber dafür brauchst du keine Arena.[ENTER]Komm wieder, wenn du es ernst meinst! "
 gameforge.arena_manager._10_npcChat = "Einen Übungskampf starten "
