@@ -6,6 +6,8 @@ CONFIRM_TIMEOUT = 2
 MALE = 0
 FEMALE = 1
 
+GOLD_MAX = 10000000000 + 1
+
 --quest.create = function(f) return coroutine.create(f) end
 --quest.process = function(co,args) return coroutine.resume(co, args) end
 setstate = q.setstate
