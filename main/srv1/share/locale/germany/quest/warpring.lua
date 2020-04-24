@@ -98,7 +98,7 @@ quest warpring begin
 				},
 				{
 					name = "Dämonenturm",
-					koord = {591120, 109490},
+					koord = {590482, 110582},
 				},
 				{
 					name = "Devil's Catacomb",
@@ -120,7 +120,7 @@ quest warpring begin
 					},
 					{
 						name = "Mitte",
-						koord = {286400, 44200},
+						koord = {303350, 27325},
 					},
 				},
 				{
@@ -130,7 +130,7 @@ quest warpring begin
 						koord = {1119900, 70800},
 					},
 					{
-						name = "Mitte",
+						name = "Ende",
 						koord = {1119100, 7700},
 					},
 				},
