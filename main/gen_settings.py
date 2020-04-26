@@ -122,6 +122,7 @@ M2CONFIG = {
 			("ITEM_DESTROY_TIME_AUTOGIVE: %u", (600)),
 			("ITEM_DESTROY_TIME_DROPITEM: %u", (600)),
 			("ITEM_DESTROY_TIME_DROPGOLD: %u", (150)),
+			("PK_PROTECT_LEVEL: %u", (1)),
 		),
 	},
 }
