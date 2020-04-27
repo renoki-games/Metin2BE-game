@@ -71,7 +71,7 @@ quest rainbowstone begin
 				pc.set_skill_level((vnum) ,40) 
 				say_reward("Deine Fertigkeit wurde auf P gesetzt.")
 				say_reward("Viel Spaﬂ weiterhin auf unserem Server!")
-				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sauf P geskillt!", name)))
+				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sauf P geskillt!", name)))
 				pc.removeitem("50512", 1)
 				end
 			end

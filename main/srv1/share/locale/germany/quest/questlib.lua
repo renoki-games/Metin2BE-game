@@ -22,6 +22,10 @@ tag = function (color_id, text)
 	return string.format("%s%s|r", tagColors[color_id], text)
 end
 
+clickable_tag = function (color_id, text)
+	return string.format("%s|Hpn_%s|h%s|h|r", tagColors[color_id], text, text)
+end
+
 --quest.create = function(f) return coroutine.create(f) end
 --quest.process = function(co,args) return coroutine.resume(co, args) end
 setstate = q.setstate
