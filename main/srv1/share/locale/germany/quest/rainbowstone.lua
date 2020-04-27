@@ -1,6 +1,6 @@
 ----------------------------------
---   Regenbogenstein Quest by M2Artaios
---		(c) by M2Artaios und Metin2 - Oldin 2014
+--   Regenbogenstein Quest by [SA]Goku
+--		(c) by [SA]Goku
 ----------------------------------
 quest rainbowstone begin
     state start begin
@@ -8,7 +8,7 @@ quest rainbowstone begin
 				
 				say_title ( "Regenbogenstein" )
 				say ( "Hiermit kannst du eine" ) 
-				say ( "Fertigkeit perfektionieren." ) 
+				say ( "Fertigkeit deiner Wahl perfektionieren!" ) 
 				say ( "" ) 
 				wait ( ) 
 				say_title ( "Regenbogenstein" ) 
@@ -22,7 +22,7 @@ quest rainbowstone begin
 				say("")
 				return
 				end
-				say("Welche Fertigkeit willst du auf P bringen?")
+				say("Welche Fertigkeit willst du perfektionieren?")
 				say("")
 
 				local i = select_table(name_list)
@@ -45,8 +45,8 @@ quest rainbowstone begin
 				
 				say_title("Regenbogenstein:")
 				say_reward("Dieser Stein ermöglicht es dir,")
-				say_reward("deine Fertigkeit von G1 auf P zu bringen!")
-				say(string.format("%s auf Perfekten Meister?", name))
+				say_reward("deine Fertigkeit ab G1 auf P zu skillen!")
+				say(string.format("%sauf Perfekten Meister?", name))
 				say("")
 
 				local s = select("Ja", "Nein")
@@ -70,8 +70,8 @@ quest rainbowstone begin
 				if 1 == c then
 				pc.set_skill_level((vnum) ,40) 
 				say_reward("Deine Fertigkeit wurde auf P gesetzt.")
-				say_reward("Viel Spaß weiterhin auf Metin2 - Oldin.")
-				notice_all(string.format("[Server] %s hat %sauf P geskillt.", pc.get_name(), name))
+				say_reward("Viel Spaß weiterhin auf unserem Server!")
+				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sauf P geskillt!", name)))
 				pc.removeitem("50512", 1)
 				end
 			end

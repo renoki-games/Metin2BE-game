@@ -8,6 +8,20 @@ FEMALE = 1
 
 GOLD_MAX = 10000000000 + 1
 
+SERVER_COLOR = 1
+NAME_COLOR = 2
+TEXT_COLOR = 3
+
+tagColors = {
+	[SERVER_COLOR] = "|cffffc8c8",
+	[NAME_COLOR] = "|cffffd74c",
+	[TEXT_COLOR] = "|cffa7ffd4",
+}
+
+tag = function (color_id, text)
+	return string.format("%s%s|r", tagColors[color_id], text)
+end
+
 --quest.create = function(f) return coroutine.create(f) end
 --quest.process = function(co,args) return coroutine.resume(co, args) end
 setstate = q.setstate

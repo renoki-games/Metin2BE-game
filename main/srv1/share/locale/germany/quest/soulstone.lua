@@ -11,11 +11,11 @@ quest soulstone begin
 			if get_time()< pc.getqf("next_time")then 
 				if pc.is_skill_book_no_delay()then 
 					say("Mit diesem Stein kannst du deine Fertigkeiten")
-					say("Perfektionieren.")
+					say("perfektionieren.")
 					wait()
 				else 
 					say("Du kannst deine Fertigkeiten noch nicht weiter")
-					say("Trainieren. Komme später wieder.")
+					say("Trainieren. Komm später wieder.")
 					return 
 				end 
 			end
@@ -23,7 +23,7 @@ quest soulstone begin
 			local vnum_list = result [ 1 ] 
 			local name_list = result [ 2 ] 
 			if table.getn( vnum_list ) == 0 then 
-				say("Du hast keine Fertigkeit zum verbessern.") 
+				say("Du hast keine Fertigkeit zum Verbessern.") 
 				return 
 			end 
 			say("Bitte wähle eine Fertigkeit aus, in der du den")
@@ -42,7 +42,7 @@ quest soulstone begin
 			local need_alignment = 1000 + 500 * ( skill_level - 30 ) 
 			local title = string.format("%sFertigkeitstraining", skill_name)
 			say_title(title) 
-			say("Beim benutzen des Steines verlierst")
+			say("Beim Benutzen des Steins verlierst")
 			say("du Rangpunkte!")
 			if cur_alignment < - 19000 + need_alignment then 
 				say_reward("Du hast nicht genügend Rangpunkte.") 
@@ -82,8 +82,8 @@ quest soulstone begin
 					pc.change_alignment(-need_alignment) 
 					say_title(string.format("%s Erfolgreich!", title)) 
 					if 40 == pc.get_skill_level( skill_vnum ) then 
-						say("Herzlichen glückwunsch!") 
-						notice_all(pc.get_name().. " hat erfolgreich " ..skill_name.. " perfektioniert!")
+						say("Herzlichen Glückwunsch!") 
+						notice_all(pc.get_name().. " hat erfolgreich " ..skill_name.. "perfektioniert!")
 					else 
 						say(string.format("Deine Fertigkeit %shat", skill_name))
 						say(string.format("Stufe G%d erreicht!", (skill_level - 30 + 1)))
