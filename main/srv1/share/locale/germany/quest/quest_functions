@@ -982,4 +982,7 @@ xpcall
 select3
 BuildSkillList
 tag
-clickable_tag
+clickable_pn_tag
+clickable_item_tag
+pc.is_dev
+say_mob

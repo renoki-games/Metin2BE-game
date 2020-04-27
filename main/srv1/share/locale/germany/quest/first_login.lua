@@ -5,7 +5,7 @@ quest first_login begin
 			pc.set_skill_level(127, 20)
 			pc.set_skill_level(128, 20)
 
-			name = clickable_tag(NAME_COLOR, pc.get_name())
+			name = clickable_pn_tag(NAME_COLOR, pc.get_name())
 			job = ({"Krieger","Ninja","Sura","Schamanen"})[pc.job+1]
 			empire = ({"Shinsoo","Chunjo","Jinno"})[pc.get_empire()]
 

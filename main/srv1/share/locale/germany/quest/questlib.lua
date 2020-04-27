@@ -11,19 +11,25 @@ GOLD_MAX = 10000000000 + 1
 SERVER_COLOR = 1
 NAME_COLOR = 2
 TEXT_COLOR = 3
+ITEM_COLOR = 4
 
 tagColors = {
 	[SERVER_COLOR] = "|cffffc8c8",
 	[NAME_COLOR] = "|cffffd74c",
 	[TEXT_COLOR] = "|cffa7ffd4",
+	[ITEM_COLOR] = "|cffffc700",
 }
 
 tag = function (color_id, text)
 	return string.format("%s%s|r", tagColors[color_id], text)
 end
 
-clickable_tag = function (color_id, text)
+clickable_pn_tag = function (color_id, text)
 	return string.format("%s|Hpn_%s|h%s|h|r", tagColors[color_id], text, text)
+end
+
+clickable_item_tag = function (color_id, vnum, name)
+	return string.format("%s|Hitem:%x:0:0:0:0|h[%s]|h|r", tagColors[color_id], vnum, name)
 end
 
 --quest.create = function(f) return coroutine.create(f) end
