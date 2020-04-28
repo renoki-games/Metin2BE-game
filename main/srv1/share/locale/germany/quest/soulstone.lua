@@ -82,8 +82,8 @@ quest soulstone begin
 					pc.change_alignment(-need_alignment) 
 					say_title(string.format("%s Erfolgreich!", title)) 
 					if 40 == pc.get_skill_level( skill_vnum ) then 
-						say("Herzlichen Glückwunsch!") 
-						notice_all(pc.get_name().. " hat erfolgreich " ..skill_name.. "perfektioniert!")
+						say("Herzlichen Glückwunsch!")
+						notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sperfektioniert!", skill_name)))
 					else 
 						say(string.format("Deine Fertigkeit %shat", skill_name))
 						say(string.format("Stufe G%d erreicht!", (skill_level - 30 + 1)))
