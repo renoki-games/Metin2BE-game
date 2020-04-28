@@ -37,10 +37,6 @@ change_name_item.lua
 goldbars.lua
 mining.lua
 horse_menu.lua
-
-Biolog/biolog_01.lua
-Biolog/biolog_02.lua
-Biolog/biolog_03.lua
-Biolog/biolog_04.lua
+bio.lua
 
 refine_item_information.lua
