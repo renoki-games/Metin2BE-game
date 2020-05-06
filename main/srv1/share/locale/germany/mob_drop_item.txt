@@ -1,0 +1,366 @@
+Group	5Metin		
+{				
+	Type	drop		
+	mob	8001		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	11200	1	20		--Krieger Lv0
+	3	11400	1	20		--Ninja Lv0
+	4	11600	1	20		--Sura Lv0
+	5	11800	1	20		--Schamane Lv0
+	6	71151	3	100		--Grüne Switcher
+	7	71152	1	100		--Grüne hinzufügen
+}				
+				
+Group	10Metin			
+{				
+	Type	drop		
+	mob	8002		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	11210	1	20		--Krieger Lv9
+	3	11410	1	20		--Ninja Lv9
+	4	11610	1	20		--Sura Lv9
+	5	11810	1	20		--Schamane Lv9
+	6	71151	3	100		--Grüne Switcher
+	7	71152	1	100		--Grüne hinzufügen
+}				
+				
+Group	15Metin				
+{				
+	Type	drop		
+	mob	8003		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	11220	1	20		--Krieger Lv18
+	3	11420	1	20		--Ninja Lv18
+	4	11620	1	20		--Sura Lv18
+	5	11820	1	20		--Schamane Lv18
+	6	71151	3	100		--Grüne Switcher
+	7	71152	1	100		--Grüne hinzufügen
+}				
+				
+Group	20Metin				
+{				
+	Type	drop		
+	mob	8004		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	11230	1	20		--Krieger Lv26
+	3	11430	1	20		--Ninja Lv26
+	4	11630	1	20		--Sura Lv26
+	5	11830	1	20		--Schamane Lv26
+	6	71151	3	100		--Grüne Switcher
+	7	71152	1	100		--Grüne hinzufügen
+}				
+				
+Group	25Metin				
+{				
+	Type	drop		
+	mob	8005		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	71001	1	100		--Exorzismus Schriftrolle
+	4	11230	1	20		--Krieger Lv26
+	5	11430	1	20		--Ninja Lv26
+	6	11630	1	20		--Sura Lv26
+	7	11830	1	20		--Schamane Lv26
+	8	71084	1	70		--Gegenstand verzaubern
+	9	71085	1	70		--Gegenstand verstärken
+}				
+				
+Group	30Metin			
+{				
+	Type	drop		
+	mob	8006		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	71001	1	100		--Exorzismus Schriftrolle
+	4	11240	1	20		--Krieger Lv34
+	5	11440	1	20		--Ninja Lv34
+	6	11640	1	20		--Sura Lv34
+	7	11840	1	20		--Schamane Lv34
+	8	71084	1	70		--Gegenstand verzaubern
+	9	71085	1	70		--Gegenstand verstärken
+}
+
+Group	35Metin				
+{				
+	Type	drop		
+	mob	8007		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	71001	1	50		--Exorzismus Schriftrolle
+	4	11250	1	20		--Krieger Lv42
+	5	11450	1	20		--Ninja Lv42
+	6	11650	1	20		--Sura Lv42
+	7	11850	1	20		--Schamane Lv42
+	8	71084	1	70		--Gegenstand verzaubern
+	9	71085	1	70		--Gegenstand verstärken
+}				
+				
+Group	40Metin				
+{				
+	Type	drop		
+	mob	8008		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	50		--Exorzismus Schriftrolle
+	5	71094	1	40		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	90~93	1	15		--Barbarenschwert
+	11	100~103	1	15		--Blutiges Schwert
+	12	3080~3083	1	15	--Riesenaxt
+	13	2080~2083	1	15	--Rotaugenbogen
+	14	7080~7083	1	15	--Stichfächer
+	15	11240	1	20		--Krieger Lv34
+	16	11440	1	20		--Ninja Lv34
+	17	11640	1	20		--Sura Lv34
+	18	11840	1	20		--Schamane Lv34
+}				
+				
+Group	45Metin				
+{				
+	Type	drop		
+	mob	8009		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	2090~2093	1	15	--Dornblattbogen
+	11	3090~3093	1	15	--Gletscherpicke
+	12	3080~3083	1	15	--Riesenaxt
+	13	2080~2083	1	15	--Rotaugenbogen
+	14	7090~7093	1	15	--Phönixfächer
+	15	1060~1063	1	15	--Teufelsfaustdolch
+	16	5050~5053	1	15	--Aprikosenglocke
+	17	11250	1	20		--Krieger Lv34
+	18	11450	1	20		--Ninja Lv34
+	19	11650	1	20		--Sura Lv34
+	20	11850	1	20		--Schamane Lv34
+}			
+				
+Group	50Metin				
+{				
+	Type	drop		
+	mob	8010		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	1070~1073	1	15	--Blutiger Dolch
+	11	2100~2103	1	15	--Bullenhornbogen
+	12	7100~7103	1	15	--Dreifachfächer
+	13	2080~2083	1	15	--Rotaugenbogen
+	14	100~103	1	15		--Großschwert
+	15	3120~3123	1	15	--Löwentöter
+	16	5060~5063	1	15	--Magische Glocke
+	17	3100~3103	1	15	--Zwölfgeistschwert
+	18	11250	1	20		--Krieger Lv42
+	19	11450	1	20		--Ninja Lv42
+	20	11650	1	20		--Sura Lv42
+	21	11850	1	20		--Schamane Lv42
+}				
+				
+Group	55Metin				
+{				
+	Type	drop		
+	mob	8011	
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	7110~7113	1	15	--Brauenfächer
+	11	2110~2113	1	15	--Einhornbogen
+	12	7100~7103	1	15	--Dreifachfächer
+	13	3110~3113	1	15	--Erlösungsklinge
+	14	100~103	1	15		--Großschwert
+	15	3120~3123	1	15	--Löwentöter
+	16	5060~5063	1	15	--Magische Glocke
+	17	3100~3103	1	15	--Zwölfgeistschwert
+}				
+
+Group	60Metin				
+{				
+	Type	drop		
+	mob	8012		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+}				
+
+Group	65Metin				
+{				
+	Type	drop		
+	mob	8013		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	7110~7113	1	15	--Brauenfächer
+	11	2110~2113	1	15	--Einhornbogen
+	13	3110~3113	1	15	--Erlösungsklinge
+	14	5070~5073	1	15	--Goldkäferglocke
+	15	1080~1083	1	15	--Rippenmesser
+	16	120~123	1	15		--Zaubererschwert
+	17	3100~3103	1	15	--Zwölfgeistschwert
+	18	11260	1	6		--Krieger Lv48
+	19	11460	1	6		--Ninja Lv48
+	20	11660	1	6		--Sura Lv48
+	21	11860	1	6		--Schamane Lv48
+}	
+
+Group	70Metin				
+{				
+	Type	drop		
+	mob	8014		
+	1	50300	1	200		--Fertigkeitsbuch
+	2	50300	1	200		--Fertigkeitsbuch
+	3	50300	1	200		--Fertigkeitsbuch
+	4	71001	1	70		--Exorzismus Schriftrolle
+	5	71094	1	50		--Konzentriertes Lesen
+	6	71084	1	90		--Gegenstand verzaubern
+	7	71084	1	70		--Gegenstand verzaubern
+	8	71085	1	50		--Gegenstand verstärken
+	9	50513	1	4		--Seelenstein
+	10	1090~1093	1	15	--Chakram
+	11	130~133	1	15		--Halbmondschwert
+	13	3120~3123	1	15	--Löwentöter
+	14	2120~2123	1	15	--Riesenflügelbogen
+	15	7120~7123	1	15	--Sonnenfächer
+	16	5080~5083	1	15	--Stahlkäferglocke
+}			
+
+Group	75Metin				
+{				
+	Type	drop		
+	mob	8024	
+	1	50513	1	8		--Seelenstein
+	2	71084	1	100		--Gegenstand verzaubern
+	3	71084	2	60		--Gegenstand verzaubern
+	4	71085	2	50		--Gegenstand verstärken
+	5	2130~2133	1	15	--Aprikosenbogen
+	6	1110~1113	1	15	--Blitzmesser
+	7	7140~7143	1	15	--Erlösungsfächer
+	8	240~243	1	15		--Exorzismusschwert
+	9	5100~5103	1	15	--Himmel und Erde Glocke
+	10	3140~3143	1	15	--Magnetische Klinge
+	11	160~163	1	15		--Nymphenschwert
+	12	71026	1	10		--Magisches Eisenerz
+	13	71001	1	70		--Exorzismus Schriftrolle
+	14	71094	1	50		--Konzentriertes Lesen
+}				
+				
+Group	80Metin				
+{				
+	Type	drop		
+	mob	8025		
+	1	50513	1	8		--Seelenstein
+	2	71084	1	100		--Gegenstand verzaubern
+	3	71084	2	60		--Gegenstand verzaubern
+	4	71085	2	50		--Gegenstand verstärken
+	5	2130~2133	1	15	--Aprikosenbogen
+	6	1110~1113	1	15	--Blitzmesser
+	7	7140~7143	1	15	--Erlösungsfächer
+	8	240~243	1	15		--Exorzismusschwert
+	9	5100~5103	1	15	--Himmel und Erde Glocke
+	10	3140~3143	1	15	--Magnetische Klinge
+	11	160~163	1	15		--Nymphenschwert
+	12	71026	1	10		--Magisches Eisenerz
+	13	71001	1	70		--Exorzismus Schriftrolle
+	14	71094	1	50		--Konzentriertes Lesen
+}					
+					
+Group	85Metin					
+{					
+	Type	drop			
+	mob	8026			
+	1	50513	1	8		--Seelenstein
+	2	72001	1	8		--Erfahrungsring (1h)
+	3	72004	1	8		--Handschuh des Diehbes (1h)
+	4	71032	1	10		--Schriftrolle des Drachen
+	5	71084	1	100		--Gegenstand verzaubern
+	6	71084	2	60		--Gegenstand verzaubern
+	7	71085	2	50		--Gegenstand verstärken
+	8	2130~2133	1	25	--Aprikosenbogen
+	9	1110~1113	1	25	--Blitzmesser
+	10	7140~7143	1	25	--Erlösungsfächer
+	11	240~243	1	25		--Exorzismusschwert
+	12	5100~5103	1	25	--Himmel und Erde Glocke
+	13	3140~3143	1	25	--Magnetische Klinge
+	14	160~163	1	25		--Nymphenschwert
+	15	11280	1	15		--Krieger Lv61
+	16	11480	1	15		--Ninja Lv61
+	17	11680	1	15		--Sura Lv61
+	18	11880	1	15		--Schamane Lv61
+	19	71026	1	10		--Magisches Eisenerz
+	20	71001	1	70		--Exorzismus Schriftrolle
+	21	71094	1	50		--Konzentriertes Lesen
+}					
+					
+Group	90Metin					
+{					
+	Type	drop			
+	mob	8027			
+	1	50513	1	8		--Seelenstein
+	2	72001	1	8		--Erfahrungsring (1h)
+	3	72004	1	8		--Handschuh des Diehbes (1h)
+	4	71032	1	10		--Schriftrolle des Drachen
+	5	71084	1	100		--Gegenstand verzaubern
+	6	71084	2	60		--Gegenstand verzaubern
+	7	71085	2	50		--Gegenstand verstärken
+	8	5090~5093	1	8	--Donnervogelglocke
+	9	1100~1103	1	6	--Drachenmesser
+	10	150~153	1	5		--Geisterzahnklinge
+	11	140~143	1	4		--Schlachtschwert
+	12	2140~2143	1	12	--Großgelbdachenbogen
+	13	7130~7133	1	16	--Himmelsvogelfächer
+	14	2130~2133	1	15	--Aprikosenbogen
+	15	1110~1113	1	16	--Blitzmesser
+	16	7140~7143	1	11	--Erlösungsfächer
+	17	240~243	1	15		--Exorzismusschwert
+	18	5100~5103	1	15	--Himmel und Erde Glocke
+	19	3140~3143	1	17	--Magnetische Klinge
+	20	160~163	1	17		--Nymphenschwert
+	21	3130~3133	1	6	--Partisane
+	22	11290	1	4		--Krieger Lv66
+	23	11490	1	4		--Ninja Lv66
+	24	11690	1	4		--Sura Lv66
+	25	11890	1	4		--Schamane Lv66
+	26	14163~14166	1	22	--Kristallarmband
+	27	16163~16166	1	22	--Kristallhalskette
+	28	17163~17166	1	22	--Kristallohrringe
+	29	71026	1	17		--Magisches Eisenerz
+	30	71025	1	13		--Stein des Schmieds
+	31	71001	1	70		--Exorzismus Schriftrolle
+	32	71094	1	50		--Konzentriertes Lesen
+	33	50125	1	100		--Fertigkeitsbuch-Truhe
+	34	50126	1	100		--Geiststein-Truhe
+}
+

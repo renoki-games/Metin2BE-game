@@ -6,3 +6,89 @@ Group windschuhe
 	2 39090 100001 1
 	3 39091 100002 1
 }
+
+Group FertigkeitsbuchTruhe
+{
+	Vnum 50125
+	1	50300	1	100		-- Fertigkeitsbuch
+}
+
+Group GeiststeinTruhe
+{
+	Vnum 50126
+	1	28030	1	100		-- Stein des Durchbruchs+0
+	2	28031	1	100		-- Stein des Todesstosses+0
+	3	28032	1	100		-- Stein der Wiederkehr+0
+	4	28033	1	100		-- Stein gegen Krieger+0
+	5	28034	1	100		-- Stein gegen Ninja+0
+	6	28035	1	100		-- Stein gegen Sura+0
+	7	28036	1	100		-- Stein gegen Schamanen+0
+	8	28037	1	100		-- Stein der Monster+0
+	9	28038	1	100		-- Stein des Ausweichens+0
+	10	28039	1	100		-- Stein des Duckens+0
+	11	28040	1	100		-- Stein der Magie+0
+	12	28041	1	100		-- Stein der Lebenskraft+0
+	13	28042	1	100		-- Stein des Schutzes+0
+	14	28043	1	100		-- Stein der Hast+0
+	15	28046	1	100		-- Stein der Halbmenschen+0
+	16	28130	1	100		-- Stein des Durchbruchs+1
+	17	28131	1	100		-- Stein des Todesstosses+1
+	18	28132	1	100		-- Stein der Wiederkehr+1
+	19	28133	1	100		-- Stein gegen Krieger+1
+	20	28134	1	100		-- Stein gegen Ninja+1
+	21	28135	1	100		-- Stein gegen Sura+1
+	22	28136	1	100		-- Stein gegen Schamanen+1
+	23	28137	1	100		-- Stein der Monster+1
+	24	28138	1	100		-- Stein des Ausweichens+1
+	25	28139	1	100		-- Stein des Duckens+1
+	26	28140	1	100		-- Stein der Magie+1
+	27	28141	1	100		-- Stein der Lebenskraft+1
+	28	28142	1	100		-- Stein des Schutzes+1
+	29	28143	1	100		-- Stein der Hast+1
+	30	28146	1	100		-- Stein der Halbmenschen+1
+	31	28230	1	100		-- Stein des Durchbruchs+2
+	32	28231	1	100		-- Stein des Todesstosses+2
+	33	28232	1	100		-- Stein der Wiederkehr+2
+	34	28233	1	100		-- Stein gegen Krieger+2
+	35	28234	1	100		-- Stein gegen Ninja+2
+	36	28235	1	100		-- Stein gegen Sura+2
+	37	28236	1	100		-- Stein gegen Schamanen+2
+	38	28237	1	100		-- Stein der Monster+2
+	39	28238	1	100		-- Stein des Ausweichens+2
+	40	28239	1	100		-- Stein des Duckens+2
+	41	28240	1	100		-- Stein der Magie+2
+	42	28241	1	100		-- Stein der Lebenskraft+2
+	43	28242	1	100		-- Stein des Schutzes+2
+	44	28243	1	100		-- Stein der Hast+2
+	45	28246	1	100		-- Stein der Halbmenschen+2
+	46	28330	1	100		-- Stein des Durchbruchs+3
+	47	28331	1	100		-- Stein des Todesstosses+3
+	48	28332	1	100		-- Stein der Wiederkehr+3
+	49	28333	1	100		-- Stein gegen Krieger+3
+	50	28334	1	100		-- Stein gegen Ninja+3
+	51	28335	1	100		-- Stein gegen Sura+3
+	52	28336	1	100		-- Stein gegen Schamanen+3
+	53	28337	1	100		-- Stein der Monster+3
+	54	28338	1	100		-- Stein des Ausweichens+3
+	55	28339	1	100		-- Stein des Duckens+3
+	56	28340	1	100		-- Stein der Magie+3
+	57	28341	1	100		-- Stein der Lebenskraft+3
+	58	28342	1	100		-- Stein des Schutzes+3
+	59	28343	1	100		-- Stein der Hast+3
+	60	28346	1	100		-- Stein der Halbmenschen+3
+	61	28430	1	100		-- Stein des Durchbruchs+4
+	62	28431	1	100		-- Stein des Todesstosses+4
+	63	28432	1	100		-- Stein der Wiederkehr+4
+	64	28433	1	100		-- Stein gegen Krieger+4
+	65	28434	1	100		-- Stein gegen Ninja+4
+	66	28435	1	100		-- Stein gegen Sura+4
+	67	28436	1	100		-- Stein gegen Schamanen+4
+	68	28437	1	100		-- Stein der Monster+4
+	69	28438	1	100		-- Stein des Ausweichens+4
+	70	28439	1	100		-- Stein des Duckens+4
+	71	28440	1	100		-- Stein der Magie+4
+	72	28441	1	100		-- Stein der Lebenskraft+4
+	73	28442	1	100		-- Stein des Schutzes+4
+	74	28443	1	100		-- Stein der Hast+4
+	75	28446	1	100		-- Stein der Halbmenschen+4
+}

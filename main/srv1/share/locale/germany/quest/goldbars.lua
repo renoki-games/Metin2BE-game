@@ -16,7 +16,7 @@ quest goldbars begin
 				return
 			end
 
-			item.remove()
+			pc.remove_item(item.get_vnum(), 1)
 			pc.change_gold(barrenInfo[iVnum])
 		end
 	end
