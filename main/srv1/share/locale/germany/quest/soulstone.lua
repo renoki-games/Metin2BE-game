@@ -42,19 +42,22 @@ quest soulstone begin
 			local need_alignment = 1000 + 500 * ( skill_level - 30 ) 
 			local title = string.format("%sFertigkeitstraining", skill_name)
 			say_title(title) 
-			say("Beim Benutzen des Steins verlierst")
-			say("du Rangpunkte!")
+			say("")
+			say("Das Großmeistertraining verbraucht Rangpunkte.")
+			say("Es kann also sein, dass du in den negativen")
+			say("Punktebereich fällst.")
+
 			if cur_alignment < - 19000 + need_alignment then 
 				say_reward("Du hast nicht genügend Rangpunkte.") 
 				return 
 			end 
 			if cur_alignment < 0 then 
-				say_reward( string.format("Benötigte Rangpunkte: %d" , need_alignment * 2 )) 
+				csay.pink( string.format("Benötigte Rangpunkte: %d" , need_alignment * 2 )) 
 				need_alignment = need_alignment * 2 
 			elseif cur_alignment < need_alignment then 
-				say_reward( string.format("Benötigte Rangpunkte: %d" , need_alignment )) 
+				csay.pink( string.format("Benötigte Rangpunkte: %d" , need_alignment )) 
 			else 
-				say_reward( string.format("Benötigte Rangpunkte: %d" , need_alignment )) 
+				csay.pink( string.format("Benötigte Rangpunkte: %d" , need_alignment )) 
 			end 
 			say("") 
 			local s = select("Weiter" , "Abbrechen")
@@ -62,14 +65,23 @@ quest soulstone begin
 				return 
 			end 
 			if cur_alignment >= 0 and cur_alignment < need_alignment then 
-				say_title( string.format("Fertigkeit perfektionieren:", title)) 
-				say("Es ist soweit!")
-				say("Um zu trainieren,")
-				say("gib bitte ein: trainieren")
+				say_title( string.format("Fertigkeit perfektionieren:", title))
+				say("")
+				say("Wenn du jetzt eine Großmeisterfertigkeit")
+				say("steigerst, könnten deine Rangpunkte in den")
+				say("negativen Bereich fallen, da du im Moment nur")
+				say("wenige besitzt. Wenn du wirklich trainieren")
+				say("willst, gib das Wort 'trainieren' in die")
+				say("Befehlszeile ein.")
+				say("")
+				csay.pink("trainieren")
+
 				local s = input()
 				if s ~= "trainieren" then 
 					return 
 				end 
+				say("Willst du nicht trainieren, drücke einfach")
+				say("'ENTER'.")
 			end 
 			if get_time()< pc.getqf("next_time")then 
 				if pc.is_skill_book_no_delay()then 
@@ -80,23 +92,29 @@ quest soulstone begin
 			if need_alignment > 0 then 
 				if pc.learn_grand_master_skill(skill_vnum) then 
 					pc.change_alignment(-need_alignment) 
-					say_title(string.format("%s Erfolgreich!", title)) 
+					csay.pink(string.format("%s Erfolgreich!", title)) 
 					if 40 == pc.get_skill_level( skill_vnum ) then 
 						say("Herzlichen Glückwunsch!")
 						notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sperfektioniert!", skill_name)))
 					else 
-						say(string.format("Deine Fertigkeit %shat", skill_name))
+						say(string.format("Deine Fertigkeit %s hat", skill_name))
 						say(string.format("Stufe G%d erreicht!", (skill_level - 30 + 1)))
 					end 
 					say("") 
-					say_reward("Perfektionieren erfolgreich!")
-					say_reward( string.format("Rangpunkte verloren: %d " , need_alignment )) 
+					say("Du hast es geschafft.")
+					say("ist nun auf Perfekter Meister.")
+					csay.pink("Du hast dein Level erfolgreich gesteigert!")
+					say_reward( string.format("Du hast %d Rangpunkte verbraucht" , need_alignment )) 
 					say("") 
 				else 
-					say_title(string.format("%s Fehlgeschlagen!" , title )) 
+					csay.pink(string.format("%s Fehlgeschlagen!" , title )) 
 					say("")
-					say_reward("Perfektionieren fehlgeschlagen!") 
-					say("") 
+					say("Du hast deine Fertigkeiten nicht verbessern")
+					say("können.")
+					say("")
+					csay.pink("Du hast einige Rangpunkte verloren")
+					csay.pink("und den Seelenstein verbraucht.")
+
 					pc.change_alignment(-number(need_alignment/3 , need_alignment/2)) 
 				end 
 			end 

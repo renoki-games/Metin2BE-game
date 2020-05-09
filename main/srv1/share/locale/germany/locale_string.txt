@@ -695,7 +695,7 @@
 "Der Krieg zwischen %s und %s wurde abgebrochen.";
 
 "´İ±â";
-"Schliessen ";
+"Schließen";
 
 "ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
 "Abgebrochen. Der Kampf hat nicht begonnen.";

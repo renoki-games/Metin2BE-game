@@ -39,5 +39,6 @@ goldbars.lua
 mining.lua
 horse_menu.lua
 bio.lua
+chest_beginer.lua
 
 refine_item_information.lua

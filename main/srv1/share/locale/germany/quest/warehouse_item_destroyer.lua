@@ -14,10 +14,10 @@ quest warehouse_item_destroyer begin
 			local i = item.vnum
 			say_title(mob_name(npc.get_race()).. ":")
 			say("")
-			
+			if pc.is_gm() then
 				say("(GM) Vnum: " ..i)
 				say("(GM) ID: " ..item.get_id())
-		
+			end
 			if c <= 1 then
 				say_reward("Möchtest du " ..item_name(i).. " zerstören?")
 			else
