@@ -986,3 +986,5 @@ clickable_pn_tag
 clickable_item_tag
 pc.is_dev
 say_mob
+pc.give_dr
+pc.give_dm
