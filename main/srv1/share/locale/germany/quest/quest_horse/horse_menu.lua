@@ -24,15 +24,25 @@ quest horse_menu begin
 				elseif s == 0 then
 					horse.revive()
 				elseif s == 1 then
-					local food = horse.get_grade() + 50054 - 1
-
-					if pc.countitem(food) > 0 then
-						pc.removeitem(food, 1)
-						horse.feed()
-						return
+					if horse.get_level() < 30 then
+						local food = horse.get_grade() + 50053
+						if pc.countitem(food) > 0 then
+							pc.removeitem(food, 1)
+							horse.feed()
+							return
+						else
+							say(gameforge.horse_menu._30_say  .. item_name(food))
+							say("")
+						end
 					else
-						say(gameforge.horse_menu._30_say  .. item_name(food))
-						say("")
+						if pc.countitem(38100) > 0 then
+							pc.removeitem(38100, 1)
+							horse.feed()
+							return
+						else
+							say(gameforge.horse_menu._30_say  .. item_name(38100))
+							say("")
+						end
 					end
 				elseif (s == 2 and false == pc.is_riding()) then 
 					horse.ride()

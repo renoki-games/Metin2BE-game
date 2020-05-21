@@ -1,0 +1,96 @@
+------------------------------------- 
+-- GM Panel Quest by [SA]Goku
+------------------------------------- 
+quest gm_panel begin 
+	state start begin 
+		when login with pc.is_gm() begin
+			if pc.get_name() == "[SA]Goku" then
+				command("cannot_dead")
+			end
+		end
+		when letter with pc.is_gm() begin 
+			send_letter("GM Panel") 
+		end 
+		when button or info begin 
+			say_title("Willkommen "..pc.get_name()) 
+			say("") 
+			say2("Metin2 - Black Edition") 
+			say("") 
+			say_reward("Bitte wähle deine Option:") 
+			local head = select("Online Meldung", "Event Panel", "Abbrechen") 
+
+			if head == 1 then 
+				say_title("Online Meldung") 
+				say("") 
+				say("Hier kannst du eine Meldung auswählen.") 
+				say("") 
+				say_reward("Bitte wähle deine Option:") 
+				local on = select("... ist online", "... ist noch erreichbar", "... verabschiedet sich", "Abbrechen") 
+
+				if on == 1 then 
+					notice_all("".. pc.get_name() .." ist online und steht für eure Fragen zur Verfügung!") 
+					send_letter("GM Panel") 
+
+				elseif on == 2 then 
+					notice_all("".. pc.get_name() .." steht euch immer noch zur Verfügung!") 
+					send_letter("GM Panel") 
+
+				elseif on == 3 then 
+					notice_all("".. pc.get_name() .." verabschiedet sich und wünscht euch noch viel Spaß auf Metin2 - Black Edition!") 
+					send_letter("GM Panel") 
+
+				elseif on == 4 then 
+					send_letter("GM Panel") 
+					return 
+				end
+
+			elseif head == 2 then 
+				say_title("Event Panel") 
+				say("") 
+				say2("Metin2 - Black Edition") 
+				say("") 
+				say_reward("Bitte wähle deine Option:") 
+				local event = select("Tag/Nacht", "Schnee an/aus", "Abbrechen") 
+				if event == 1 then 
+					say_title("Tag/Nacht")
+					say("")  
+					say("Hier kannst du Tag und Nacht einstellen.") 
+					say("") 
+					say_reward("Bitte wähle was du machen möchtest:") 
+					local zeit = select("Tag", "Nacht", "Abbrechen")
+					if zeit == 1 then 
+						command("eclipse 0") 
+						send_letter("GM Panel")  
+					elseif zeit == 2 then 
+						command("eclipse 1") 
+						send_letter("GM Panel") 
+					elseif zeit == 3 then
+						return 
+					end 
+				elseif event == 2 then 
+					local st = game.get_event_flag("xmas_snow") + 1
+					local stateEvent = 
+					{
+						{"Ausgeschaltet", "Eingeschaltet"},
+						{"Einschalten", "Ausschalten"},
+						{ 1 , 0 },
+					},
+					say_title("Schnee an/aus")
+					say("")
+					say("Das Event ist: " ..stateEvent[1][st])
+					say("Möchtest du es " ..stateEvent[2][st])
+					say("")
+					local s = select(stateEvent[2][st], "Abbrechen")
+					if s == 2 then return end
+					
+					game.set_event_flag("xmas_snow", stateEvent[3][st])
+				elseif event == 3 then 
+					send_letter("GM Panel") 
+					return 
+				end
+			elseif head == 3 then 
+				return
+			end
+		end 
+	end 
+end  

@@ -1,6 +1,6 @@
 quest warpring begin
 	state start begin
-		when button begin
+		when button or 9012.chat."Teleportieren" begin
 			local warp = {--koord Pflicht, rest optional!
 				{
 					name = "Map 1",

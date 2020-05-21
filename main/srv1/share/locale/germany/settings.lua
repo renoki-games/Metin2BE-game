@@ -170,6 +170,8 @@ add_bgm_info(303, "blacksea.mp3", 0.5);
 add_bgm_info(304, "mt.mp3", 0.5);
 set_bgm_volume_enable();
 
-dofile(get_locale_base_path().."/BlueDragon.lua")
-dofile(get_locale_base_path().. "/quest/GFquestlib.lua")
+dofile(get_locale_base_path().. "/quest/LIB/GameForge_BlueDragon.lua")
+dofile(get_locale_base_path().. "/quest/LIB/GameForge_QuestLib.lua")
+dofile(get_locale_base_path().. "/quest/LIB/GameForge_QuestLib_2.lua")
+dofile(get_locale_base_path().. "/quest/LIB/Mijago_QuestLib.lua")
 

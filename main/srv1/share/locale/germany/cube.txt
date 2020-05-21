@@ -1080,4 +1080,39 @@ gold	50000
 percent	10	
 end		
 	
+
+###################
+###Schriftrollen###
+###################
+		
+#Schriftrolle des Krieges		
+section		
+npc	20016	
+item	25040	1
+item	70035	1
+reward	71021	1
+gold	200000
+percent	100	
+end		
+		
+#Schriftrolle des Drachen		
+section		
+npc	20016	
+item	25040	1
+item	71026	1
+reward	71032	1
+gold	500000
+percent	100	
+end		
+		
+#Schmiede Handbuch		
+section		
+npc	20016	
+item	25040	1
+item	71025	1
+reward	70039	1
+gold	1000000
+percent	100	
+end	
+	
 	

@@ -3,43 +3,61 @@
 ### OR
 ## python pre_qc.py -ac
 
+quest_announcements/chest_beginer.lua
+quest_announcements/first_login.lua
+quest_announcements/level_100_notice.lua
+quest_announcements/refine_item_lv9_notice.lua
 
-GILDE/Gilden_Npcs.quest
-GILDE/Gilden_Rangliste.quest
-GILDE/Gilden_Verwaltung.quest
-GILDE/Gildenaltarbau.quest
-GILDE/Gildenerstellung.quest
-GILDE/Gildenkrieg_beitreten.quest
-GILDE/Gildenkriegsliste.quest
-GILDE/Gildenlandkauf.quest
-GILDE/Gildenleaderwechsel.quest
-GILDE/Gildenschmiede.quest
+quest_guild/guild_building_alter_of_power.quest
+quest_guild/guild_building_melt.quest
+quest_guild/guild_building_npc.quest
+quest_guild/guild_building.quest
+quest_guild/guild_create.quest
+quest_guild/guild_manage.quest
+quest_guild/guild_ranking.quest
+quest_guild/guild_war_bet.quest
+quest_guild/guild_war_join.quest
+quest_guild/guild_war_observer.quest
 
-## READ
+quest_horse/horse_examination_01.lua
+quest_horse/horse_examination_25.lua
+quest_horse/horse_examination_50.lua
+quest_horse/horse_examination_75.lua
+quest_horse/horse_medaille.lua
+quest_horse/horse_menu.lua
+quest_horse/horse_summon.lua
+
+quest_item/item_change_empire.quest
+quest_item/item_change_guild_master.quest
+quest_item/item_change_name.lua
+quest_item/item_change_sex.quest
+quest_item/item_dr_voucher.lua
+quest_item/item_goldbars.lua
+quest_item/item_questscrolls.lua
+quest_item/item_rainbowstone.lua
+quest_item/item_reset_skill.quest
+quest_item/item_reset_status.quest
+quest_item/item_soulstone.lua
+quest_item/item_warpring.lua
+
+quest_npc/npc_arena_manager.lua
+quest_npc/npc_fisher_buy_fishrod.lua
+quest_npc/npc_fisher_refine_fishrod.lua
+quest_npc/npc_fortune_telling.lua
+quest_npc/npc_hair_shop.lua
+quest_npc/npc_information.lua
+quest_npc/npc_learn_skill.lua
+quest_npc/npc_marriage_manage.quest
+quest_npc/npc_skill_reset.lua
+quest_npc/npc_smith_crafting.lua
+quest_npc/npc_warehouse_item_destroyer.lua
+quest_npc/npc_warehouse_shop.lua
+quest_npc/npc_warp_spiderdungeon_2.lua
+
+quest_playerquests/bio.lua
+
+quest_system/mining_bergbau.lua
+#quest_system/oxevent.lua
+
+adminpannel.quest
 game_option.quest
-pet_system.quest
-ride.quest
-##sample__guild_make.quest
-
-## SKIPPED - if commented with "#", it will be skipped just like these:
-
-# sample__mob_drop_item.quest
-
-first_login.lua
-warpring.lua
-horse_summon.lua
-skill_group.lua
-rainbowstone.lua
-warehouse_item_destroyer.lua
-warehouse_shop.lua
-soulstone.lua
-level_info.lua
-change_name_item.lua
-goldbars.lua
-mining.lua
-horse_menu.lua
-bio.lua
-chest_beginer.lua
-
-refine_item_information.lua
-# test.lua

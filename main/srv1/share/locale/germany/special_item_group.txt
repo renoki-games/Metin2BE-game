@@ -621,6 +621,39 @@ Group	Schmuckkasten
 	1	10	1	1
 }
 
+Group	Eisenkiste
+{
+	Vnum	50121
+	1	14180	1	10	-- Amethystarmband+0
+	2	16180	1	10	-- Amethysthalskette+0
+	3	17180	1	10	-- Amethystohrringe+0
+	4	30190	1	10	-- Blutstein
+	5	72006	1	10	-- Handschuhe des Diebes
+	6	16100	1	10	-- Ebenholzhalskette+0
+	7	72003	1	10	-- Erfahrungsring
+	8	72012	1	10	-- Feder der Liebenden
+	9	72015	1	10	-- Fischereibuch
+	10	14200	1	10	-- Himmelstränenarmband+0
+	11	16200	1	10	-- Himmelstränenhalskette+0
+	12	17200	1	10	-- Himmelstränenohrringe+0
+	13	14080	1	10	-- Jadearmband+0
+	14	16080	1	10	-- Jadehalskette+0
+	15	14160	1	10	-- Kristallarmband+0
+	16	16160	1	10	-- Kristallhalskette+0
+	17	17160	1	10	-- Kristallohrringe+0
+	18	71004	1	10	-- Medaille des Drachen
+	19	72024	1	10	-- Medaille des Glücks
+	20	71082	1	10	-- Metinstein (schwer)
+	21	27987	1	10	-- Muschel
+	22	14120	1	10	-- Perlenarmband+0
+	23	16120	1	10	-- Perlenhalskette+0
+	24	50513	1	10	-- Seelenstein
+	25	25040	1	10	-- Segensschriftrolle
+	26	14140	1	10	-- Weißgoldarmband+0
+	27	16140	1	10	-- Weißgoldhalskette+0
+	28	70024	1	10	-- Segenskugel
+}
+
 ########################################
 ##
 ##	Gruppe: Boss Truhen

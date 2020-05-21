@@ -1,0 +1,417 @@
+quest guild_building_melt begin
+	state start begin
+		function GetOreRefineCost(cost)
+			if pc.empire != npc.empire then
+				return 3 * cost
+			end
+			if pc.get_guild() == npc.get_guild() then
+				return cost * 0.8
+			end
+			return cost
+		end
+		function GetMyRefineNum(race)
+			return race - 20060 + 50601 or
+			race - 20061 + 50602 or
+			race - 20062 + 50603 or
+			race - 20063 + 50604 or
+			race - 20064 + 50605 or
+			race - 20065 + 50606 or
+			race - 20066 + 50607 or
+			race - 20067 + 50608 or
+			race - 20068 + 50609 or
+			race - 20069 + 50610 or
+			race - 20070 + 50611 or
+			race - 20071 + 50612 or
+			race - 20072 + 50613 or
+			race - 25410 + 50614 or
+			race - 25411 + 50615 or
+			race - 25412 + 50616 or
+			race - 25413 + 50617 or
+			race - 25414 + 50618
+		end
+		function GetOreRefineGoodPct()
+			return 75
+		end
+		function GetOreRefineBadPct()
+			return 35
+		end
+		--function GetOreRefineJuwelesPct()
+		--	return 65
+		--end
+		function IsRefinableRawOre(vnum)
+			return vnum >= 50601 and vnum <= 50618
+		end
+		-- all another Ores
+		function DoRefine(pct)
+			local from_postfix
+			local from_name = item_name(item.vnum)
+			local to_vnum = item.vnum + 20
+			local to_name = item_name(to_vnum)
+			local to_postfix 
+			local price = guild_building_melt.GetOreRefineCost(1000000)
+			if under_han(from_name) then
+				from_postfix = ""
+			else
+				from_postfix = ""
+			end
+			if under_han(to_name) then
+				to_postfix = ""
+			else
+				to_postfix = ""
+			end
+			say_title(""..mob_name(20001)..".:")
+			say("")
+			say("Ich bin ein Meister im veredeln von")
+			say("verschiedensten Erzen.")
+			say("Bringe mir 100 Stk. ".. from_name .." und ich")
+			say("versuche es in ".. to_name .." zu veredeln.")
+			say("Außerdem benötigen wir noch einen Geiststein")
+			say("von der Stufe +0, +1, +2 oder +3 zum veredeln.")
+			say("")
+			if item.count >= 100 then
+				say("Die Wahrscheinlichkeit beträgt "..pct.."%.")
+				say("Eine veredelung kostet "..price.." ¥ang")
+				say("")
+				say_reward("Wollen wir es versuchen?")
+				local s = select("Versuchen", "Nein,danke")
+				if s == 1 then
+					if pc.get_gold() < price then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Du hast nicht genug ¥ang.")
+						say("komm wieder wenn du genug ¥ang")
+						say("bei dir hast.Schönen Tag noch!")
+						return
+					end
+					local selected_item_cell = select_item()
+					if selected_item_cell == 0 then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Ohne Geiststein kann ich es nicht herstellen.")
+						say("Bringe bitte ein Geiststein mit.")
+						say("")
+						return
+					end
+					local old_item = item.get_id()
+					if not item.select_cell(selected_item_cell) then
+						say("³o*Óª««~¨Ã¤£¥¿½T.")
+						return
+					end
+					if item.vnum < 28030 or item.vnum >= 28443 then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Was ist den das, dass ist doch garkein")
+						say("Geiststein auf +0, +1, +2 oder +3. Nein so")
+						say("kann ich nicht arbeiten,bitte gib mir")
+						say("einen richtigen Geiststein.")
+						return
+					end
+					local stone_item = item.vnum
+					item.select(old_item)
+					local chance = number(1, 100)
+					local chance_max = pct
+					if chance <= chance_max then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung war erfolgreich. Du erhälst")
+						say_item(to_name, to_vnum, "")
+						say("Saubere Arbeit nicht? Komm gerne wieder.")
+						say("")
+						pc.give_item2(to_vnum,1)
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+						pc.removeitem(""..stone_item.."",1)
+					else
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung ist fehlgeschlagen.")
+						say("Tut mir Leid für dich da waren wohl")
+						say("zuviele Verunreinigungen im Erz.")
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+						pc.removeitem(""..stone_item.."",1)
+					end
+				end
+			else
+				say("")
+				say("Zur veredelung brauche ich mindestens")
+				say("100 Stk. " .. from_name .. " um es in")
+				say("" .. to_name .. " zuverdeln.Komm wieder")
+				say("wenn du soviele bei dir hast!")
+				say("")
+			end
+		end
+		--Only Diamond
+		function DoRefineDiamond(pct)
+			local from_postfix
+			local from_name = item_name(item.vnum)
+			local to_vnum = item.vnum + 20
+			local to_name = item_name(to_vnum)
+			local to_postfix 
+			local price = guild_building_melt.GetOreRefineCost(2000000)
+			if under_han(from_name) then
+				from_postfix = ""
+			else
+				from_postfix = ""
+			end
+			if under_han(to_name) then
+				to_postfix = ""
+			else
+				to_postfix = ""
+			end
+			say_title(""..mob_name(20001)..".:")
+			say("")
+			say("Ich bin ein Meister im veredeln von")
+			say("verschiedensten Erzen.")
+			say("Bringe mir 100 ".. from_name .." Stk. dieses")
+			say("Erzes und ich versuche in ".. to_name .." zu veredeln.")
+			if item.count >= 100 then
+				say("Die Wahrscheinlichkeit beträgt "..pct.."%.")
+				say("Eine veredelung kostet "..price.." ¥ang")
+				say("")
+				say_reward("Wollen wir es versuchen?")
+				local s = select("Versuchen", "Nein,danke")
+				if s == 1 then
+					if pc.get_gold() < price then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Du hast nicht genug ¥ang.")
+						say("komm wieder wenn du genug ¥ang")
+						say("bei dir hast.Schönen Tag noch!")
+						return
+					end
+					local chance = number(1, 100)
+					local chance_max = pct
+					if chance <= chance_max then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung war erfolgreich. Du erhälst")
+						say_item(to_name, to_vnum, "")
+						say("Saubere Arbeit nicht? Komm gerne wieder.")
+						say("")
+						pc.give_item2(to_vnum,1)
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+					else
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung ist fehlgeschlagen.")
+						say("Tut mir Leid für dich da waren wohl")
+						say("zuviele Verunreinigungen im Erz.")
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+					end
+				end
+			else
+				say("")
+				say("Zur veredelung brauche ich mindestens")
+				say("100 Stk. " .. from_name .. " um es in")
+				say("" .. to_name .. " zuverdeln.Komm wieder")
+				say("wenn du soviele bei dir hast!")
+				say("")
+			end
+		end
+		--New Mines
+		function DoRefineNew(pct)
+			local from_postfix
+			local from_name = item_name(item.vnum)
+			local to_vnum = item.vnum + 41621
+			local to_name = item_name(to_vnum)
+			local to_postfix 
+			local price = guild_building_melt.GetOreRefineCost(15000)
+			if under_han(from_name) then
+				from_postfix = ""
+			else
+				from_postfix = ""
+			end
+			if under_han(to_name) then
+				to_postfix = ""
+			else
+				to_postfix = ""
+			end
+			say_title(""..mob_name(20001)..".:")
+			say("")
+			say("Ich bin ein Meister im veredeln von")
+			say("verschiedensten Erzen.")
+			say("Bringe mir 100 Stk. ".. from_name .." und ich")
+			say("versuche es in ".. to_name .." zu veredeln.")
+			say("Außerdem benötigen wir noch einen Geiststein")
+			say("von der Stufe +0 , +1 oder +2 zum veredeln.")
+			say("")
+			if item.count >= 100 then
+				say("Die Wahrscheinlichkeit beträgt "..pct.."%.")
+				say("Eine veredelung kostet "..price.." ¥ang")
+				say("")
+				say_reward("Wollen wir es versuchen?")
+				local s = select("Versuchen", "Nein,danke")
+				if s == 1 then
+					if pc.get_gold() < price then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Du hast nicht genug ¥ang.")
+						say("komm wieder wenn du genug ¥ang")
+						say("bei dir hast.Schönen Tag noch!")
+						return
+					end
+					local selected_item_cell = select_item()
+					if selected_item_cell == 0 then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Ohne Geiststein kann ich es nicht herstellen.")
+						say("Bringe bitte ein Geiststein mit.")
+						say("")
+						return
+					end
+					local old_item = item.get_id()
+					if not item.select_cell(selected_item_cell) then
+						say("³o*Óª««~¨Ã¤£¥¿½T.")
+						return
+					end
+					if item.vnum < 28000 or item.vnum >= 28300 then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Was ist den das,dass ist doch garkein")
+						say("Geiststein auf +0,+1 od. +2, nein so")
+						say("kann ich nicht arbeiten,bitte gib mir")
+						say("einen richtigen Geiststein.")
+						return
+					end
+					local stone_item = item.vnum
+					item.select(old_item)
+					local chance = number(1, 100)
+					local chance_max = pct
+					if chance <= chance_max then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung war erfolgreich. Du erhälst")
+						say_item(to_name, to_vnum, "")
+						say("Saubere Arbeit nicht?Komm gerne wieder.")
+						say("")
+						pc.give_item2(to_vnum,1)
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+						pc.removeitem(""..stone_item.."",1)
+					else
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Die Herstellung ist fehlgeschlagen.")
+						say("Tut mir Leid für dich da waren wohl")
+						say("zuviele Verunreinigungen im Erz.")
+						pc.changemoney(-price)
+						pc.removeitem(""..from_name.."",100)
+						pc.removeitem(""..stone_item.."",1)
+					end
+				end
+			else
+				say("")
+				say("Zur veredelung brauche ich mindestens")
+				say("100 Stk. " .. from_name .. " um es in")
+				say("" .. to_name .. " zuverdeln.Komm wieder")
+				say("wenn du soviele bei dir hast!")
+				say("")
+			end
+		end
+		when 20060.take or 20061.take or 20062.take or 20063.take or 20064.take or 20065.take or 20066.take or
+			20067.take or 20068.take or 20069.take or 20070.take or 20071.take or 20072.take or 25410.take or 25411.take or 25412.take or 25413.take or 25414.take  with guild_building_melt.GetMyRefineNum(npc.race) == item.vnum begin
+			if item.vnum == 50601 then
+				guild_building_melt.DoRefineDiamond(guild_building_melt.GetOreRefineGoodPct())
+			else
+				guild_building_melt.DoRefine(guild_building_melt.GetOreRefineGoodPct())
+			end
+		end
+		--BAD
+		when 20060.take or 20061.take or 20062.take or 20063.take or 20064.take or 20065.take or 20066.take or
+			20067.take or 20068.take or 20069.take or 20070.take or 20071.take or
+			20072.take or 25410.take or 25411.take or 25412.take or 25413.take or 25414.take with guild_building_melt.IsRefinableRawOre(item.vnum) and guild_building_melt.GetMyRefineNum(npc.race) != item.vnum begin
+			if item.vnum == 50601 then
+				guild_building_melt.DoRefineDiamond(guild_building_melt.GetOreRefineBadPct())
+			else
+				guild_building_melt.DoRefine(guild_building_melt.GetOreRefineBadPct())
+			end
+		end
+		--New Mines Take
+		when 9017.take with item.vnum == 9013 or item.vnum == 9014 or item.vnum == 9015 or item.vnum == 9016 begin
+			if game.get_event_flag("nacht") < 1 then
+				guild_building_melt.DoRefineNew(guild_building_melt.GetOreRefineGoodPct())
+			else
+				guild_building_melt.DoRefineNew(guild_building_melt.GetOreRefineBadPct())
+			end
+		end
+		--Making Juweles
+		--when 9017.take with item.vnum == 50634 or item.vnum == 50635 or item.vnum ==50636 or item.vnum ==50637 or item.vnum ==50638 or item.vnum ==50639 begin
+		--	guild_building_melt.DoRefineNewtojuwels(guild_building_melt.GetOreRefineJuwelesPct())
+		--end
+		--Change Spezial
+		when 20060.click or 20061.click or 20062.click or 20063.click or 20064.click or
+			20065.click or 20066.click or 20067.click or 20068.click or 20069.click or
+			20070.click or 20071.click or 20072.click or 25410.click or 25411.click or 25412.click or 25413.click or 25414.click with npc.get_guild() == pc.get_guild() and pc.isguildmaster() begin
+			say_title(""..mob_name(20001)..".:")
+			say("")
+			say("Für 3.000.000 Yang können Sie mich zu einer")
+			say("Fortbildung schicken,damit kann ich mich auf") 
+			say("die Veredelung eines anderen Erzes")
+			say("spezialisieren.")
+			say("")
+			wait()
+			if get_time()<=pc.getqf("1day_time") then
+				local wait_time = math.floor(((pc.getqf("1day_time") - get_time()) / 60 / 60)+0.5)
+				say_title(""..mob_name(20001)..".:")
+				say("")
+				say("Du kannst mich jetzt nich Fortbilden.")
+				say("Du kannst mich nur alle 24h zu einer Fortbildung")
+				say("schicken.")
+				say("")
+				say_green("Du musst noch "..wait_time.." Stunde(n) warten!")
+				return
+			end
+			if pc.get_gold() < 3000000 then
+				say_title(""..mob_name(20001)..".:")
+				say("")
+				say_reward("Du brauchst 3.000.000 Yang damit ich")
+				say_reward("auf die Fortbildung kann.")
+			else
+				say_yellow("Welche Spezialisierung wollen sie?")
+				local sel = 0
+				local timetable_01	= {'Diamanten', 'Fossilholz', 'Kupfer', 'Silber', 'Gold', 'Jade', 'Weiter'} 
+				local valuetable_01	= {14111, 14112, 14113, 14114, 14115, 14116, 1, 3} 
+				local timetable_02	= {'Ebenholz', 'Perle', 'Weissgold', 'Kristall', 'Amethyst', 'Himmelsträne', 'Zurück', 'Weiter'} 
+				local valuetable_02	= {140117, 14118, 14119, 14120, 14121, 14122, 0, 2, 3} 
+				local timetable_03	= {'Seelenkristall', 'Zurück', 'Keine Änderung'} 
+				local valuetable_03	= {14123, 1, 3} 
+
+				repeat 
+					if sel == 0 then
+						local s = select_table(timetable_01) 
+						sel = valuetable_01[s] 
+					elseif sel == 1 then 
+						local s = select_table(timetable_02) 
+						sel = valuetable_02[s] 
+					elseif sel == 2 then 
+						local s = select_table(timetable_03) 
+						sel = valuetable_03[s] 
+					end 
+				until sel > 2
+				
+				if sel != 3 then 
+					npc_num = sel + 20060 - 14111 
+					if npc_num == npc.get_race() then
+						say_title(""..mob_name(20001)..".:")
+						say("")
+						say("Das bin ich doch bereits.")
+					else
+						pc.changegold(-3000000)
+						building.reconstruct(sel)
+						pc.setqf("1day_time", get_time()+24*60*60)
+					end
+				else
+					say_title(""..mob_name(20001)..".:")
+					say("")
+					say("Okay dann mache ich meinen Job so weiter,")
+					say("Bedenken Sie aber das die Seminarkosten")
+					say("in naher Zukunft auch steigen könnten.")
+					say("")
+				end
+			end
+		end
+	end
+end  

@@ -869,6 +869,7 @@ restart_quest
 return_charname_by_id
 ride.Ride
 say
+say2
 say_alen
 say_important
 say_important_title
@@ -988,3 +989,5 @@ pc.is_dev
 say_mob
 pc.give_dr
 pc.give_dm
+selectHorseAppearence
+giveHorseItem

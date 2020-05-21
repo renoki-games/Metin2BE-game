@@ -45,8 +45,8 @@ quest rainbowstone begin
 				
 				say_title("Regenbogenstein:")
 				say_reward("Dieser Stein ermöglicht es dir,")
-				say_reward("deine Fertigkeit ab G1 auf P zu skillen!")
-				say(string.format("%sauf Perfekten Meister?", name))
+				say_reward("deine Fertigkeit ab G1 auf P zu perfektionieren!")
+				say(string.format("%s auf Perfekten Meister?", name))
 				say("")
 
 				local s = select("Ja", "Nein")
@@ -69,9 +69,9 @@ quest rainbowstone begin
 
 				if 1 == c then
 				pc.set_skill_level((vnum) ,40) 
-				say_reward("Deine Fertigkeit wurde auf P gesetzt.")
-				say_reward("Viel Spaß weiterhin auf unserem Server!")
-				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %sperfektioniert!", name)))
+				say_reward("Deine Fertigkeit wurde perfektioniert!")
+				say_reward("Viel Spaß weiterhin auf unserem Server.")
+				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %s perfektioniert!", name)))
 				pc.removeitem("50512", 1)
 				end
 			end
