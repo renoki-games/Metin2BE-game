@@ -7,6 +7,6 @@ ViewRadius	128
 
 MapSize	8	8
 BasePosition	307200	1203200
-TextureSet	textureset\metin2_map_devilcatacomb.txt
-Environment	map_devilcatacomb.msenv
+TextureSet	textureset\metin2_map_devilscatacomb.txt
+Environment	map_devilscatacomb.msenv
 

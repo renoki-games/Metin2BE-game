@@ -8,7 +8,7 @@
 "Alle werden in Kürze in die Stadt teleportiert.";
 
 "<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Wärend eines Gildenkriegs gibt es keinen Jagdvorteil.";
+"[Gilde] Wärend eines Gildenkriegs gibt es keinen Jagdvorteil.";
 
 "ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
 "Der Gildenkampf kann nicht gestartet werden, weil der Server nicht online ist.";
@@ -20,7 +20,7 @@
 "Der Krieg ist bereits vorbei.";
 
 "<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
-"<Gilde> Rangstufe hat %d Punkte erreicht.";
+"[Gilde] Rangstufe hat %d Punkte erreicht.";
 
 "%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
 "Du hast %d Yang investiert.";
@@ -44,7 +44,7 @@
 "%s der Gilde wurde von %s gefangen genommen.";
 
 "<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
-"<Quest> Es gab schon eine Belohnung, du bekommst nichts mehr.";
+"[Quest] Es gab schon eine Belohnung, du bekommst nichts mehr.";
 
 "´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
 "Du kannst das nicht in der Duellarena nutzen.";
@@ -662,19 +662,19 @@
 "Die Edelsteine von %s verschwinden.";
 
 "<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
-"<Gilde> Der Gildenname ist ungültig.";
+"[Gilde] Der Gildenname ist ungültig.";
 
 "<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
-"<Gilde> Dieser Gildenname ist bereits vergeben.";
+"[Gilde] Dieser Gildenname ist bereits vergeben.";
 
 "<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst keine Gilde erstellen.";
+"[Gilde] Du kannst keine Gilde erstellen.";
 
 "%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
 "%s hat %s den Krieg erklärt!";
 
 "<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
-"<Gilde> %s hat den Gildenkrieg abgelehnt.";
+"[Gilde] %s hat den Gildenkrieg abgelehnt.";
 
 "%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
 "Der Krieg zwischen %s und %s beginnt in wenigen Minuten!";
@@ -689,7 +689,7 @@
 "%s hat den Krieg gegen %s gewonnen!";
 
 "<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
-"<Gilde> Der Gildenkrieg wurde abgebrochen.";
+"[Gilde] Der Gildenkrieg wurde abgebrochen.";
 
 "%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
 "Der Krieg zwischen %s und %s wurde abgebrochen.";
@@ -803,67 +803,67 @@
 "Der Spieler duelliert sich gerade.";
 
 "<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
-"<Gilde> Es gehört nicht der Gilde.";
+"[Gilde] Es gehört nicht der Gilde.";
 
 "<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt das Level der Gildenfertigkeiten zu ändern.";
+"[Gilde] Du bist nicht berechtigt das Level der Gildenfertigkeiten zu ändern.";
 
 "<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
-"<Lager> Du hast ein falsches Passwort eingegeben.";
+"[Lager] Du hast ein falsches Passwort eingegeben.";
 
 "<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
-"<Lager> Das Lager ist bereits geöffnet.";
+"[Lager] Das Lager ist bereits geöffnet.";
 
 "<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
-"<Lager> Du musst 10 Sekunden warten um das Lager wieder zu öffnen.";
+"[Lager] Du musst 10 Sekunden warten um das Lager wieder zu öffnen.";
 
 "<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
-"<Lager> Die Entfernung zwischen dir und dem Lager ist zu groß um es zu öffnen.";
+"[Lager] Die Entfernung zwischen dir und dem Lager ist zu groß um es zu öffnen.";
 
 "<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Der Server kann die Gruppenaufgabe nicht bearbeiten.";
+"[Gruppe] Der Server kann die Gruppenaufgabe nicht bearbeiten.";
 
 "<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keine Gruppe verlassen.";
+"[Gruppe] Du kannst in einem Dungeon keine Gruppe verlassen.";
 
 "<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
-"<Gruppe> Du bist aus der Gruppe ausgetreten.";
+"[Gruppe] Du bist aus der Gruppe ausgetreten.";
 
 "<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
-"<Gilde> Deine Gilde nimmt bereits an einem anderen Krieg teil.";
+"[Gilde] Deine Gilde nimmt bereits an einem anderen Krieg teil.";
 
 "<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Es gibt kein Recht auf einen Gildenkrieg.";
+"[Gilde] Es gibt kein Recht auf einen Gildenkrieg.";
 
 "<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
-"<Gilde> Diese Gilde existiert nicht.";
+"[Gilde] Diese Gilde existiert nicht.";
 
 "<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
-"<Gilde> Die Gilde ist bereits im Krieg.";
+"[Gilde] Die Gilde ist bereits im Krieg.";
 
 "<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Nicht genug Yang um an einem Gildenkrieg teilzunehmen.";
+"[Gilde] Nicht genug Yang um an einem Gildenkrieg teilzunehmen.";
 
 "<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Gilde hat nicht genug Yang um an einem Gildenkrieg teilzunehmen.";
+"[Gilde] Die Gilde hat nicht genug Yang um an einem Gildenkrieg teilzunehmen.";
 
 "<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
-"<Gilde> Die Gilde ist bereits für einen anderen Krieg reserviert.";
+"[Gilde] Die Gilde ist bereits für einen anderen Krieg reserviert.";
 
 "<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
-"<Gilde> Die Gilde ist bereits in einem Krieg.";
+"[Gilde] Die Gilde ist bereits in einem Krieg.";
 
 "<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Gildenlevel ist zu niedrig um an einem Gildenkrieg teilzunehmen.";
+"[Gilde] Gildenlevel ist zu niedrig um an einem Gildenkrieg teilzunehmen.";
 
 "<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
-"<Gilde> Mindestens %d Spieler müssen an einem Gildenkrieg teilnehmen.";
+"[Gilde] Mindestens %d Spieler müssen an einem Gildenkrieg teilnehmen.";
 
 "<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Gilde hat nicht genug Rangpunkte um an einem Gildenkrieg teilzunehmen.";
+"[Gilde] Die Gilde hat nicht genug Rangpunkte um an einem Gildenkrieg teilzunehmen.";
 
 "<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Gilde hat nicht genug Mitglieder um an einem Gildenkrieg teilzunehmen.";
+"[Gilde] Die Gilde hat nicht genug Mitglieder um an einem Gildenkrieg teilzunehmen.";
 
 "·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
 "Dein Level muss höher als 20 sein, um eine Handynummer zu registrieren.";
@@ -1169,7 +1169,7 @@
 "Der Spieler lehnt es ab zum Messenger hinzugefügt zu werden.";
 
 "<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Messenger> Du kannst einen GM nicht zu deinem Messenger hinzufügen.";
+"[Messenger] Du kannst einen GM nicht zu deinem Messenger hinzufügen.";
 
 "%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
 "%s ist nicht im Spiel.";
@@ -1190,121 +1190,121 @@
 "Der Spieler besitzt zu viel Yang. Du kannst nicht mit ihm handeln.";
 
 "<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
-"<Lager> Keine Bewegung möglich.";
+"[Lager] Keine Bewegung möglich.";
 
 "<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
-"<Lager> Der Gegenstand kann nicht gelagert werden.";
+"[Lager] Der Gegenstand kann nicht gelagert werden.";
 
 "<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Der Spieler, der die Einladung geschickt hat, ist nicht online.";
+"[Gruppe] Der Spieler, der die Einladung geschickt hat, ist nicht online.";
 
 "<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
-"<Gruppe> Nur der Gruppenanführer kann das ändern.";
+"[Gruppe] Nur der Gruppenanführer kann das ändern.";
 
 "<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
-"<Gruppe> Das Ziel ist kein Mitglied deiner Gruppe.";
+"[Gruppe] Das Ziel ist kein Mitglied deiner Gruppe.";
 
 "<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keinen Spieler ausschließen.";
+"[Gruppe] Du kannst in einem Dungeon keinen Spieler ausschließen.";
 
 "<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keinen Spieler ausschließen.";
+"[Gruppe] Du kannst in einem Dungeon keinen Spieler ausschließen.";
 
 "<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
-"<Gruppe> Du wurdest aus der Gruppe ausgeschlossen.";
+"[Gruppe] Du wurdest aus der Gruppe ausgeschlossen.";
 
 "<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keine Gruppe verlassen.";
+"[Gruppe] Du kannst in einem Dungeon keine Gruppe verlassen.";
 
 "<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst die Gruppenmitglieder nicht ausschließen.";
+"[Gruppe] Du kannst die Gruppenmitglieder nicht ausschließen.";
 
 "<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst innerhalb von %d Tagen nach Auflösung der Gilde keine neue erstellen.";
+"[Gilde] Du kannst innerhalb von %d Tagen nach Auflösung der Gilde keine neue erstellen.";
 
 "<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst innerhalb von %d Tagen nach Verlassen der Gilde keine neue erstellen.";
+"[Gilde] Du kannst innerhalb von %d Tagen nach Verlassen der Gilde keine neue erstellen.";
 
 "ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
 "Der Gildenname ist ungültig.";
 
 "<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
-"<Gilde> [%s] wurde erstellt!";
+"[Gilde] [%s] wurde erstellt!";
 
 "<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
-"<Gilde> Erstellung der Gilde fehlgeschlagen.";
+"[Gilde] Erstellung der Gilde fehlgeschlagen.";
 
 "<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
-"<Gruppe> Gruppenfertigkeiten stehen nur dem Gruppenanführer zur Verfügung.";
+"[Gruppe] Gruppenfertigkeiten stehen nur dem Gruppenanführer zur Verfügung.";
 
 "<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Das Ziel wurde nicht gefunden.";
+"[Gruppe] Das Ziel wurde nicht gefunden.";
 
 "<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
-"<Gilde> Der Yangbetrag ist nicht korrekt.";
+"[Gilde] Der Yangbetrag ist nicht korrekt.";
 
 "<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
-"<Gilde> Du hast nicht genug Yang dabei.";
+"[Gilde] Du hast nicht genug Yang dabei.";
 
 "<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die gesuchte Person kann nicht gefunden werden.";
+"[Gilde] Die gesuchte Person kann nicht gefunden werden.";
 
 "<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
-"<Gilde> Die Person gehört nicht derselben Gilde an.";
+"[Gilde] Die Person gehört nicht derselben Gilde an.";
 
 "<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt ein Gildenmitglied zu entlassen.";
+"[Gilde] Du bist nicht berechtigt ein Gildenmitglied zu entlassen.";
 
 "<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
-"<Gilde> Gildenmitglied %s wurde von der Gilde ausgeschlossen.";
+"[Gilde] Gildenmitglied %s wurde von der Gilde ausgeschlossen.";
 
 "<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
-"<Gilde> Du hast ein Gildenmitglied entlassen.";
+"[Gilde] Du hast ein Gildenmitglied entlassen.";
 
 "<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt deinen Rangnamen zu ändern.";
+"[Gilde] Du bist nicht berechtigt deinen Rangnamen zu ändern.";
 
 "<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Position des Gildenmeisters kann nicht verändert werden.";
+"[Gilde] Die Position des Gildenmeisters kann nicht verändert werden.";
 
 "<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
-"<Gilde> Der Rangname ist ungültig.";
+"[Gilde] Der Rangname ist ungültig.";
 
 "<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt deine Machtposition zu ändern.";
+"[Gilde] Du bist nicht berechtigt deine Machtposition zu ändern.";
 
 "<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Macht des Gildenmeisters kann nicht verändert werden.";
+"[Gilde] Die Macht des Gildenmeisters kann nicht verändert werden.";
 
 "<±æµå> %luÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
-"<Gilde> %lu 's Erfahrung wurde eingesetzt.";
+"[Gilde] %lu 's Erfahrung wurde eingesetzt.";
 
 "<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
-"<Gilde> Erfahrungseinsatz fehlgeschlagen.";
+"[Gilde] Erfahrungseinsatz fehlgeschlagen.";
 
 "<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
-"<Gilde> Nicht genug Yang.";
+"[Gilde] Nicht genug Yang.";
 
 "<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
-"<Gilde> Drachengeist wurde nicht wiederhergestellt.";
+"[Gilde] Drachengeist wurde nicht wiederhergestellt.";
 
 "<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt eine Ankündigung zu machen.";
+"[Gilde] Du bist nicht berechtigt eine Ankündigung zu machen.";
 
 "<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt deine Position zu ändern.";
+"[Gilde] Du bist nicht berechtigt deine Position zu ändern.";
 
 "<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Die Stellung des Gildenmeisters kann nicht geändert werden.";
+"[Gilde] Die Stellung des Gildenmeisters kann nicht geändert werden.";
 
 "<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst deine Stellung nicht zum Gildenmeister ändern.";
+"[Gilde] Du kannst deine Stellung nicht zum Gildenmeister ändern.";
 
 "<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt den Gildenmeister auszuwählen.";
+"[Gilde] Du bist nicht berechtigt den Gildenmeister auszuwählen.";
 
 "<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst keine weiteren Gildenmeister auswählen.";
+"[Gilde] Du kannst keine weiteren Gildenmeister auswählen.";
 
 "¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
 "Du kannst diesen Gegenstand nicht weggeben.";
@@ -1376,10 +1376,10 @@
 "Der Abbau ist fehlgeschlagen.";
 
 "<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
-"<Messenger> Du hast %s als Freund hinzugefügt!";
+"[Messenger] Du hast %s als Freund hinzugefügt!";
 
 "<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
-"<Messenger> Du hast %s von der Liste gelöscht.";
+"[Messenger] Du hast %s von der Liste gelöscht.";
 
 "¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
 "Ein kritischer Server-Fehler ist aufgetreten. Der Server wird automatisch neu gestartet.";
@@ -1481,10 +1481,10 @@
 "Du kannst kein Lager öffnen solange ein anderes Handelsfenster offen ist.";
 
 "<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
-"<Lager> Speicherpasswort wurde geändert.";
+"[Lager] Speicherpasswort wurde geändert.";
 
 "<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
-"<Lager> Du hast das falsche Passwort eingegeben.";
+"[Lager] Du hast das falsche Passwort eingegeben.";
 
 "°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
 "Deine Spielzeit läuft in %d Minuten ab.";
@@ -1604,28 +1604,28 @@
 "Du kannst nicht ohne Angel fischen.";
 
 "ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst keine Anfrage stellen, da der Gruppenanführer nicht online ist.";
+"[Gruppe] Du kannst keine Anfrage stellen, da der Gruppenanführer nicht online ist.";
 
 "<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Mit Spielern eines anderen Reichs kannst du keine Gruppe bilden.";
+"[Gruppe] Mit Spielern eines anderen Reichs kannst du keine Gruppe bilden.";
 
 "<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keine Einladung senden.";
+"[Gruppe] Du kannst in einem Dungeon keine Einladung senden.";
 
 "<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst im Zuschauer-Modus keine Einladung senden.";
+"[Gruppe] Du kannst im Zuschauer-Modus keine Einladung senden.";
 
 "<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
-"<Gruppe> Es können nur Spieler im Levelunterschied von -30 bis +30 eingeladen werden.";
+"[Gruppe] Es können nur Spieler im Levelunterschied von -30 bis +30 eingeladen werden.";
 
 "<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst den Spieler nicht einladen, da sein Level zu niedrig ist.";
+"[Gruppe] Du kannst den Spieler nicht einladen, da sein Level zu niedrig ist.";
 
 "<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst den Spieler nicht einladen, da sein Level zu hoch ist.";
+"[Gruppe] Du kannst den Spieler nicht einladen, da sein Level zu hoch ist.";
 
 "<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst keine weiteren Spieler in deine Gruppe einladen.";
+"[Gruppe] Du kannst keine weiteren Spieler in deine Gruppe einladen.";
 
 "%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
 "Du möchtest der Gruppe von %s beitretten.";
@@ -1634,31 +1634,31 @@
 "Der Spieler befindet sich nicht in der Gruppe.";
 
 "<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst nicht in die Gruppe eintreten, da sie bereits voll ist.";
+"[Gruppe] Du kannst nicht in die Gruppe eintreten, da sie bereits voll ist.";
 
 "<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gruppe> Du hast nicht das Recht eine Einladung zusenden.";
+"[Gruppe] Du hast nicht das Recht eine Einladung zusenden.";
 
 "<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
-"<Gruppe> %s lehnt die Einladung in deine Gruppe ab.";
+"[Gruppe] %s lehnt die Einladung in deine Gruppe ab.";
 
 "<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
-"<Gruppe> %s ist bereits in der Gruppe.";
+"[Gruppe] %s ist bereits in der Gruppe.";
 
 "<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst in einem Dungeon keine Einladung annehmen.";
+"[Gruppe] Du kannst in einem Dungeon keine Einladung annehmen.";
 
 "<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du bist nicht in der Lage die Einladung anzunehmen.";
+"[Gruppe] Du bist nicht in der Lage die Einladung anzunehmen.";
 
 "<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
-"<Gruppe> Deine Einladung wurde abgelehnt.";
+"[Gruppe] Deine Einladung wurde abgelehnt.";
 
 "<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
-"<Gruppe> %s ist deiner Gruppe beigetreten!";
+"[Gruppe] %s ist deiner Gruppe beigetreten!";
 
 "<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
-"<Gruppe> %s ist deiner Gruppe beigetreten!";
+"[Gruppe] %s ist deiner Gruppe beigetreten!";
 
 "´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
 "Du kannst jetzt keinen privaten Laden nutzen.";
@@ -1880,13 +1880,13 @@
 "Dieser Befehl existiert nicht!";
 
 "<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
-"<Gruppe> Die Gruppe hat sich aufgelöst.";
+"[Gruppe] Die Gruppe hat sich aufgelöst.";
 
 "<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst das Ziel nicht rufen.";
+"[Gruppe] Du kannst das Ziel nicht rufen.";
 
 "<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gruppe> Du kannst die Gruppenmitglieder nicht zu deiner aktuellen Position rufen.";
+"[Gruppe] Du kannst die Gruppenmitglieder nicht zu deiner aktuellen Position rufen.";
 
 "ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
 "Deine Gruppe kooperiert und erhält einen zusätzlichen Erfahrungsbonus!";
@@ -1898,55 +1898,55 @@
 "Member ";
 
 "<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
-"<Gilde> Angebotene Erfahrung ist größer als verbleibende Erfahrung.";
+"[Gilde] Angebotene Erfahrung ist größer als verbleibende Erfahrung.";
 
 "<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
-"<Gilde> Die Nachricht kann nicht gelöscht werden.";
+"[Gilde] Die Nachricht kann nicht gelöscht werden.";
 
 "<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
-"<Gilde> Nicht genug Drachengeist. (%d, %d) ";
+"[Gilde] Nicht genug Drachengeist. (%d, %d) ";
 
 "<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst jetzt noch nicht die Gildenfertigkeit nutzen.";
+"[Gilde] Du kannst jetzt noch nicht die Gildenfertigkeit nutzen.";
 
 "<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %lu";
-"<Gilde> %d-Fertigkeit wurde angewendet (%d, %d) auf %lu. ";
+"[Gilde] %d-Fertigkeit wurde angewendet (%d, %d) auf %lu. ";
 
 "<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
-"<Gilde> Der Spieler ist in Kanal %d. (Aktueller Kanal: %d) ";
+"[Gilde] Der Spieler ist in Kanal %d. (Aktueller Kanal: %d) ";
 
 "<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
-"<Gilde> Der Spieler ist nicht online.";
+"[Gilde] Der Spieler ist nicht online.";
 
 "<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
-"<Gilde> Die Gildenfertigkeit kann nur im Krieg benutzt werden.";
+"[Gilde] Die Gildenfertigkeit kann nur im Krieg benutzt werden.";
 
 "<±æµå> %luÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
-"<Gilde> %lu 's Drachengeist wurde wiederhergestellt.";
+"[Gilde] %lu 's Drachengeist wurde wiederhergestellt.";
 
 "<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
-"<Gilde> Nur der Gildenmeister kann Yang abheben.";
+"[Gilde] Nur der Gildenmeister kann Yang abheben.";
 
 "<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
-"<Gilde> Der Spieler lehnt die Gildeneinladung ab.";
+"[Gilde] Der Spieler lehnt die Gildeneinladung ab.";
 
 "<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
-"<Gilde> Du bist nicht berechtigt jemanden in die Gilde einzuladen.";
+"[Gilde] Du bist nicht berechtigt jemanden in die Gilde einzuladen.";
 
 "<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Spieler aus einem anderen Reich können nicht in die Gilde eingeladen werden.";
+"[Gilde] Spieler aus einem anderen Reich können nicht in die Gilde eingeladen werden.";
 
 "<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Du kannst diesen Spieler erst nach %d Tage wieder einladen.";
+"[Gilde] Du kannst diesen Spieler erst nach %d Tage wieder einladen.";
 
 "<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
-"<Gilde> Nach Umgestaltung kannst du erst wieder nach %d Tagen neue Mitglieder einladen.";
+"[Gilde] Nach Umgestaltung kannst du erst wieder nach %d Tagen neue Mitglieder einladen.";
 
 "<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
-"<Gilde> Die Person gehört bereits einer anderen Gilde an.";
+"[Gilde] Die Person gehört bereits einer anderen Gilde an.";
 
 "<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
-"<Gilde> Die maximale Gildenkapazität ist erreicht.";
+"[Gilde] Die maximale Gildenkapazität ist erreicht.";
 
 "¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
 "Du kannst diese Fertigkeit nicht trainieren.";
@@ -1976,7 +1976,7 @@
 "Du hast dein Training mit dem Buch erfolgreich abgeschlossen!";
 
 "°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
-"Du kannst das nicht wegen mangelnder Erfahrung lesen.";
+"Du kannst das wegen mangelnder Erfahrung nicht lesen.";
 
 "ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
 "Du kannst diese Fertigkeit nicht mehr mit einem Buch trainieren.";
@@ -2075,7 +2075,7 @@
 "Du hast nicht das richtige Material.";
 
 "<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
-"<Gilde> Bitte versuche es später noch mal.";
+"[Gilde] Bitte versuche es später noch mal.";
 
 "%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
 "Du hast das %d Buch gelesen.";
@@ -2084,7 +2084,7 @@
 "%d Das Lesen des Fertigkeitsbuches ist fehlgeschlagen.";
 
 "<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
-"<Gilde> Bitte versuche es später erneut.";
+"[Gilde] Bitte versuche es später erneut.";
 
 "¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
 "Diese Funktion kann nur im Schloss verwendet werden.";
@@ -2165,7 +2165,7 @@
 "Du kannst keine Emotionen austauschen mit jemanden, der auf einem Pferd sitzt.";
 
 "<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
-"<Gilde> Der Gildenleader ist offline!";
+"[Gilde] Der Gildenleader ist offline!";
 
 "%ld ½Ã°£ %ld ºĞ %ld ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
 "Chatten wurde f? %ld Stunde(n) %ld Minute(n) %ld Sekunde(n) untersagt";
@@ -2191,6 +2191,9 @@
 "¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
 "Item drop rate";
 
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Du hast %d Yang fallen gelassen.";
+
 "ÀüÁ¦±¹";
 "All Empires";
 
@@ -2211,3 +2214,24 @@
 
 "SECOND";
 "Sekunden";
+
+"Change channel in %d seconds.";
+"Wechsel Channel in %d Sekunden.";
+
+"You can't change channel in private map.";
+"Du kannst den Channel nicht in einem Dungeon wechseln.";
+
+"You can't change channel in this map.";
+"Du kannst den Channel auf dieser Map nicht wechseln.";
+
+"You are already in this channel.";
+"Du bist bereits in diesem Channel.";
+
+"You can't do that now. Wait 10 seconds and try again.";
+"Du kannst den Channel jetzt nicht wechseln. Versuche es in 10 Sekunden erneut.";
+
+"This channel is not valid.";
+"Dieser Channel existiert nicht.";
+
+"Change channel canceled.";
+"Channel wechsel wurde abgebrochen.";

@@ -8,6 +8,10 @@ quest_announcements/first_login.lua
 quest_announcements/level_100_notice.lua
 quest_announcements/refine_item_lv9_notice.lua
 
+quest_dungeon/deviltower_zone.quest
+quest_dungeon/devilcatacomb_zone.quest
+quest_dungeon/blue_dragon_zone.quest
+
 quest_guild/guild_building_alter_of_power.quest
 quest_guild/guild_building_melt.quest
 quest_guild/guild_building_npc.quest
@@ -19,10 +23,12 @@ quest_guild/guild_war_bet.quest
 quest_guild/guild_war_join.quest
 quest_guild/guild_war_observer.quest
 
+quest_horse/horse_appearance.lua
 quest_horse/horse_examination_01.lua
 quest_horse/horse_examination_25.lua
 quest_horse/horse_examination_50.lua
 quest_horse/horse_examination_75.lua
+quest_horse/horse_kingdom_item.lua
 quest_horse/horse_medaille.lua
 quest_horse/horse_menu.lua
 quest_horse/horse_summon.lua
@@ -39,6 +45,7 @@ quest_item/item_reset_skill.quest
 quest_item/item_reset_status.quest
 quest_item/item_soulstone.lua
 quest_item/item_warpring.lua
+quest_item/item_shop_chests.lua
 
 quest_npc/npc_arena_manager.lua
 quest_npc/npc_fisher_buy_fishrod.lua
@@ -52,7 +59,9 @@ quest_npc/npc_skill_reset.lua
 quest_npc/npc_smith_crafting.lua
 quest_npc/npc_warehouse_item_destroyer.lua
 quest_npc/npc_warehouse_shop.lua
+quest_npc/npc_warp_arena.lua
 quest_npc/npc_warp_spiderdungeon_2.lua
+quest_npc/npc_warp_grotte.lua
 
 quest_playerquests/bio.lua
 

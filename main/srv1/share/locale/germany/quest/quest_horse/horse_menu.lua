@@ -1,7 +1,8 @@
 quest horse_menu begin
-    state start begin
+	state start begin
 		when 20030.click or 20101.click or 20102.click or 20103.click or 20104.click or 20105.click or 20106.click or 20107.click
-			or 20108.click or 20109.click or 20119.click or 20120.click or 20121.click or 20122.click or 20119.click begin
+			or 20108.click or 20109.click or 20110.click or 20111.click or 20112.click or 20113.click or 20114.click 
+			or 20115.click or 20116.click or 20117.click or 20118.click or 20119.click or 20120.click or 20121.click begin
 			if horse.is_mine() then
 				say(locale.horse_menu.menu)
 				say("")

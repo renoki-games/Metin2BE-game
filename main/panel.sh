@@ -1,6 +1,6 @@
 #!/bin/sh
 #### @martysama0134 start scripts ####
-v_base=$PWD
+v_base=/usr/home/game/main
 v_mt2f=$v_base
 v_bakf=$v_base/baks
 v_dbf=$v_bakf/db
@@ -32,7 +32,6 @@ abio () { echo -e "\033[31m$1\033[32m$1\033[33m$1\033[34m$1\033[35m$1\033[36m$1\
 r_echo ".:. AdminPanel .:."
 gecho "What do you want to do?"
 recho "1. Start (start)
-1c. Restart (restart and clean)
 1i. Start Interactive (starti)
 2. Stop (stop|close)
 2i. Stop Interactive (stopi|closei)
@@ -40,6 +39,7 @@ recho "1. Start (start)
 33. Clean All (cleanall|clearall)
 4. Backup mysql/db (bak1|db|db_backup)
 5. Backup game/fs (bak2|fs|fs_backup)
+6. Restart (restart)
 11. Compile game (compile_game)
 12. Clean and Compile game (clean_and_compile_game)
 13. Compile db (compile_db)
@@ -60,24 +60,6 @@ fi
 
 case  $phase in
 1|start)
-	cd $v_mt2f
-	$v_bin start.py
-	cd $v_base
-	cecho "start completed"
-;;
-1c|restartandclean)
-	cd $v_mt2f
-	$v_bin stop.py
-	cd $v_base
-	cecho "stop completed"
-
-	cd $v_mt2f
-	$v_bin clear.py
-	cd $v_base
-	make -C $v_dbf clean
-	make -C $v_fsf clean
-	cecho "cleanall completed"
-
 	cd $v_mt2f
 	$v_bin start.py
 	cd $v_base
@@ -136,26 +118,46 @@ case  $phase in
 	make -C $v_fsf dump
 	cecho "bak fs completed"
 ;;
+5|restart)
+	cd $v_mt2f
+	$v_bin stop.py
+	cecho "stop completed"
+
+	$v_bin clear.py
+	make -C $v_dbf clean
+	make -C $v_fsf clean
+	cecho "cleanall completed"
+
+	cd $v_mt2f/$v_foldername/share/locale/$v_localename/quest
+	chmod u+x qc
+	$v_bin pre_qc.py -ac
+	cd $v_base
+	cecho "quest completed"
+
+	$v_bin start.py
+	cd $v_base
+	cecho "start completed"
+;;
 11|compile_game)
 	cd $v_gamesrcpath
-	gmake -j13
+	gmake -j9
 	cecho "game src compiled"
 ;;
 12|clean_and_compile_game)
 	cd $v_gamesrcpath
 	gmake clean
-	gmake -j13
+	gmake -j9
 	cecho "game src clean compiled"
 ;;
 13|compile_db)
 	cd $v_dbsrcpath
-	gmake -j13
+	gmake -j9
 	cecho "db src compiled"
 ;;
 14|clean_and_compile_db)
 	cd $v_dbsrcpath
 	gmake clean
-	gmake -j13
+	gmake -j9
 	cecho "db src clean compiled"
 ;;
 666|gen)

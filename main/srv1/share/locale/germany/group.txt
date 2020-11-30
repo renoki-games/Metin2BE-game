@@ -3660,12 +3660,11 @@ Group	L70_¢¥AA¨¬C¨ªAu(Boss)-©öi¡íc¡Æ©ª(Boss)
 }
 Group	L70_¢¬¡í(Boss)-A¢Ò¢Òu¢¬¡í(Boss)
 {
-	Leader	.	20025
+	Leader	PonyWeiss	20150
 	Vnum	12007
-	1	Pony	20029
-	2	Pony	20029
-	3	Pferd	20030
-	4	Pferd	20030
+	1	PonyBraun	20151
+	2	PonySchwarz	20152
+	3	Appaloosa	20153
 }
 Group	¢¥UAI¨ú¨¡¢¬o¥ìa¡¾¢´¢¬¨¡
 {

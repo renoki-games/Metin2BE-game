@@ -96,10 +96,20 @@ end
 			end
 			if pc.getsp()>=100 then
 				if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
+					horse.set_appearance(horse.get_appearance())
 					chat("Pferd erfolgreich gerufen! (Pferd Level: "..horse.get_level()..")")
-					horse.summon(false, item.get_value(5))
+					if horse.get_appearance() != 0 then
+						horse.summon()
+					else
+						if horse.get_appearance() == 50506 then
+							horse.set_appearance(pc.getqf("safe_horse_before"))
+							horse.summon()
+						else
+							horse.summon()
+						end
+					end
 				else
-					chat("Es hat nicht funktioniert - das Pferd konnte nicht gerufen werden.")
+					chat("Es hat nicht funktioniert, das Anfängerpferd konnte nicht gerufen werden.")
 				end
 				pc.change_sp(-100)
 			else
@@ -131,9 +141,18 @@ end
 			if pc.getsp()>=200 then
 				if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
 					chat("Pferd erfolgreich gerufen! (Pferd Level: "..horse.get_level()..")")
-					horse.summon(false, item.get_value(5))
+					if horse.get_appearance() != 0 then
+						horse.summon()
+					else
+						if horse.get_appearance() == 50506 then
+							horse.set_appearance(pc.getqf("safe_horse_before"))
+							horse.summon()
+						else
+							horse.summon()
+						end
+					end
 				else
-					chat("Es hat nicht funktioniert - das Kampfpferd konnte nicht gerufen werden.")
+					chat("Es hat nicht funktioniert, das Kampfpferd konnte nicht gerufen werden.")
 				end
 				pc.change_sp(-200)
 			else
@@ -164,9 +183,18 @@ end
 			if pc.getsp()>=300 then
 				if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
 					chat("Pferd erfolgreich gerufen! (Pferd Level: "..horse.get_level()..")")
-					horse.summon(false, item.get_value(5))
+					if horse.get_appearance() != 0 then
+						horse.summon()
+					else
+						if horse.get_appearance() == 50506 then
+							horse.set_appearance(pc.getqf("safe_horse_before"))
+							horse.summon()
+						else
+							horse.summon()
+						end
+					end
 				else
-					chat("Es hat nicht funktioniert - das Militärpferd konnte nicht gerufen werden.")
+					chat("Es hat nicht funktioniert, das Militärpferd konnte nicht gerufen werden.")
 				end
 				pc.change_sp(-300)
 			else
@@ -186,11 +214,11 @@ end
 			say(gameforge.buy_fishrod._210_sayTitle)
 			say(gameforge.horse_summon._190_sayReward)
 		end
-		when 50069.use with horse.get_grade()==3 begin
+		when 50069.use with horse.get_level()<30 begin
 			say(gameforge.buy_fishrod._210_sayTitle)
 			say(gameforge.horse_summon._250_sayReward)
 		end
-		when 50069.use with horse.get_grade()==4 begin
+		when 50069.use with horse.get_level()==30 begin
 			if pc.get_map_index() >= 1100000 and pc.get_map_index() <= 1300000 then
 				syschat("Du kannst in einem Gildenkrieg kein Pferd rufen.")
 				return
@@ -198,9 +226,18 @@ end
 			if pc.getsp()>=500 then
 				if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
 					chat("Pferd erfolgreich gerufen! (Pferd Level: "..horse.get_level()..")")
-					horse.summon(false, item.get_value(5))
+					if horse.get_appearance() == 0 then
+						horse.summon(false, item.get_value(5))
+					else
+						if horse.get_appearance() == 50506 then
+							horse.set_appearance(pc.getqf("safe_horse_before"))
+							horse.summon()
+						else
+							horse.summon()
+						end
+					end
 				else
-					chat("Es hat nicht funktioniert - das Schlachtenross konnte nicht gerufen werden.")
+					chat("Es hat nicht funktioniert, das Schlachtross konnte nicht gerufen werden.")
 				end
 				pc.change_sp(-500)
 			else
@@ -213,7 +250,17 @@ end
 				syschat("Du kannst in einem Gildenkrieg kein Pferd rufen.")
 				return
 			else
-				horse.summon(false, item.get_value(5))
+				if horse.get_appearance() != 0 then
+					if horse.get_appearance() != 50506 then
+						pc.setqf("safe_horse_before", horse.get_appearance())
+						horse.set_appearance(item.get_value(5))
+						horse.summon()
+					else
+						horse.summon()
+					end
+				else
+					horse.summon(false, item.get_value(5))
+				end
 			end
 		end
 	end

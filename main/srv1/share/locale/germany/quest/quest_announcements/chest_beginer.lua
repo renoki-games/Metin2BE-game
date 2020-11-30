@@ -1,10 +1,17 @@
 quest truhen_zero begin
 	state start begin
 		when login begin
-			say_title("Willkommen auf Metin2 - Black Edition")
+			say_title("Herzlich Willkommen in der Welt von Metin2 - Black Edition")
+			say("Hallo " ..pc.get_name().. ", du erhälst von uns dein Starterset.")
 			say("")
-			say("Du erhälst von uns dein Starterset,")
-			say("wir wünschen dir viel Spaß!")
+			say_title("Wie farmst du richtig Yang?")
+			say("- Fertigkeitsbuch: 50K Yang")
+			say("- Geiststein: 20K - 2KK Yang")
+			say("- Verwandlungskugel: 2KK Yang")
+			say("Einfach bei einem NPC verkaufen.")
+			say("")
+			say("Wir wünschen dir viel Spaß! :)")
+			say("")
 			pc.give_item2(50187)
 			horse.set_level(0)
 			set_state(truhen)
@@ -62,7 +69,7 @@ quest truhen_zero begin
 			pc.give_item2(50189, 1)				--Lehrlingstruhe III
 			pc.give_item2(71004, 3)				--Medaille des Drachen
 			pc.give_item2(27989, 1)				--Kompass des Metinsteins
-			pc.give_item2(39006, 10)			--Tapferkeitsumhang
+			pc.give_item2(76007, 40)			--Tapferkeitsumhang
 			pc.give_item2(71049, 1)				--Seidenbündel
 		end
 		when 50189.use with pc.get_level() >= 20 begin
@@ -70,35 +77,35 @@ quest truhen_zero begin
 			pc.give_item2(50190, 1)				--Expertentruhe I
 			pc.give_item2(71004, 6)				--Medaille des Drachen
 			pc.give_item2(27989, 2)				--Kompass des Metinsteins
-			pc.give_item2(39006, 20)			--Tapferkeitsumhang
+			pc.give_item2(76007, 60)			--Tapferkeitsumhang
 			pc.give_item2(71012, 1)				--Buch des Anführers
 		end
 		when 50190.use with pc.get_level() >= 30 begin
 			pc.remove_item(50190, 1)			--Expertentruhe I verschwindet
 			pc.give_item2(50191, 1)				--Expertentruhe II
-			pc.give_item2(27987, 1)				--Muschel
+			pc.give_item2(27987, 3)				--Muschel
 			pc.give_item2(71004, 9)				--Medaille des Drachen
 			pc.give_item2(27989, 3)				--Kompass des Metinsteins
-			pc.give_item2(39006, 30)			--Tapferkeitsumhang
+			pc.give_item2(76007, 80)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 		end
 		when 50191.use with pc.get_level() >= 40 begin
 			pc.remove_item(50191, 1)			--Expertentruhe II verschwindet
 			pc.give_item2(50192, 1)				--Expertentruhe III
-			pc.give_item2(27987, 2)				--Muschel
+			pc.give_item2(27987, 4)				--Muschel
 			pc.give_item2(71153, 1)				--Trank der Weisheit
-			pc.give_item2(39006, 40)			--Tapferkeitsumhang
+			pc.give_item2(76007, 100)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
-			pc.give_item2(71151, 3)				--Grüner Zauber
-			pc.give_item2(71152, 3)				--Grüne Stärke
+			pc.give_item2(71084, 3)				--Gegenstand verzaubern
+			pc.give_item2(71085, 3)				--Gegenstand verstärken
 		end
 		when 50192.use with pc.get_level() >= 50 begin
 			pc.remove_item(50192, 1)			--Expertentruhe III verschwindet
 			pc.give_item2(50193, 1)				--Meistertruhe I
-			pc.give_item2(27987, 3)				--Muschel
-			pc.give_item2(39006, 50)			--Tapferkeitsumhang
+			pc.give_item2(27987, 5)				--Muschel
+			pc.give_item2(76007, 120)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern
@@ -108,8 +115,8 @@ quest truhen_zero begin
 		when 50193.use with pc.get_level() >= 60 begin
 			pc.remove_item(50193, 1)			--Meistertruhe I verschwindet
 			pc.give_item2(50194, 1)				--Meistertruhe II
-			pc.give_item2(27987, 4)				--Muschel
-			pc.give_item2(39006, 60)			--Tapferkeitsumhang
+			pc.give_item2(27987, 6)				--Muschel
+			pc.give_item2(76007, 140)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern
@@ -120,8 +127,8 @@ quest truhen_zero begin
 		when 50194.use with pc.get_level() >= 70 begin
 			pc.remove_item(50194, 1)			--Meistertruhe II verschwindet
 			pc.give_item2(50195, 1)				--Meistertruhe III
-			pc.give_item2(27987, 5)				--Muschel
-			pc.give_item2(39006, 70)			--Tapferkeitsumhang
+			pc.give_item2(27987, 7)				--Muschel
+			pc.give_item2(76007, 160)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern
@@ -133,8 +140,8 @@ quest truhen_zero begin
 		when 50195.use with pc.get_level() >= 80 begin
 			pc.remove_item(50195, 1)			--Meistertruhe III verschwindet
 			pc.give_item2(50196, 1)				--Großmeistertruhe
-			pc.give_item2(27987, 6)				--Muschel
-			pc.give_item2(39006, 80)			--Tapferkeitsumhang
+			pc.give_item2(27987, 8)				--Muschel
+			pc.give_item2(76007, 180)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern
@@ -146,8 +153,8 @@ quest truhen_zero begin
 		when 50196.use with pc.get_level() >= 90 begin
 			pc.remove_item(50196, 1)			--Großmeistertruhe verschwindet
 			pc.give_item2(50197, 1)				--Perfekte Meistertruhe
-			pc.give_item2(27987, 7)				--Muschel
-			pc.give_item2(39006, 90)			--Tapferkeitsumhang
+			pc.give_item2(27987, 9)				--Muschel
+			pc.give_item2(76007, 200)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern
@@ -158,8 +165,8 @@ quest truhen_zero begin
 		end
 		when 50197.use with pc.get_level() >= 100 begin
 			pc.remove_item(50197, 1)			--Perfekte Meistertruhe verschwindet
-			pc.give_item2(27987, 8)				--Muschel
-			pc.give_item2(39006, 100)			--Tapferkeitsumhang
+			pc.give_item2(27987, 10)			--Muschel
+			pc.give_item2(76007, 250)			--Tapferkeitsumhang
 			pc.give_item2(71001, 3)				--Exorzismus-Schriftrolle
 			pc.give_item2(71094, 3)				--Konzentriertes Lesen
 			pc.give_item2(71084, 3)				--Gegenstand verzaubern

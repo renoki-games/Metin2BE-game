@@ -26,13 +26,13 @@ quest missionbooks begin
 				{5, {5113, 15}, {5114, 15}, "Geheimnis des normalen Affen 2", "Der Ort des normalen Affendungeons in der Wüste wurde endlich entdeckt.  Soweit wir wissen, sind diese Affen keine Gefahr,  aber wenn sie sich zusammenrotten, können sie das Reich gefährden.  Begib Dich zum normalen Affendungeon  und finde heraus, wer sich dahinter verbirgt.", "Missionsbuch erfüllt!"},
 				{6, {631, 30}, {632, 30}, "Großer Aufstand der Orks 1", "Geheime Informationen legen die Vermutung nahe, dass die Anführer der Orks im Tal von Seungryong an Weltherrschaftsplänen arbeiten. Schau dich dort bitte einmal um und überprüfe die Richtigkeit dieser Informationen. Und damit sich die Reise lohnt, könntest du gleich noch ein paar Orks aus dem Weg schaffen.", "Missionsbuch erfüllt!"}, 
 				{7, {633, 20}, {634, 15}, "Großer Aufstand der Orks 2", "Geheime Informationen deuten darauf hin, dass die Anführer der Orks im Tal von Seungryong planen, die ganze Welt zu unterwerfen. So lächerlich das auch klingen mag, solltest du dieses Gerücht dennoch überprüfen. Und wenn du schon mal dort bist, könntest du auch gleich noch ihre Truppen dezimieren.", "Missionsbuch erfüllt!"}, 
-				{8, {8006, 10}, {0, 0}, "Metin der Dunkelheit zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
-				{9, {8007, 10}, {0, 0}, "Metin der Eifersucht zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
-				{10, {8005, 10}, {0, 0}, "Metin der Schwärze zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
+				{8, {8006, 3}, {0, 0}, "Metin der Dunkelheit zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
+				{9, {8007, 2}, {0, 0}, "Metin der Eifersucht zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
+				{10, {8005, 2}, {0, 0}, "Metin der Schwärze zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden.", "Missionsbuch erfüllt!"}, 
 				{11, {501, 30}, {502, 30}, "Überfall der Wilden", "Wir haben einen Spion der Wilden geschnappt und ihm wichtige Informationen entlockt. Offenbar planen sie einen Überfall auf das Reich. Wir müssen ihrem Angriff zuvorkommen. Beweise deine Treue zum Reich!", "Missionsbuch erfüllt!"}, 
 				{12, {404, 25}, {405, 25}, "Unruhiger schwarzer Wind", "Es heißt neuerdings, dass die Schwarzwindbande sich anschickt, das Land in einem einzigen Handstreich zu übernehmen. Bevor sie genügend Truppen rekrutieren können, sollten wir sie ihrer Führung berauben. Ich bitte dich: Schalte ihre Anführer aus!"}, 
 				{13, {304, 20}, {0, 0}, "Vertreiben der weißen Armee", "In letzter Zeit hat die Armee des Weißen-Eides uns sehr zu schaffen gemacht. Sie entführt oft fahrende Händler und richtet im Dorf Verwüstungen an. Bitte halte sie auf. Schalte Mitglieder der Armee und ihre Anführerinnen aus.", "Missionsbuch erfüllt!"}, 
-				{14, {494, 5}, {0, 0}, "Wer Wind sät, wird Sturm ernten", "Die Chuong, Anführer der Schwarzwindbande, machen Ärger. Als Meister des Schwertkampfs haben sie nur zum Spaß andere Krieger herausgefordert. Schalte sie aus, bevor sie die gesamte Schwarzwindbande mit ihrem Übermut anstecken.", "Missionsbuch erfüllt!"}, 
+				{14, {494, 4}, {0, 0}, "Wer Wind sät, wird Sturm ernten", "Die Chuong, Anführer der Schwarzwindbande, machen Ärger. Als Meister des Schwertkampfs haben sie nur zum Spaß andere Krieger herausgefordert. Schalte sie aus, bevor sie die gesamte Schwarzwindbande mit ihrem Übermut anstecken.", "Missionsbuch erfüllt!"}, 
 			} 
 			return quests 
 		end 
@@ -52,30 +52,28 @@ quest missionbooks begin
 				{12, {5123, 15}, {5124, 15}, "Geheimnis des schweren Affendungeons 2", "Die Lage des schweren Affendungeons in der Wüste wurde endlich ermittelt. Normalerweise stellen die dort lebenden Affen keine Gefahr dar, aber wenn sie sich zusammenrotten, könnten sie das Reich gefährden. Begib dich zum schweren Affendungeon und sieh nach, wie es um die Affenpopulation steht."}, 
 				{13, {1001, 30}, {1002, 20}, "Gesellschaft des Todes 1", "Hast du schon vom Dämonenturm gehört? Dort haben esoterische Sekten mit mächtiger Magie Dämonensoldaten beschworen. Bekämpfe sie und finde so heraus, wie mächtig sie sind."}, 
 				{13, {1003, 30}, {1004, 25}, "Gesellschaft des Todes 2", "Hast du schon vom Dämonenturm gehört? Dort haben esoterische Sekten mit mächtiger Magie Dämonensoldaten beschworen. Bekämpfe sie und finde so heraus, wie mächtig sie sind."}, 
-				{14, {8010, 10}, {0, 0}, "Metin der Härte zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
-				{15, {8009, 10}, {0, 0}, "Metin der Seele zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
-				{16, {8008, 10}, {0, 0}, "Metin des Schattens zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
-				{17, {2051, 50}, {2052, 50}, "Sie haben acht Beine 1(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
-				{18, {2053, 50}, {2054, 50}, "Sie haben acht Beine 2(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
-				{19, {2055, 100}, {0, 0}, "Sie haben acht Beine 3(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
-				{20, {2103, 30}, {2104, 20}, "Skorpionplage", "Diese Skorpionwesen tyrannisieren Reisende und Händler, was sich schlecht auf die Wirtschaft des Reiches auswirkt. Bitte hilf dabei, dieser Plage Herr zu werden."}, 
-				{21, {2001, 40}, {0, 0}, "Wut der Spinne 1", "Spinnen, die normalerweise friedlich in der Yongbi-Wüste leben, haben angefangen, Reisende anzugreifen und zu töten. Abgesehen davon, dass die Betroffenen wenig erfreut sind, haben diese Angriffe unangenehme Auswirkungen auf die Handelsbeziehungen im Reich. Sorge bitte dafür, dass das aufhört."}, 
-				{22, {2002, 40}, {0, 0}, "Wut der Spinne 2", "Spinnen, die normalerweise friedlich in der Yongbi-Wüste leben, haben angefangen, Reisende anzugreifen und zu töten. Abgesehen davon, dass die Betroffenen wenig erfreut sind, haben diese Angriffe unangenehme Auswirkungen auf die Handelsbeziehungen im Reich. Sorge bitte dafür, dass das aufhört."}, 
-				{23, {2302, 40}, {2303, 30}, "Das Geheimnis des Geisterwaldes", "Nachforschungen haben ergeben, dass der Geisterwald ein Gebiet ist, das von Geisterbaumstumpf und Dryade dominiert wird. Wenn du sie vernichtest, kannst du vielleicht verhindern, dass sich die Geisterbäume weiter ausbreiten."}, 
-				{24, {2301, 50}, {0, 0}, "Untersuche die Geisterbäume", "Sie stehen wie normale, etwas finster aussehende Bäume in der Landschaft herum – doch dann werden sie plötzlich lebendig und greifen Tiere und Menschen an. Finde heraus, wie die Geisterbäume vernichtet werden können."}, 
-				{25, {2204, 40}, {0, 0}, "Erforsche die Flammen", "Die Flammen sind unglaublich brutal. Sie ergötzen sich am Schmerz der Menschen, deren Haut sie gerade verzehren. Wir haben noch keine Ahnung, wie wir sie ausschalten können. Kannst du mehr über diese Flammen herausfinden?"}, 
-				{26, {2202, 45}, {0, 0}, "Flammengeist! Seine Identität", "Eine Gruppe, die Kampftiger jagen sollte, wurde selbst von noch unbekannten Gegnern vernichtet. Es heißt, dass diese Gegner wie brennende Mädchen aussehen, also finde heraus, worum es sich handelt."}, 
-				{27, {2205, 60}, {0, 0}, "Flammenkrieger", "Vor Kurzem wurde das Kind eines Adligen, das sich in das Feuerland begab, von einem Flammenkrieger erschlagen. Wenn du die Flammenkrieger tötest, erhältst du eine Belohnung. Warum forderst du sie nicht heraus?"}, 
-				{28, {2201, 60}, {2203, 40}, "Reduziere die Zahl der Kampftiger", "Jetzt, da wir die Feuergeister bekämpfen können, müssen wir sie im offenen Kampf komplett vernichten. Diese Aufgabe wird vom Militär übernommen, aber um mit voller Kampfstärke zu den Feuergeistern durchdringen zu können, brauchen wir eine Einfallschneise. Bitte sorge dafür, dass uns keine Kampftiger in die Quere kommen."}, 
-				{29, {2201, 45}, {0, 0}, "Doyyumhwan erforschen", "Doyyumhwan ist ein Lavagebiet, das von noch unbekannten Monstern bevölkert wird. Wir müssen diese Region erforschen. Kannst du uns dabei helfen?"} 
-			} 
+				{14, {8010, 2}, {0, 0}, "Metin der Härte zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
+				{15, {8009, 2}, {0, 0}, "Metin der Seele zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
+				{16, {8008, 2}, {0, 0}, "Metin des Schattens zerstören", "Seit kurzem regnet es Steine in der Nähe der Stadt. Sie scheinen böses Chi zu besitzen, denn seitdem gebärden sich die Tiere in der Umgebung wie toll. Bitte kümmere dich darum, dass diese Steine zerstört werden. Du wirst für deine Mühe angemessen entlohnt werden."}, 
+				{17, {2051, 35}, {2052, 35}, "Sie haben acht Beine 1(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
+				{18, {2053, 35}, {2054, 35}, "Sie haben acht Beine 2(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
+				{19, {2033, 35}, {2034, 35}, "Sie haben acht Beine 3(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
+				{19, {2035, 40}, {0, 0}, "Sie haben acht Beine 4(SD2)", "In der Yongbi-Wüste wurde ein Höhlensystem entdeckt, das den dort lebenden Spinnen als Unterschlupf dient. Wir haben keine genaueren Informationen über diese Spinnenhöhlen, aber die Gegend ist als sehr gefährlich bekannt. Andererseits ergibt sich durch die Ansammlung vieler Spinnen auf engem Raum eine gute Gelegenheit, ihre Zahl und damit auch ihre Bedrohlichkeit zu verringern. Also mach dich auf den Weg! Und sei vorsichtig!"}, 
+				{21, {2103, 30}, {2104, 20}, "Skorpionplage", "Diese Skorpionwesen tyrannisieren Reisende und Händler, was sich schlecht auf die Wirtschaft des Reiches auswirkt. Bitte hilf dabei, dieser Plage Herr zu werden."}, 
+				{22, {2001, 40}, {0, 0}, "Wut der Spinne 1", "Spinnen, die normalerweise friedlich in der Yongbi-Wüste leben, haben angefangen, Reisende anzugreifen und zu töten. Abgesehen davon, dass die Betroffenen wenig erfreut sind, haben diese Angriffe unangenehme Auswirkungen auf die Handelsbeziehungen im Reich. Sorge bitte dafür, dass das aufhört."}, 
+				{23, {2002, 40}, {0, 0}, "Wut der Spinne 2", "Spinnen, die normalerweise friedlich in der Yongbi-Wüste leben, haben angefangen, Reisende anzugreifen und zu töten. Abgesehen davon, dass die Betroffenen wenig erfreut sind, haben diese Angriffe unangenehme Auswirkungen auf die Handelsbeziehungen im Reich. Sorge bitte dafür, dass das aufhört."}, 
+				} 
 			return quests 
 		end 
 		function expertquests() 
 			local quests = { 
-				{1, {106, 35}, {0, 0}, "Auftauchen der Grauwölfe 1", "Hast du von den Grauwölfen gehört? Sie waren meist alleine unterwegs, aber durch den Einfluss des bösen Chi in letzter Zeit haben sie begonnen, in Rudeln Reisende zu jagen. Kannst Du diese Grauwölfe ausschalten? Du wirst sicher belohnt werden.", "Missionsbuch erfüllt!"}, 
-				{2, {107, 30}, {0, 0}, "Auftauchen der Grauwölfe 2", "Hast du von den Alpha-Grauwölfen gehört? Sie waren meist alleine unterwegs, aber durch den Einfluss des bösen Chi in letzter Zeit haben sie begonnen, in Rudeln Reisende zu jagen. Kannst Du diese Alpha-Grauwölfe ausschalten? Du wirst sicher belohnt werden.", "Missionsbuch erfüllt!"}, 
-				{3, {104, 35}, {105, 25}, "Der Sturm der Blauwölfe", "Hast Du schon vom Sturm der Blauwölfe gehört? Das bezieht sich auf die Untaten der Blauwölfe in letzter Zeit. Sie vernichten alles was ihnen im Weg ist, als wären sie ein Sturm aus Pelz und Zähnen. Kannst Du diesen Sturm der Blauwölfe bändigen?", "Missionsbuch erfüllt!"}, 
+				{1, {2302, 40}, {2303, 30}, "Das Geheimnis des Geisterwaldes", "Nachforschungen haben ergeben, dass der Geisterwald ein Gebiet ist, das von Geisterbaumstumpf und Dryade dominiert wird. Wenn du sie vernichtest, kannst du vielleicht verhindern, dass sich die Geisterbäume weiter ausbreiten."}, 
+				{2, {2301, 30}, {0, 0}, "Untersuche die Geisterbäume", "Sie stehen wie normale, etwas finster aussehende Bäume in der Landschaft herum – doch dann werden sie plötzlich lebendig und greifen Tiere und Menschen an. Finde heraus, wie die Geisterbäume vernichtet werden können."}, 
+				{3, {2204, 40}, {0, 0}, "Erforsche die Flammen", "Die Flammen sind unglaublich brutal. Sie ergötzen sich am Schmerz der Menschen, deren Haut sie gerade verzehren. Wir haben noch keine Ahnung, wie wir sie ausschalten können. Kannst du mehr über diese Flammen herausfinden?"}, 
+				{4, {2202, 45}, {0, 0}, "Flammengeist! Seine Identität", "Eine Gruppe, die Kampftiger jagen sollte, wurde selbst von noch unbekannten Gegnern vernichtet. Es heißt, dass diese Gegner wie brennende Mädchen aussehen, also finde heraus, worum es sich handelt."}, 
+				{5, {2205, 60}, {0, 0}, "Flammenkrieger", "Vor Kurzem wurde das Kind eines Adligen, das sich in das Feuerland begab, von einem Flammenkrieger erschlagen. Wenn du die Flammenkrieger tötest, erhältst du eine Belohnung. Warum forderst du sie nicht heraus?"}, 
+				{6, {2201, 60}, {2203, 40}, "Reduziere die Zahl der Kampftiger", "Jetzt, da wir die Feuergeister bekämpfen können, müssen wir sie im offenen Kampf komplett vernichten. Diese Aufgabe wird vom Militär übernommen, aber um mit voller Kampfstärke zu den Feuergeistern durchdringen zu können, brauchen wir eine Einfallschneise. Bitte sorge dafür, dass uns keine Kampftiger in die Quere kommen."}, 
+				{7, {2201, 45}, {0, 0}, "Doyyumhwan erforschen", "Doyyumhwan ist ein Lavagebiet, das von noch unbekannten Monstern bevölkert wird. Wir müssen diese Region erforschen. Kannst du uns dabei helfen?"} 
 			} 
 			return quests 
 		end 
@@ -83,38 +81,38 @@ quest missionbooks begin
 		function einfache_belohnungen_item() 
 			local item = {
 			--  Item // Count
-				{ 25040, 1 },		-- Segensschriftrolle
-				{ 71084, 20 },		-- Gegenstand verzaubern
-				{ 71085, 5 },		-- Gegenstand verstärken
-				{ 71151, 30 },		-- Grüner verzaubern
-				{ 71152, 10 },		-- Grüner verstärken
-				{ 70024, 1 },		-- Segenskugel
-				{ 50300, 3},		-- Fertigkeitsbuch
-				{ 50050, 3},		-- Pferdemedaille
-				{ 50008, 1},		-- Goldener Schlüssel
-				{ 50009, 1},		-- Silberner Schlüssel
+				{ 30003, 1 },		-- Schweinenase
+				{ 30053, 1 },		-- Bärenfußhaut
+				{ 30072, 1 },		-- Bärenfußhaut+
+				{ 30010, 1 },		-- Bärengalle
+				{ 30071, 1 },		-- Bärengalle+
+				{ 30038, 1 },		-- Tigerfell
+				{ 30023, 1 },		-- Weißes Tigerfell
+				{ 30028, 1 },		-- Wolfskralle
+				{ 30069, 1 },		-- Wolfskralle+
+				{ 30004, 1 },		-- Keilerzahn
 			}
 			return item 
 		end
 		function einfache_belohnungen_exp() 
 			local experience = {
 				-- EXP // Chance
-				{ 10000,	20 },
+				{ 10000,	35 },
 				{ 20000,	30 },
-				{ 40000,	35 },
-				{ 75000,	10 },
-				{ 100000,	5 },
+				{ 30000,	20 },
+				{ 50000,	10 },
+				{ 80000,	5 },
 			}
 			return experience
 		end
 		function einfache_belohnungen_gold() 
 			local gold ={
 				-- Gold // Chance
-				{ 200000,	20 },
-				{ 400000,	30 },
-				{ 600000,	35 },
-				{ 800000,	10 },
-				{ 1000000,	5 },
+				{ 5000,	35 },
+				{ 10000,	30 },
+				{ 20000,	20 },
+				{ 50000,	10 },
+				{ 100000,	5 },
 			}
 			return gold 
 		end 
@@ -122,44 +120,58 @@ quest missionbooks begin
 		function mittlere_belohnungen_item() 
 			local item = {
 			--  Item // Count
-				{ 50513, 1 },		-- Seelenstein
-				{ 25040, 1 },		-- Segensschriftrolle
-				{ 71021, 1 },		-- Schriftrolle des Krieges
-				{ 71032, 1 },		-- Schriftrolle des Drachen
-				{ 71084, 20 },		-- Gegenstand verzaubern
-				{ 71085, 5 },		-- Gegenstand verstärken
-				{ 70024, 1 },		-- Segenskugel
-				{ 70102, 10 },		-- Zen-Bohne
-				{ 71107, 1 },		-- Frucht des Lebens
-				{ 50300, 5},		-- Fertigkeitsbuch
-				{ 71015, 1},		-- Erfahrungsring
-				{ 71016, 1},		-- Handschuh des Diebes
-				{ 71001, 3},		-- Exorzismus-Schriftrolle
-				{ 71094, 3},		-- Konzentriertes Lesen
-				{ 71095, 3},		-- Passierschein
-				{ 71153, 1},		-- Trank der Weisheit
+				{ 30057, 1 },		-- Spinnenaugen
+				{ 30056, 1 },		-- Spinnennetz
+				{ 30058, 1 },		-- Spinnen-Eiersack
+				{ 30025, 1 },		-- Spinnen-Giftsack
+				{ 30032, 1 },		-- Schwarze Uniform
+				{ 30074, 1 },		-- Schwarze Uniform+
+				{ 30007, 1 },		-- Orkamulett
+				{ 30076, 1 },		-- Orkamulett+
+				{ 30006, 1 },		-- Orkzahn
+				{ 30077, 1 },		-- Orkzahn+
+				{ 30055, 1 },		-- Skorpionschere
+				{ 30046, 1 },		-- Skorpionschwanz
+				{ 30081, 1 },		-- Skorpionschwanz+
+				{ 30045, 1 },		-- Skorpionnadel
+				{ 30030, 1 },		-- Rostige Degenklinge
+				{ 30018, 1 },		-- Rotes Haarband
+				{ 30031, 1 },		-- Schmuckgegenstand
+				{ 30052, 1 },		-- Flagge
+				{ 30017, 1 },		-- Schmückende Haarnadel
+				{ 30008, 1 },		-- Esoterikfibel
+				{ 30011, 1 },		-- Knäuel
+				{ 30041, 1 },		-- Shuriken
+				{ 30034, 1 },		-- Weißes Haarband
+				{ 30073, 1 },		-- Weißes Haarband+
+				{ 30092, 1 },		-- Kriegsbeute
+				{ 30033, 1 },		-- Zerbrochenes Porzellan
+				{ 30035, 1 },		-- Gesichtscreme
+				{ 30021, 1 },		-- Stück Edelstein
+				{ 30005, 1 },		-- Stück kaputte Rüstung
 			}
 			return item 
 		end
 		function mittlere_belohnungen_exp()
 			local experience = {
 				-- EXP // Chance
+				{ 20000,	35 },
+				{ 30000,	30 },
 				{ 50000,	20 },
-				{ 100000,	30 },
-				{ 200000,	35 },
-				{ 350000,	10 },
-				{ 500000,	5 },
+				{ 80000,	10 },
+				{ 100000,	5 },
 			}
 			return experience
 		end
 		function mittlere_belohnungen_gold()
 			local gold ={
 				-- Gold // Chance
-				{ 300000,	20 },
-				{ 500000,	35 },
-				{ 700000,	30 },
-				{ 1000000,	10 },
-				{ 1500000,	5 },
+				{ 10000,	25 },
+				{ 30000,	25 },
+				{ 50000,	20 },
+				{ 80000,	15 },
+				{ 100000,	10 },
+				{ 200000,	5 },
 			}
 			return gold 
 		end 
@@ -167,50 +179,59 @@ quest missionbooks begin
 		function schwere_belohnungen_item() 
 			local item = {
 			--  Item // Count
-				{ 50513, 1 },		-- Seelenstein
-				{ 25041, 1 },		-- Magischer Stein
-				{ 25040, 3 },		-- Segensschriftrolle
-				{ 71021, 1 },		-- Schriftrolle des Krieges
-				{ 71032, 1 },		-- Schriftrolle des Drachen
-				{ 70039, 1 },		-- Schmiedehandbuch
-				{ 71084, 30 },		-- Gegenstand verzaubern
-				{ 71085, 10 },		-- Gegenstand verstärken
-				{ 70024, 3 },		-- Segenskugel
-				{ 70102, 10 },		-- Zen-Bohne
-				{ 71107, 1 },		-- Frucht des Lebens
-				{ 71108, 20 },		-- Granatapfelsaft
-				{ 50300, 5},		-- Fertigkeitsbuch
-				{ 71015, 1},		-- Erfahrungsring
-				{ 71016, 1},		-- Handschuh des Diebes
-				{ 71001, 3},		-- Exorzismus-Schriftrolle
-				{ 71094, 3},		-- Konzentriertes Lesen
-				{ 71095, 3},		-- Passierschein
-				{ 71110, 1},		-- Pferdezucker
-				{ 71153, 1},		-- Trank der Weisheit
-				{ 71044, 3},		-- Kritischer Kampf
-				{ 71044, 3},		-- Durchbohrender Kampf
+				{ 30040, 1 },		-- Blatt
+				{ 30091, 1 },		-- Kriegersymbol
+				{ 30016, 1 },		-- Dämonenedelstein
+				{ 30048, 1 },		-- Eisstück
+				{ 30088, 1 },		-- Eisstück+
+				{ 30039, 1 },		-- Stück Gewebe
+				{ 30085, 1 },		-- Stück Gewebe+
+				{ 30015, 1 },		-- Dämonenandenken
+				{ 30086, 1 },		-- Dämonenandenken+
+				{ 30059, 1 },		-- Spinnenbeine
+				{ 30061, 1 },		-- Froschschenkel
+				{ 30049, 1 },		-- Eiskillerwal-Horn
+				{ 30050, 1 },		-- Eiskugel
+				{ 30090, 1 },		-- Eiskugel+
+				{ 30047, 1 },		-- Fluchsammlung
+				{ 30080, 1 },		-- Fluchsammlung+
+				{ 30067, 1 },		-- Schlangenhaut
+				{ 30022, 1 },		-- Schlangenschwanz
+				{ 30051, 1 },		-- Unbekannter Talisman
+				{ 30079, 1 },		-- Unbekannter Talisman+
+				{ 30038, 1 },		-- Tigerfell
+				{ 30014, 1 },		-- Yetifell
+				{ 30089, 1 },		-- Yetifell+
+				{ 30009, 1 },		-- Unbekannte Medizin
+				{ 30083, 1 },		-- Unbekannte Medizin+
+				{ 30042, 1 },		-- Reißzahn eines Tigers
+				{ 30019, 1 },		-- Flammenmähne
+				{ 30075, 1 },		-- Shuriken+
 			}
 			return item
 		end
 		function schwere_belohnungen_exp() 
 			local experience = {
 				-- EXP // Chance
-				{ 100000,	20 },
-				{ 200000,	30 },
-				{ 300000,	35 },
-				{ 500000,	10 },
-				{ 750000,	5 },
+				{ 30000,	20 },
+				{ 50000,	20 },
+				{ 80000,	15 },
+				{ 100000,	15 },
+				{ 150000,	15 },
+				{ 200000,	10 },
+				{ 300000,	5 },
 			}
 			return experience
 		end
 		function schwere_belohnungen_gold() 
 			local gold ={
 				-- Gold // Chance
-				{ 500000,	20 },
-				{ 750000,	50 },
-				{ 1000000,	25 },
-				{ 1500000,	3 },
-				{ 2500000,	2 },
+				{ 30000,	25 },
+				{ 50000,	25 },
+				{ 80000,	20 },
+				{ 100000,	15 },
+				{ 150000,	10 },
+				{ 200000,	5 },
 			}
 			return gold 
 		end 
@@ -218,58 +239,39 @@ quest missionbooks begin
 		function experten_belohnungen_item() 
 			local item = {
 			--  Item // Count
+				{ 70050, 1 },		-- Symbol d. weisen Kaisers
+				{ 70051, 1 },		-- Handschuh weiser Kaiser
+				{ 70048, 1 },		-- Flüchtlingsumhang
+				{ 50301, 1 },		-- Sun-zi-Kriegskunst
+				{ 50302, 1 },		-- Wu-zi-Kriegskunst
+				{ 50303, 1 },		-- WeiLiao-zi Kriegskunst
+				{ 70102, 1 },		-- Zen-Bohne
 				{ 50513, 1 },		-- Seelenstein
-				{ 50514, 1 },		-- Seelenstein+
-				{ 72951, 1 },		-- Halbmondring (3h)
-				{ 72054, 1 },		-- Lolli (3h)
-				{ 72057, 1 },		-- Amulett der Ewigen Liebe (3h)
-				{ 72060, 1 },		-- Ring der Freude (3h)
-				{ 72063, 1 },		-- Ring der Verteidigung (3h)
-				{ 72066, 1 },		-- Ring des Angriffs (3h)
-				{ 25041, 1 },		-- Magischer Stein
-				{ 25040, 5 },		-- Segensschriftrolle
-				{ 71021, 1 },		-- Schriftrolle des Krieges
-				{ 71032, 1 },		-- Schriftrolle des Drachen
-				{ 70039, 1 },		-- Schmiedehandbuch
-				{ 71084, 30 },		-- Gegenstand verzaubern
-				{ 71085, 10 },		-- Gegenstand verstärken
-				{ 70024, 5 },		-- Segenskugel
-				{ 70102, 10 },		-- Zen-Bohne
-				{ 71107, 1 },		-- Frucht des Lebens
-				{ 71108, 20 },		-- Granatapfelsaft
-				{ 52701, 1 },		-- Löwen-Urkunde
-				{ 52702, 1 },		-- Tiger-Urkunde
-				{ 52703, 1 },		-- Keiler-Urkunde
-				{ 52704, 1 },		-- Wolfs-Urkunde
-				{ 52705, 1 },		-- Rentier-Urkunde(m)
-				{ 52706, 1 },		-- Rentier-Urkunde(w)
-				{ 52707, 1 },		-- Dragor-Urkunde
-				{ 38100, 1 },		-- Powersnack (7 Tage)
-				{ 50067, 1 },		-- Rolle der Evolution
-				{ 50068, 1 },		-- Rolle der Mutation
-				{ 99990, 3 },		-- Goldene Muschel
 			}
 			return item 
 		end
 		function experten_belohnungen_exp() 
 			local experience = {
 				-- EXP // Chance
-				{ 300000,	20 },
-				{ 400000,	30 },
-				{ 500000,	35 },
-				{ 1000000,	10 },
-				{ 2000000,	5 },
+				{ 30000,	15 },
+				{ 50000,	15 },
+				{ 80000,	15 },
+				{ 100000,	15 },
+				{ 150000,	15 },
+				{ 200000,	10 },
+				{ 250000,	10 },
+				{ 500000,	5 },
 			}
 			return experience
 		end
 		function experten_belohnungen_gold()
 			local gold ={
 				-- Gold // Chance
-				{ 1000000,	20 },
-				{ 2000000,	50 },
-				{ 3000000,	25 },
-				{ 4000000,	3 },
-				{ 5000000,	2 },
+				{ 50000,	30 },
+				{ 80000,	25 },
+				{ 100000,	20 },
+				{ 150000,	15 },
+				{ 200000,	10 },
 			}
 			return gold 
 		end 
@@ -316,7 +318,7 @@ quest missionbooks begin
 			if pc.getqf("Has_Mission") == 0 then 
 				say_title("Normales Missionsbuch:")
 				say("")
-				say("Möchtest du das leichte Missionsbuch")
+				say("Möchtest du das normale Missionsbuch")
 				say("einlösen um eine Aufgabe zu erhalten?")
 				say("")
 				say_yellow("Du kannst die Mission nicht mehr abbrechen!")
@@ -395,15 +397,11 @@ quest missionbooks begin
 				say("Möchtest du das experten Missionsbuch")
 				say("einlösen um eine Aufgabe zu erhalten?")
 				say("")
-				say_yellow("Das Experten Missionsbuch hat ein 20min.")
-				say_yellow("Zeitlimit für das absolvieren der Aufgabe!")
-				say("")
 				say_yellow("Du kannst die Mission nicht mehr abbrechen!")
 				say("")
 				local start = select("Starten","Abbrechen")
 				if start == 1 then
 					pc.setqf("Has_Mission", 1) 
-					pc.setqf("MISSION_TIME_20", get_time()+2*60)
 					pc.setqf("Is_Finished", 0)
 					pc.setqf("QUEST_ART", 4) 
 					pc.setqf("QUEST_ID", rnd) 
@@ -415,7 +413,6 @@ quest missionbooks begin
 					end 
 					pc.remove_item(50310, 1) 
 					send_letter(liste[rnd][4]) 
-					q.set_clock("Verbl. Zeit:", pc.getqf("MISSION_TIME_20")-get_time())
 				else
 					return
 				end
@@ -446,31 +443,11 @@ quest missionbooks begin
 			end 
 		end 
 		when button or info begin 
-			if pc.getqf("QUEST_ART") == 4 and get_time()>=pc.getqf("MISSION_TIME_20") then
-				say_title("Missionsbuch Experte:")
-				say("")
-				say("Du hast die Aufgabe nicht geschafft innerhalb")
-				say("der 20 Minuten.")
-				say("")
-				say("Versuche es später mit einer neuen Mission erneut!")
-				
-				pc.delqf("Is_Finished") 
-				pc.delqf("Has_Mission") 
-				pc.delqf("MOB_ID_1") 
-				pc.delqf("MOB_ID_2") 
-				pc.delqf("MOB_ANZAHL_2") 
-				pc.delqf("MOB_ANZAHL_1") 
-				pc.delqf("QUEST_ID") 
-				pc.delqf("QUEST_ART") 
-				cleartimer("MISSION_TIME_20")
-				clear_letter()
-			end
 			if pc.getqf("Has_Mission") == 1 then
 				local liste 
 				local belohnung 
 				local quest_art = pc.getqf("QUEST_ART") 
 				local quest_id = pc.getqf("QUEST_ID") 
-				local mission_time = math.floor(((pc.getqf("MISSION_TIME_20") - get_time()) / 60)+0.5)
 				if quest_art == 1 then 
 					liste = missionbooks.leichtequests() 
 				elseif quest_art == 2 then 
@@ -493,10 +470,6 @@ quest missionbooks begin
 						say_reward("(Verbleibend: "..mob_name(pc.getqf("MOB_ID_1")).." "..pc.getqf("MOB_ANZAHL_1").." und "..mob_name(pc.getqf("MOB_ID_2")).." "..pc.getqf("MOB_ANZAHL_2")..")") 
 					end
 					say("")
-					if pc.getqf("QUEST_ART") == 4 then
-						say_green("Du hast noch "..mission_time.." Minuten zeit!")
-						say("")
-					end
 					-- if select("Weiter", "Abbrechen") == 2 then 
 						-- say_title(liste[quest_id][4].." abbrechen") 
 						-- say("Möchtest du diesen Auftrag wirklich abbrechen?") 
@@ -591,15 +564,6 @@ quest missionbooks begin
 			if pc.getqf("Has_Mission") == 1 then
 				local count = pc.getqf("MOB_ANZAHL_1")
 				q.set_counter(mob_name(pc.getqf("MOB_ID_1")), count)
-				if pc.getqf("QUEST_ART") == 4 then
-					if get_time()>=pc.getqf("MISSION_TIME_20") then
-						cleartimer("MISSION_TIME_20")
-						clear_letter()
-						set_state(failure_expert_quest)
-					else
-						q.set_clock("Verbl. Zeit:", pc.getqf("MISSION_TIME_20")-get_time())
-					end
-				end
 			end
 		end
 		when kill with pc.getqf("Has_Mission") == 1 begin 
@@ -621,13 +585,6 @@ quest missionbooks begin
 					if count >= 0 then 
 						pc.setqf("MOB_ANZAHL_1", count) 
 						q.set_counter(mob_name(pc.getqf("MOB_ID_1")), count) 
-						if pc.getqf("QUEST_ART") == 4 then
-							if get_time()>=pc.getqf("MISSION_TIME_20") then
-								cleartimer("MISSION_TIME_20")
-								clear_letter()
-								set_state(failure_expert_quest)
-							end
-						end
 						if count == 0 then 
 							pc.setqf("Is_Finished", 1) 
 							send_letter(liste[quest_id][6]) 
@@ -641,13 +598,6 @@ quest missionbooks begin
 					if count >= 0 then 
 						pc.setqf("MOB_ANZAHL_1", count) 
 						q.set_counter(mob_name(pc.getqf("MOB_ID_1")), count) 
-						if pc.getqf("QUEST_ART") == 4 then
-							if get_time()>=pc.getqf("MISSION_TIME_20") then
-								cleartimer("MISSION_TIME_20")
-								clear_letter()
-								set_state(failure_expert_quest)
-							end
-						end
 						if count == 0 and count2 == 0 then 
 							pc.setqf("Is_Finished", 1) 
 							send_letter(liste[quest_id][6]) 
@@ -660,13 +610,6 @@ quest missionbooks begin
 					if count2 >= 0 then 
 						pc.setqf("MOB_ANZAHL_2", count2) 
 						q.set_counter(mob_name(pc.getqf("MOB_ID_2")), count2)
-						if pc.getqf("QUEST_ART") == 4 then
-							if get_time()>=pc.getqf("MISSION_TIME_20") then
-								cleartimer("MISSION_TIME_20")
-								clear_letter()
-								set_state(failure_expert_quest)
-							end
-						end
 						if count2 == 0 and count == 0 then 
 							pc.setqf("Is_Finished", 1) 
 							send_letter(liste[quest_id][6]) 
@@ -675,31 +618,5 @@ quest missionbooks begin
 				end 
 			end 
 		end 
-	end
-	
-	state failure_expert_quest begin
-		when letter begin
-			send_letter("Mission gescheitert!")
-		end
-		
-		when button or info begin
-			say_title("Missionsbuch Experte:")
-			say("")
-			say("Du hast die Aufgabe nicht geschafft innerhalb")
-			say("der 20 Minuten.")
-			say("")
-			say("Versuche es später mit einer neuen Mission erneut!")
-			
-			pc.delqf("Is_Finished") 
-			pc.delqf("Has_Mission") 
-			pc.delqf("MOB_ID_1") 
-			pc.delqf("MOB_ID_2") 
-			pc.delqf("MOB_ANZAHL_2") 
-			pc.delqf("MOB_ANZAHL_1") 
-			pc.delqf("QUEST_ID") 
-			pc.delqf("QUEST_ART") 
-			clear_letter()
-			set_state(start)
-		end
 	end
 end  

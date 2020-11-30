@@ -5,29 +5,37 @@ quest horse_medaille begin
 			if horse.get_level() >= 1 and horse.get_level() <= 9 or 
 			   horse.get_level() >= 11 and horse.get_level() <= 19 or 
 			   horse.get_level() >= 21 and horse.get_level() <= 28 then
-				say("")
-				say("Möchtest du diese Pferdemedaille benutzen")
-				say("um dein Pferdelevel zu steigern?")
-				say("")
-				if select("Steigern", "Beenden") == 2 then return end
-				local drop_random = number(1,100)
-				if drop_random < 50 then
-					horse.set_level(horse.get_level()+1)
-					say_title("Pferdelevel gestiegen!")
+			   if pc.count_item(50050) > 0 then
 					say("")
-					say("Glückwunsch!")
-					say("Das Training mit der Medaille hat geklappt!")
+					say("Möchtest du eine Pferdemedaille benutzen")
+					say("um dein Pferdelevel zu steigern?")
 					say("")
-					say("Dein Pferd ist auf Level "..horse.get_level().." gestiegen!")
-					pc.remove_item(50050, 1)
+					if select("Steigern", "Abbrechen") == 2 then return end
+					local drop_random = number(1,100)
+					if drop_random < 50 then
+						horse.set_level(horse.get_level()+1)
+						say_title("Pferdelevel gestiegen!")
+						say("")
+						say("Glückwunsch!")
+						say("Das Training mit der Medaille hat geklappt!")
+						say("")
+						say("Dein Pferd ist auf Level "..horse.get_level().." gestiegen!")
+						pc.remove_item(50050, 1)
+					else
+						say_title("Pferdelevel nicht gestiegen!")
+						say("")
+						say("Das Training mit der Medaille hat leider nicht geklappt!")
+						say("Probiere es später noch mal.")
+						say("")
+						say("Dein Pferd ist noch auf Level "..horse.get_level().."!")
+						pc.remove_item(50050, 1)
+					end
 				else
-					say_title("Pferdelevel nicht gestiegen!")
 					say("")
-					say("Das Training mit der Medaille hat leider nicht geklappt!")
-					say("Probiere es später noch mal.")
+					say("Du hast keine Pferdemedaille dabei!")
+					say_item_vnum(50050)
+					say_reward("Du bekommst diese Medaillen im Affendungeon.")
 					say("")
-					say("Dein Pferd ist noch auf Level "..horse.get_level().."!")
-					pc.remove_item(50050, 1)
 				end
 			else
 				if horse.get_level() == 10 or horse.get_level() == 20 then
@@ -36,7 +44,8 @@ quest horse_medaille begin
 				end
 				if horse.get_level() == 29 then
 					say("")
-					say("Du kannst dein Pferdelevel mit der Medaille nicht mehr erhöhen!")
+					say("Du kannst dein Pferdelevel mit der")
+					say("Medaille nicht mehr erhöhen!")
 				end
 				if horse.get_level() == 30 then
 					say("")

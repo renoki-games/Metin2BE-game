@@ -26,6 +26,7 @@
 71 metin2_map_spiderdungeon_02
 72 metin2_map_skipia_dungeon_01
 73 metin2_map_skipia_dungeon_02
+74 metin2_map_skipia_dungeon_boss
 81 metin2_map_wedding_01
 100 metin2_map_fielddungeon
 101 metin2_map_resources_zon
@@ -55,7 +56,6 @@
 182 metin2_map_empirewar02
 183 metin2_map_empirewar03
 200 gm_guild_build
-208 metin2_map_skipia_dungeon_boss
 216 metin2_map_devilcatacomb
 217 metin2_map_spiderdungeon_03
 301 Metin2_map_CapeDragonHead

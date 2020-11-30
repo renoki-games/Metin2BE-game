@@ -534,11 +534,14 @@ Group	Metinstein_Schwer
 Group	Roter_Ebenholzkasten
 {
 	Vnum	50109
-	1	25040	1	3	-- Segensschriftrolle
+	1	25040	1	1	-- Segensschriftrolle
 	2	50300	1	1	-- Fertigkeitsbuch
 	3	70043	1	1	-- Diebeshandschuh
-	4	70102	1	10	-- Zen-Bohne
+	4	70102	1	1	-- Zen-Bohne
 	5	70005	1	1	-- Erfahrungsring
+	6	71085	1	1	-- Gegenstand verstärken
+	7	71084	1	1	-- Gegenstand verzaubern
+	8	70024	1	1	-- Segenskugel
 }
 
 Group	Prunk_Ebenholzkasten
@@ -549,15 +552,18 @@ Group	Prunk_Ebenholzkasten
 	3	70005	1	1	-- Erfahrungsring
 	4	50300	1	1	-- Fertigkeitsbuch
 	5	71032	1	1	-- Schriftrolle des Drachen
-	6	25040	1	5	-- Segensschriftrolle
+	6	25040	1	1	-- Segensschriftrolle
+	7	71085	1	1	-- Gegenstand verstärken
+	8	71084	1	1	-- Gegenstand verzaubern
+	9	70024	1	1	-- Segenskugel
 }
 
 Group	Gelber_Ebenholzkasten
 {
 	Vnum	50111
-	1	25040	1	10	-- Segensschriftrolle
-	2	50513	1	2	-- Seelenstein
-	3	71032	1	2	-- Schriftrolle des Drachen
+	1	25040	1	1	-- Segensschriftrolle
+	2	50513	1	1	-- Seelenstein
+	3	71032	1	1	-- Schriftrolle des Drachen
 	4	50300	1	1	-- Fertigkeitsbuch
 	5	70052	1	1	-- Karma-Zauber 1
 	6	70050	1	1	-- Symbol d. weisen Kaisers
@@ -566,53 +572,82 @@ Group	Gelber_Ebenholzkasten
 	9	70048	1	1	-- Flüchtlingsumhang
 	10	70043	1	1	-- Diebeshandschuh
 	11	70005	1	1	-- Erfahrungsring
-	12	70102	1	10	-- Zen-Bohne
+	12	70102	1	1	-- Zen-Bohne
+	13	71085	1	1	-- Gegenstand verstärken
+	14	71084	1	1	-- Gegenstand verzaubern
+	15	70024	1	1	-- Segenskugel
 }
 
 Group	Hellgruener_Ebenholzkasten
 {
 	Vnum	50112
-	1	50513	1	3	-- Seelenstein
-	2	25040	1	5	-- Segensschriftrolle
-	3	71032	1	3	-- Schriftrolle des Drachen
-	4	71085	1	15	-- Gegenstand verstärken
-	5	71084	1	15	-- Gegenstand verzaubern
+	1	50513	1	1	-- Seelenstein
+	2	25040	1	1	-- Segensschriftrolle
+	3	71032	1	1	-- Schriftrolle des Drachen
+	4	71085	1	1	-- Gegenstand verstärken
+	5	71084	1	1	-- Gegenstand verzaubern
 	6	70005	1	1	-- Erfahrungsring
 	7	70043	1	1	-- Diebeshandschuh
-	8	70102	1	5	-- Zen-Bohne
+	8	70102	1	1	-- Zen-Bohne
+	9	71085	1	1	-- Gegenstand verstärken
+	10	71084	1	1	-- Gegenstand verzaubern
+	11	70024	1	1	-- Segenskugel
 }
 
 Group	Gruener_Ebenholzkasten
 {
 	Vnum	50113
-	1	25040	1	10	-- Segensschriftrolle
-	2	50513	1	3	-- Seelenstein
-	3	71032	1	3	-- Schriftrolle des Drachen
-	4	71085	1	20	-- Gegenstand verstärken
-	5	71084	1	20	-- Gegenstand verzaubern
-	6	70102	1	10	-- Zen-Bohne
+	1	25040	1	1	-- Segensschriftrolle
+	2	50513	1	1	-- Seelenstein
+	3	71021	1	1	-- Schriftrolle des Krieges
+	4	71085	1	1	-- Gegenstand verstärken
+	5	71084	1	1	-- Gegenstand verzaubern
+	6	70102	1	1	-- Zen-Bohne
+	7	71085	1	1	-- Gegenstand verstärken
+	8	71084	1	1	-- Gegenstand verzaubern
+	9	70024	1	1	-- Segenskugel
 }
 
 Group	Blauer_Ebenholzhasten
 {
 	Vnum	50114
-	1	25040	1	10	-- Segensschriftrolle
-	2	50513	1	3	-- Seelenstein
-	3	70039	1	3	-- Schmiede-Handbuch
-	4	71085	1	20	-- Gegenstand verstärken
-	5	71084	1	20	-- Gegenstand verzaubern
-	6	70102	1	10	-- Zen-Bohne
+	1	25040	1	1	-- Segensschriftrolle
+	2	50513	1	1	-- Seelenstein
+	3	71032	1	1	-- Schriftrolle des Drachen
+	4	71085	1	1	-- Gegenstand verstärken
+	5	71084	1	1	-- Gegenstand verzaubern
+	6	70102	1	1	-- Zen-Bohne
+	7	71085	1	1	-- Gegenstand verstärken
+	8	71084	1	1	-- Gegenstand verzaubern
+	9	70024	1	1	-- Segenskugel
 }
 
 Group	Purpur_Ebenholzhasten
 {
 	Vnum	50115
-	1	25040	1	10	-- Segensschriftrolle
-	2	50513	1	3	-- Seelenstein
-	3	25041	1	3	-- Magisches Metall
-	4	71085	1	20	-- Gegenstand verstärken
-	5	71084	1	20	-- Gegenstand verzaubern
-	6	70102	1	10	-- Zen-Bohne
+	1	25040	1	1	-- Segensschriftrolle
+	2	50513	1	1	-- Seelenstein
+	3	70039	1	1	-- Schmiede-Handbuch
+	4	71085	1	1	-- Gegenstand verstärken
+	5	71084	1	1	-- Gegenstand verzaubern
+	6	70102	1	1	-- Zen-Bohne
+	7	71085	1	1	-- Gegenstand verstärken
+	8	71084	1	1	-- Gegenstand verzaubern
+	9	70024	1	1	-- Segenskugel
+}
+
+Group	Schwarzer_Ebenholzhasten
+{
+	Vnum	50116
+	1	25040	1	1	-- Segensschriftrolle
+	2	50513	1	1	-- Seelenstein
+	3	25041	1	1	-- Magisches Metall
+	4	71085	1	1	-- Gegenstand verstärken
+	5	71084	1	1	-- Gegenstand verzaubern
+	6	70102	1	1	-- Zen-Bohne
+	7	71085	1	1	-- Gegenstand verstärken
+	8	71084	1	1	-- Gegenstand verzaubern
+	9	70024	1	1	-- Segenskugel
 }
 
 Group	Schmuckkasten
@@ -630,7 +665,7 @@ Group	Eisenkiste
 	4	30190	1	10	-- Blutstein
 	5	72006	1	10	-- Handschuhe des Diebes
 	6	16100	1	10	-- Ebenholzhalskette+0
-	7	72003	1	10	-- Erfahrungsring
+	7	70005	1	10	-- Erfahrungsring
 	8	72012	1	10	-- Feder der Liebenden
 	9	72015	1	10	-- Fischereibuch
 	10	14200	1	10	-- Himmelstränenarmband+0
@@ -943,15 +978,9 @@ Group	Windschuhe
 	3 39091 100002 1
 }
 
-Group Fertigkeitsbuch_Truhe
-{
-	Vnum 50125
-	1	50300	1	100		-- Fertigkeitsbuch
-}
-
 Group Geiststein_Truhe
 {
-	Vnum 50126
+	Vnum 50125
 	1	28030	1	100	-- Stein des Durchbruchs+0
 	2	28031	1	100	-- Stein des Todesstosses+0
 	3	28032	1	100	-- Stein der Wiederkehr+0
@@ -1028,3 +1057,216 @@ Group Geiststein_Truhe
 	74	28443	1	100	-- Stein der Hast+4
 	75	28446	1	100	-- Stein der Halbmenschen+4
 }
+
+Group Zutaten_Truhe
+{
+	Vnum 50126
+	1	30010	1	100		-- Bärengalle
+	2	30071	1	100		-- Bärengalle+
+	3	30022	1	100		-- Schlangenschwanz
+	4	30082	1	100		-- Schlangenschwanz+
+	5	30034	1	100		-- Weißes Haarband
+	6	30073	1	100		-- Weißes Haarband+
+	7	30009	1	100		-- Unbekannte Medizin
+	8	30083	1	100		-- Unbekannte Medizin+
+	9	30050	1	100		-- Eiskugel
+	10	30090	1	100		-- Eiskugel+
+	11	30041	1	100		-- Shuriken
+	12	30075	1	100		-- Shuriken+
+	13	30047	1	100		-- Fluchsammlung
+	14	30080	1	100		-- Fluchsammlung+
+	15	30008	1	100		-- Esoterikfibel
+	16	30078	1	100		-- Esoterikfibel+
+	17	30007	1	100		-- Orkamulett
+	18	30076	1	100		-- Orkamulett+
+	19	30051	1	100		-- Unbekannter Talisman
+	20	30079	1	100		-- Unbekannter Talisman+
+	21	30015	1	100		-- Dämonenandenken
+	22	30086	1	100		-- Dämonenandenken+
+	23	30016	1	100		-- Dämonenedelstein
+	24	30087	1	100		-- Dämonenedelstein+
+	25	30006	1	100		-- Orkzahn
+	26	30077	1	100		-- Orkzahn+
+	27	30046	1	100		-- Skorpionschwanz
+	28	30081	1	100		-- Skorpionschwanz+
+	29	30048	1	100		-- Eisstück
+	30	30088	1	100		-- Eisstück+
+	31	30032	1	100		-- Schwarze Uniform
+	32	30074	1	100		-- Schwarze Uniform+
+	33	30053	1	100		-- Bärenfußhaut
+	34	30072	1	100		-- Bärenfußhaut+
+	35	30039	1	100		-- Stück Gewebe
+	36	30085	1	100		-- Stück Gewebe+
+	37	30014	1	100		-- Yetifell
+	38	30089	1	100		-- Yetifell+
+	39	30027	1	100		-- Wolfsfell
+	40	30070	1	100		-- Wolfsfell+
+	41	30028	1	100		-- Wolfskralle
+	42	30069	1	100		-- Wolfskralle+
+	43	30037	1	100		-- Tigerkralle
+	44	30004	1	100		-- Keilerzahn
+	45	71123	1	100		-- Drachenschuppe
+	46	71129	1	100		-- Drachenkralle
+	47	70031	1	100		-- Traktat zur Fechtkunst
+	48	30049	1	100		-- Eiskillerwal-Horn
+	49	30059	1	100		-- Spinnenbeine
+	50	30199	1	100		-- Blauer Kristall
+	51	30193	1	100		-- Fingerknochen
+	52	30061	1	100		-- Froschschenkel
+	53	30067	1	100		-- Schlangenhaut
+	54	30042	1	100		-- Reißzahn eines Tigers
+	55	30060	1	100		-- Froschzunge
+	56	30019	1	100		-- Flammenmähne
+	57	27992	1	100		-- Weiße Perle
+	58	27993	1	100		-- Blaue Perle
+	59	27994	1	100		-- Blutrote Perle
+	60	30194	1	100		-- Ork-Keule
+	61	30011	1	100		-- Knäuel
+	62	30056	1	100		-- Spinnennetz
+	63	30198	1	100		-- Wasserkristall
+	64	30192	1	100		-- Milchsaft
+	65	30023	1	100		-- Weißes Tigerfell
+	66	30197	1	100		-- Magische Samen
+	67	30040	1	100		-- Blatt
+	68	30038	1	100		-- Tigerfell
+	69	30091	1	100		-- Kriegersymbol
+	70	30196	1	100		-- Dämonenasche
+	71	30195	1	100		-- Quarzsand
+	72	27987	1	100		-- Muschel
+	73	27799	1	100		-- Gräten
+	74	30035	1	100		-- Gesichtscreme
+	75	30045	1	100		-- Skorpionnadel
+	76	30017	1	100		-- Schmückende Haarnadel
+	77	30021	1	100		-- Stück Edelstein
+	78	30025	1	100		-- Spinnen-Giftsack
+	79	30031	1	100		-- Schmuckgegenstand
+	80	30005	1	100		-- Stück kaputte Rüstung
+	81	30033	1	100		-- Zerbrochenes Porzellan
+	82	30030	1	100		-- Rostige Degenklinge
+	83	30092	1	100		-- Kriegsbeute
+	84	30052	1	100		-- Flagge
+	85	30057	1	100		-- Spinnenaugen
+	86	30003	1	100		-- Schweinenase
+	87	30058	1	100		-- Spinnen-Eiersack
+	88	30055	1	100		-- Skorpionschere
+	89	30018	1	100		-- Rotes Haarband
+}
+
+Group Itemshop_Truhe
+{
+	Vnum 50127
+	1	25040	1	100		-- Segensschriftrolle
+	2	25041	1	100		-- Magisches Metall
+	3	27987	1	100		-- Muschel
+	4	27992	1	100		-- Weiße Perle
+	5	27993	1	100		-- Blaue Perle
+	6	27994	1	100		-- Blutrote Perle
+	7	30179	1	100		-- Gewundener Schlüssel
+	8	30190	1	100		-- Blutstein
+	9	30319	1	100		-- Schrumpfkopf
+	10	50002	1	100		-- Goldring 20K Yang
+	11	50121	1	100		-- Eisenkiste
+	12	70024	1	100		-- Segenskugel
+	13	70035	1	100		-- Magisches Kupfererz
+	14	70039	1	100		-- Schmiede-Handbuch
+	15	70102	1	100		-- Zen-Bohne
+	16	71001	1	100		-- Exorzismus-Schriftrolle
+	17	71012	1	100		-- Buch des Anführers
+	18	71025	1	100		-- Stein des Schmieds
+	19	71026	1	100		-- Magisches Eisenerz
+	20	71032	1	100		-- Schriftrolle des Drachen
+	21	71080	1	100		-- Metinstein (leicht)
+	22	71081	1	100		-- Metinstein (normal)
+	23	71082	1	100		-- Metinstein (schwer)
+	24	71084	1	100		-- Gegenstand verzaubern
+	25	71085	1	100		-- Gegenstand verstärken
+	26	71094	1	100		-- Konzentriertes Lesen
+	27	71130	1	100		-- Passierschein
+	28	71107	1	100		-- Frucht des Lebens
+	29	71151	1	100		-- Grüner Zauber
+	30	71152	1	100		-- Grüne Stärke
+	31	71035	1	100		-- Elixier des Forschers
+	32	71083	1	100		-- Stein-Handbuch
+	33	71109	1	100		-- Rolle der Korrektur
+	34	70008	1	100		-- Weiße Flagge
+	35	71021	1	100		-- Schriftrolle des Krieges
+	36	50513	1	100		-- Seelenstein
+	37	80008	1	100		-- Goldklumpen 1KK Yang
+	38	25100	1	100		-- Geiststein-Schriftrolle
+	39	70057	1	100		-- Tapferkeitsumhang
+	40	71004	1	100		-- Medaille des Drachen
+}
+
+Group Fischerei_Truhe
+{
+	Vnum 50128
+	1	27803	1	100		-- Zander
+	2	27804	1	100		-- Mandarinfisch
+	3	27805	1	100		-- Großer Zander
+	4	27806	1	100		-- Karpfen
+	5	27807	1	100		-- Lachs
+	6	27808	1	100		-- Graskarpfen
+	7	27809	1	100		-- Bachforelle
+	8	27810	1	100		-- Aal
+	9	27811	1	100		-- Regenbogenforelle
+	10	27812	1	100		-- Flussforelle
+	11	27813	1	100		-- Rotfeder
+	12	27814	1	100		-- Barsch
+	13	27815	1	100		-- Tenchi
+	14	27816	1	100		-- Wels
+	15	27817	1	100		-- Schmerle
+	16	27818	1	100		-- Lotusfisch
+	17	27819	1	100		-- Ayu
+	18	27820	1	100		-- Stint
+	19	27821	1	100		-- Shiri
+	20	27822	1	100		-- Spiegelkarpfen
+	21	27823	1	100		-- Goldfisch
+}
+
+Group Fertigkeitsbuch_Truhe
+{
+	Vnum 50129
+	1	50300	1	100		-- Fertigkeitsbuch
+}
+
+Group Edelstein_Truhe
+{
+	Vnum 50130
+	1	50621	1	100		-- Diamant
+	2	50623	1	100		-- Fossilholz
+	3	50624	1	100		-- Kupfer
+	4	50625	1	100		-- Silber
+	5	50626	1	100		-- Gold
+	6	50627	1	100		-- Jade
+	7	50628	1	100		-- Ebenholz
+	8	50629	1	100		-- Perle
+	9	50630	1	100		-- Weißgold
+	10	50631	1	100		-- Kristall
+	11	50632	1	100		-- Amethyst
+	12	50633	1	100		-- Himmelsträne
+}
+
+Group Spezial_Truhe
+{
+	Vnum 50131
+	1	30190	1	100		-- Blutstein
+	2	30319	1	100		-- Schrumpfkopf
+	3	71130	1	100		-- Passierschein
+	4	39036	1	100		-- Windschuhe
+	5	71011	1	100		-- Emotionsmaske
+	6	70024	1	100		-- Segenskugel
+	7	71085	1	100		-- Gegenstand verstärken
+	8	71084	1	100		-- Gegenstand verzaubern
+	9	71152	1	100		-- Grüne Stärke
+	10	71151	1	100		-- Grüner Zauber
+	11	71094	1	100		-- Konzentriertes Lesen
+	12	71001	1	100		-- Exorzismus-Schriftrolle
+	13	71109	1	100		-- Rolle der Korrektur
+	14	71083	1	100		-- Stein-Handbuch
+	15	25100	1	100		-- Geiststein-Schriftrolle
+	16	71012	1	100		-- Buch des Anführers
+	17	71035	1	100		-- Elixier des Forschers
+	18	70057	1	100		-- Tapferkeitsumhang
+	19	71004	1	100		-- Medaille des Drachen
+}
+

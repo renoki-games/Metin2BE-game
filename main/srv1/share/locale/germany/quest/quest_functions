@@ -318,6 +318,8 @@ horse.set_stat0
 horse.summon
 horse.unride
 horse.unsummon
+horse.set_appearance
+horse.get_appearance
 horse_menu.horse_menu
 inc_today_count
 input

@@ -83,7 +83,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -125,8 +125,8 @@ quest bio begin
 			else
 				say_title("Biologe:")
 				say("")
-				say("Es tut mir leid, aber der Zahn ist bei")
-				say("den Untersuchungen zerbrochen.")
+				say("Es tut mir leid, der Zahn")
+				say("ist bei den Untersuchungen zerbrochen.")
 				say("Bitte hol mir einen neuen Orkzahn!")
 				say("")
 			end
@@ -295,7 +295,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -339,7 +339,8 @@ quest bio begin
 				say("")
 				say("Es tut mir leid, die Fluchsammlung")
 				say("ist bei den Untersuchungen zerfallen.")
-				say("Bitte hol mir eine neue Fluchsammlung.")
+				say("Bitte hol mir eine neue Fluchsammlung!")
+				say("")
 			end
 		end
 	end
@@ -510,7 +511,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -556,7 +557,8 @@ quest bio begin
 				say("")
 				say("Es tut mir leid, das Andenken")
 				say("ist bei den Untersuchungen zerbrochen.")
-				say("Bitte hol mir ein Neues.")
+				say("Bitte hol mir ein neues Andenken!")
+				say("")
 			end
 		end
 	end
@@ -725,7 +727,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -771,7 +773,8 @@ quest bio begin
 				say("")
 				say("Es tut mir leid, die Eiskugel")
 				say("ist bei den Untersuchungen zerbrochen.")
-				say("Bitte hol mir eine Neue.")
+				say("Bitte hol mir eine neue Eiskugel!")
+				say("")
 			end
 		end
 	end
@@ -949,7 +952,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -995,7 +998,8 @@ quest bio begin
 				say("")
 				say("Es tut mir leid, der Holzast")
 				say("ist während des Transports verwelkt.")
-				say("Bitte hol mir einen Neuen.")
+				say("Bitte hol mir einen neuen Holzast!")
+				say("")
 			end
 		end
 	end
@@ -1174,7 +1178,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -1220,7 +1224,8 @@ quest bio begin
 				say("")
 				say("Es tut mir leid, die Tafel")
 				say("ist während der Untersuchung zerbrochen.")
-				say("Bitte hol mir eine Neue.")
+				say("Bitte hol mir eine neue Tafel!")
+				say("")
 			end
 		end
 	end
@@ -1399,7 +1404,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -1438,19 +1443,19 @@ quest bio begin
 					say("Ich denke, dafür bist du stark genug.")
 					say("")
 					pc.setqf("collect_count",0)
-					set_state(collect_bossKey)
+					set_state(collect_red_ast_bosskey)
 				end
 			else
 				say_title("Biologe:")
 				say("")
-				say("Es tut mir leid, der Holzast")
+				say("Es tut mir leid, der Ast")
 				say("ist während des Transports verwelkt.")
-				say("Bitte hol mir einen Neuen.")
+				say("Bitte hol mir einen neuen Ast!")
 				say("")
 			end
 		end
 	end
-	state collect_bossKey begin
+	state collect_red_ast_bosskey begin
 		when letter begin
 			send_letter("Waldgeist-Seelenstein")
 		end
@@ -1484,7 +1489,7 @@ quest bio begin
 				say("deine inneren Kräfte zu steigern.")
 				say("")
 				pc.remove_item(30226,1)
-				set_state(bossKey_reward)
+				set_state(red_ast_bosskey_reward)
 			else
 				say_title("Biologe:")
 				say("")
@@ -1498,7 +1503,7 @@ quest bio begin
 			end
 		end
 	end
-	state bossKey_reward begin
+	state red_ast_bosskey_reward begin
 		when letter begin
 			send_letter("Sprich mit Baek-Go")
 			local v = find_npc_by_vnum(20018)
@@ -1510,7 +1515,7 @@ quest bio begin
 			say("")
 			say("Um die Belohnung des Biologen zu erhalten,")
 			say("suche mit den Informationen der")
-			say("Notizen und des Seelensteins")
+			say("Roter Geisterbaum Äste und des Seelensteins")
 			say("Baek-Go auf. Er befindet sich in der Stadt.")
 			say("")
 		end
@@ -1567,7 +1572,7 @@ quest bio begin
 			say_title("Biologe:")
 			say("")
 			say("Gut, dass du gekommen bist...")
-			say("Die Untersuchung der Tugyis Tafeln")
+			say("Die Untersuchung der Roter Geisterbaum Äste")
 			say("habe ich abgeschlossen.")
 			say("Nun habe ich neue Objekte gefunden,")
 			say("die ich gerne untersuchen würde.")
@@ -1626,7 +1631,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -1665,17 +1670,19 @@ quest bio begin
 					say("Ich denke, dafür bist du stark genug.")
 					say("")
 					pc.setqf("collect_count",0)
-					set_state(collect_bossKey2)
+					set_state(collect_notice_bosskey)
 				end
 			else
 				say_title("Biologe:")
+				say("")
 				say("Es tut mir leid, die Notiz")
 				say("hat sich als unlesbar herausgestellt.")
-				say("Bitte hol mir eine Neue.")
+				say("Bitte hol mir eine neue Notiz!")
+				say("")
 			end
 		end
 	end
-	state collect_bossKey2 begin
+	state collect_notice_bosskey begin
 		when letter begin
 			send_letter("Seelenstein der Anführer")
 		end
@@ -1711,7 +1718,7 @@ quest bio begin
 				say("deine inneren Kräfte zu steigern.")
 				say("")
 				pc.remove_item(30227,1)
-				set_state(bossKey_reward)
+				set_state(notice_bosskey_reward)
 			else
 				say_title("Biologe:")
 				say("")
@@ -1725,7 +1732,7 @@ quest bio begin
 			end
 		end
 	end
-	state bossKey_reward begin
+	state notice_bosskey_reward begin
 		when letter begin
 			send_letter("Sprich mit Baek-Go")
 			local v = find_npc_by_vnum(20018)
@@ -1751,21 +1758,21 @@ quest bio begin
 			say("")
 			say_reward("Du erhälst:")
 			say_reward("Schaden gegen andere Spieler: +8% (Dauerhaft)")
-			say_reward("1x Blauer Ebenholzkasten")
+			say_reward("1x Schwarzer Ebenholzkasten")
 			say("")
 			affect.add_collect(apply.ATTBONUS_WARRIOR, 8, 60*60*24*365*60)
 			affect.add_collect(apply.ATTBONUS_ASSASSIN, 8, 60*60*24*365*60)
 			affect.add_collect(apply.ATTBONUS_SURA, 8, 60*60*24*365*60)
 			affect.add_collect(apply.ATTBONUS_SHAMAN, 8, 60*60*24*365*60)
-			pc.give_item2(50114, 1)
-			set_state(collect_quest_lv90)
+			pc.give_item2(50116, 1)
+			set_state(collect_quest_lv92)
 		end
 	end
 	
 	--------------------------------
 	-- LvL 92 / Juwelen der Magie --
 	--------------------------------
-	state collect_quest_lv90 begin
+	state collect_quest_lv92 begin
 		when login or levelup with pc.level ==92 begin
 			set_state(talk_to_disciple_lv92)
 		end	
@@ -1848,7 +1855,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -1886,10 +1893,10 @@ quest bio begin
 					set_state(magie_reward)
 				end
 			else
-				say("Seon-Pyeong:")
+				say_title("Seon-Pyeong:")
 				say("")
-				say("Es tut mir leid, aber dises Juwel ist bei")
-				say("den Untersuchungen zerbrochen.")
+				say("Es tut mir leid, das Juwel")
+				say("ist bei den Untersuchungen zerbrochen.")
 				say("Bitte hol mir ein neues Juwel!")
 				say("")
 			end
@@ -1917,9 +1924,9 @@ quest bio begin
 			say("Seon-Pyeong hat dich zu mir geschickt.")
 			say("")
 			say_reward("Du erhälst:")
-			say_reward("Max-MP: +162 (Dauerhaft)")
+			say_reward("Max-MP: +1962 (Dauerhaft)")
 			say("")
-			affect.add_collect(apply.MAX_SP, 162, 60*60*24*365*60) 
+			affect.add_collect(apply.MAX_SP, 1962, 60*60*24*365*60) 
 			set_state(collect_quest_lv94)
 		end
 	end
@@ -2006,7 +2013,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -2047,8 +2054,9 @@ quest bio begin
 				say_title("Seon-Pyeong:")
 				say("")
 				say("Es tut mir leid, das Juwel")
-				say("ist bei den Untersuchungen zerfallen.")
-				say("Bitte hol mir ein neues Juwel.")
+				say("ist bei den Untersuchungen zerbrochen.")
+				say("Bitte hol mir ein neues Juwel!")
+				say("")
 			end
 		end
 	end
@@ -2075,9 +2083,9 @@ quest bio begin
 			say("Seon-Pyeong hat dich zu mir geschickt.")
 			say("")
 			say_reward("Du erhälst:")
-			say_reward("Max-TP: +1414 (Dauerhaft)")
+			say_reward("Max-TP: +2314 (Dauerhaft)")
 			say("")
-			affect.add_collect(apply.MAX_HP, 1414, 60*60*24*365*60)
+			affect.add_collect(apply.MAX_HP, 2314, 60*60*24*365*60)
 			set_state(collect_quest_lv96)
 		end
 	end
@@ -2164,7 +2172,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -2205,8 +2213,9 @@ quest bio begin
 				say_title("Seon-Pyeong:")
 				say("")
 				say("Es tut mir leid, das Juwel")
-				say("ist bei den Untersuchungen zerfallen.")
-				say("Bitte hol mir ein neues Juwel.")
+				say("ist bei den Untersuchungen zerbrochen.")
+				say("Bitte hol mir ein neues Juwel!")
+				say("")
 			end
 		end
 	end
@@ -2235,7 +2244,7 @@ quest bio begin
 			say_reward("Du erhälst:")
 			say_reward("Angriff: +60 (Dauerhaft)")
 			say("")
-			affect.add_collect(apply.ATT_GRADE_BONUS, 60, 60*60*24*365*60)
+			affect.add_collect(apply.ATT_GRADE_BONUS, 110, 60*60*24*365*60)
 			set_state(collect_quest_lv98)
 		end
 	end
@@ -2321,7 +2330,7 @@ quest bio begin
 				say("und somit die Wahrscheinlichkeit steigern, dass die Abgabe")
 				say("erfolgreich ist.")
 				say("")
-				local sel = select("Verwenden", "Nicht verwenden") 
+				local sel = select("Verwenden", "Abbrechen") 
 				if sel == 1 then
 					rand = rand - 25
 					pc.remove_item(71035, 1)
@@ -2362,8 +2371,9 @@ quest bio begin
 				say_title("Seon-Pyeong:")
 				say("")
 				say("Es tut mir leid, das Juwel")
-				say("ist bei den Untersuchungen zerfallen.")
-				say("Bitte hol mir ein neues Juwel.")
+				say("ist bei den Untersuchungen zerbrochen.")
+				say("Bitte hol mir ein neues Juwel!")
+				say("")
 			end
 		end
 	end

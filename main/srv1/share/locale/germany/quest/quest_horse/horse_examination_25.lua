@@ -11,9 +11,9 @@ quest horse_mission2 begin
 			say_title("Das Kampf-Pferd")
 			say("")
 			say("Du bist Level 25 und kannst")
-			say("nun deine Prüfung für dein Kampf")
-			say("Pferd absolvieren!")
-			say("Bringe dazu eine Pferdemedaillen mit!")
+			say("nun deine Prüfung für dein")
+			say("Kampf-Pferd absolvieren!")
+			say("Bringe dazu eine Pferdemedaille mit!")
 			say("")
 			clear_letter()
 			set_state(horse_mission2_begin)
@@ -22,24 +22,24 @@ quest horse_mission2 begin
 		
 	state horse_mission2_begin begin
 		when 20349.chat."Das Kampf-Pferd" begin
-			say("Stallbursche:")
+			say_title("Stallbursche:")
 			say("")
-			say("Hallo "..pc.get_name().."")
-			say("Du willst also das Kampf-Pferd?")
-			say("Dann musst du erstmal beweisen")
-			say("das du würdig bist das Kampf-Pferd zu führen")
-			say("Töte bitte 100 Skorpionbogenschützen oder")
-			say("Schlangenbogenschützen innerhalb 30 Minuten!")
+			say("Hallo "..pc.get_name()..",")
+			say("du willst also das Kampfpferd?")
+			say("Dann musst du erstmal beweisen,")
+			say("dass du würdig bist das Kampfpferd zu führen.")
+			say("Töte 100 Skorpionbogenschützen oder")
+			say("Schlangenbogenschützen innerhalb von 30 Minuten!")
 			say("Dann werde ich dir das Kampfpferd geben.")
-			say("Du kannst dir auch eine Gruppe leiten und")
+			say("Du kannst auch eine Gruppe leiten und")
 			say("mit ihr dann die Mission erfüllen!")
 			say("")
 			say("Möchtest du die Prüfung jetzt beginnen?")
-			local v = select ("Ja, ich möchte!", "Nein, Später.")
+			local v = select ("Ja", "Nein")
 			if v == 1 then
 				if horse.get_level() == 10 then
 					if pc.count_item(50050) >= 1 then
-						say("Stallbursche:")
+						say_title("Stallbursche:")
 						say("")
 						say("Ok, ziehe jetzt los. Die 30 Minuten laufen ab jetzt!")
 						say("Viel Glück.")
@@ -49,7 +49,7 @@ quest horse_mission2 begin
 						q.set_clock("Zeit", pc.getqf("limit_time2")-get_time())
 						set_state(kill_bogie_mobs2)
 					else
-						say("Stallbursche:")
+						say_title("Stallbursche:")
 						say("")
 						say("Du hast keine Pferdemedaille dabei!")
 						say("Komme wieder wenn du eine bei dir")
@@ -57,10 +57,10 @@ quest horse_mission2 begin
 						return
 					end
 				else
-					say("Stallbursche:")
+					say_title("Stallbursche:")
 					say("")
 					say("Dein Pferdelevel ist nicht hoch genug!")
-					say("Komme wieder wenn dein Pferd level 10")
+					say("Komme wieder wenn dein Pferd Level 10")
 					say("erreicht hat.")
 					return
 				end
@@ -73,8 +73,15 @@ quest horse_mission2 begin
 	state kill_bogie_mobs2 begin
 		when letter begin
 			send_letter("Die Pferdeprüfung")
-			q.set_counter("Bogenschützen.:", pc.getqf("bogie_mobs2"))
+			q.set_counter("Bogenschützen.", pc.getqf("bogie_mobs2"))
 			q.set_clock("Zeit", pc.getqf("limit_time2")-get_time())
+		end
+		
+		when login or levelup with get_time()>=pc.getqf("limit_time3") begin
+			clear_letter()
+			pc.delqf("limit_time2")
+			pc.delqf("bogie_mobs2")
+			set_state(failure_quest2)
 		end
 		
 		when info or button begin
@@ -82,7 +89,7 @@ quest horse_mission2 begin
 			say("")
 			say("Um die Pferdeprüfung abzuschließen musst du")
 			say("100 Skorpionbogenschützen oder")
-			say("Schlangenbogenschützen innerhalb 30 Minuten")
+			say("Schlangenbogenschützen innerhalb von 30 Minuten")
 			say("töten. Sie sind in der Yongbi-Wüste zu finden!")
 			say("")
 			say_reward("Du musst noch "..pc.getqf("bogie_mobs2").."")
@@ -92,7 +99,7 @@ quest horse_mission2 begin
 		when 2105.party_kill or 2107.party_kill begin
 			pc.setqf("bogie_mobs2", pc.getqf("bogie_mobs2")-1)
 			local kill_count = pc.getqf("bogie_mobs2") 
-			q.set_counter("Bogenschützen.:", kill_count)
+			q.set_counter("Bogenschützen.", kill_count)
 			if kill_count == 0 then
 				clear_letter()
 				pc.setqf("bogie_mobs2", 0)
@@ -110,7 +117,7 @@ quest horse_mission2 begin
 		when letter begin
 			cleartimer("limit_time2")
 			clear_letter()
-			send_letter("Prüfung Erfolgreich!")
+			send_letter("Prüfung erfolgreich!")
 			local v = find_npc_by_vnum(20349)
 			if v != 0 then target.vid("__TARGET__", v, "Hauptmann3")
 			end
@@ -119,8 +126,9 @@ quest horse_mission2 begin
 		when button or info begin
 			say_title("Die Pferdeprüfung")
 			say("")
-			say("Du hast 100 Bogenschützen innerhalb 30 Minuten")
-			say("erledigt. Gehe zum Stallburschen und berichte ihm")
+			say("Du hast die 100 Bogenschützen")
+			say("innerhalb von 30 Minuten getötet.")
+			say("Gehe zum Stallburschen und berichte ihm")
 			say("davon.")
 			say("")
 			say_reward("Auf zum Stallburschen")
@@ -131,13 +139,13 @@ quest horse_mission2 begin
 			target.delete(__TARGET__)
 			say_title("Stallbursche:")
 			say("")
-			say("Du hast die Aufgabe erledigt und bewisen das")
-			say("du dein Kampf-Pferd beherrschen kannst.")
-			say("Nun brauchst du noch das Waffen-Pferdebuch")
+			say("Du hast die Aufgabe erledigt und bewiesen, dass")
+			say("du dein Kampfpferd beherrschen kannst.")
+			say("Nun brauchst du noch das Waffen-Pferdebuch.")
 			say("")
-			say("Für die herstellung benötige ich 500.000 Yang")
+			say("Für die Herstellung benötige ich 500.000 Yang.")
 			say("")
-			local v = select ("Bezahlen", "Noch nicht")
+			local v = select ("Bezahlen", "Abbrechen")
 			if v == 1 then
 				if pc.money>=500000 then
 					if not selectHorseAppearence(50052) then return end
@@ -151,7 +159,6 @@ quest horse_mission2 begin
 
 					horse.set_level("11")
 					pc.changemoney(-500000)
-
 					pc.remove_item(50051, 1)
 					set_quest_state("horse_mission3", "run")
 					set_state(__complete)
@@ -159,7 +166,7 @@ quest horse_mission2 begin
 					say_title("Stallbursche:")
 					say("")
 					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast kannst du wiederkommen")
+					say("Wenn du genug Yang hast, kannst du wiederkommen")
 					say("und das Waffen-Pferdebuch kaufen!")
 					say("")
 				end
@@ -175,13 +182,13 @@ quest horse_mission2 begin
 		when 20349.chat."Waffen-Pferdebuch" begin
 			say_title("Stallbursche:")
 			say("")
-			say("Du hast die Aufgabe erledigt und bewisen das")
-			say("du dein Kampf-Pferd beherrschen kannst.")
-			say("Nun brauchst du noch das Waffen-Pferdebuch")
+			say("Du hast die Aufgabe erledigt und bewiesen, dass")
+			say("du dein Kampfpferd beherrschen kannst.")
+			say("Nun brauchst du noch das Waffen-Pferdebuch.")
 			say("")
-			say("Für die herstellung benötige ich 500.000 Yang")
+			say("Für die Herstellung benötige ich 500.000 Yang.")
 			say("")
-			local v = select ("Bezahlen", "Noch nicht")
+			local v = select ("Bezahlen", "Abbrechen")
 			if v == 1 then
 				if pc.money>=500000 then
 					if not selectHorseAppearence(50052) then return end
@@ -202,7 +209,7 @@ quest horse_mission2 begin
 					say_title("Stallbursche:")
 					say("")
 					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast kannst du wiederkommen")
+					say("Wenn du genug Yang hast, kannst du wiederkommen")
 					say("und das Waffen-Pferdebuch kaufen!")
 					say("")
 				end
