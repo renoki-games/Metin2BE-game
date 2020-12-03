@@ -11,7 +11,7 @@ quest truhen_zero begin
 			say("Einfach bei einem NPC verkaufen.")
 			say("")
 			say("Wir wünschen dir viel Spaß! :)")
-			say("")
+			say_title("Dein M2BE Team <3")
 			pc.give_item2(50187)
 			horse.set_level(0)
 			set_state(truhen)

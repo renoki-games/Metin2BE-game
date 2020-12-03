@@ -993,3 +993,6 @@ pc.give_dr
 pc.give_dm
 selectHorseAppearence
 giveHorseItem
+item.get_socket
+item.get_attr_type
+item.get_attr_value

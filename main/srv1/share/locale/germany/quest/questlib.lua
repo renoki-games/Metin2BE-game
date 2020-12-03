@@ -28,8 +28,19 @@ clickable_pn_tag = function (color_id, text)
 	return string.format("%s|Hpn_%s|h%s|h|r", tagColors[color_id], text, text)
 end
 
-clickable_item_tag = function (color_id, vnum, name)
-	return string.format("%s|Hitem:%x:0:0:0:0|h[%s]|h|r", tagColors[color_id], vnum, name)
+clickable_item_tag = function (color_id)
+	local vnum = item.get_vnum()
+	local name = item.get_name()
+	local flags = item.get_flags()
+	local socket_0, socket_1, socket_2 = item.get_socket(0), item.get_socket(1), item.get_socket(2)
+	local attrtype_0, attrvalue_0, attrtype_1, attrvalue_1, attrtype_2, attrvalue_2, attrtype_3, attrvalue_3, attrtype_4, attrvalue_4, attrtype_5, attrvalue_5, attrtype_6, attrvalue_6 =
+		item.get_attr_type(0), item.get_attr_value(0), item.get_attr_type(1), item.get_attr_value(1), item.get_attr_type(2), item.get_attr_value(2), item.get_attr_type(3), item.get_attr_value(3),
+		item.get_attr_type(4), item.get_attr_value(4), item.get_attr_type(5), item.get_attr_value(5), item.get_attr_type(6), item.get_attr_value(6)
+
+	return string.format("%s|Hitem:%x:%x:%x:%x:%x:%x:%d:%x:%d:%x:%d:%x:%d:%x:%d:%x:%d:%x:%d|h[%s]|h|r", tagColors[color_id], vnum, flags, socket_0, socket_1, socket_2,
+				attrtype_0, attrvalue_0, attrtype_1, attrvalue_1, attrtype_2, attrvalue_2, attrtype_3, attrvalue_3,
+				attrtype_4, attrvalue_4, attrtype_5, attrvalue_5, attrtype_6, attrvalue_6,
+				name)
 end
 
 --quest.create = function(f) return coroutine.create(f) end
