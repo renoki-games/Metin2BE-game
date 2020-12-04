@@ -996,3 +996,4 @@ giveHorseItem
 item.get_socket
 item.get_attr_type
 item.get_attr_value
+get_language
