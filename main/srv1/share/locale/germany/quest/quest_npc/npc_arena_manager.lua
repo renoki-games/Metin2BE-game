@@ -1,15 +1,15 @@
 quest arena_manager begin
 	state start begin
-		when 20017.chat.gameforge.arena_manager._10_npcChat begin
+		when 20017.chat.gameforge[get_language()].arena_manager._10_npcChat begin
 			if game.get_event_flag("arena_close") > 0 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._30_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._30_say)
 				return
 			end
 
 			if not npc.lock() then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._40_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._40_say)
 				return
 			end
 
@@ -20,36 +20,36 @@ quest arena_manager begin
 			end
 
 			if pc.get_level() < useMinLevel then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._50_say, useMinLevel))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._50_say, useMinLevel))
 				npc.unlock()
 				return
 			else
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._60_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._60_say)
 
 				local sname = input()
 
 				if sname == "" then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._70_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._70_say)
 					npc.unlock()
 					return
 				else
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._80_say, pc.name, sname))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._80_say, pc.name, sname))
 				wait("")
 
 					local opp_vid = find_pc_by_name(sname)
 
 					if opp_vid == 0 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._90_say, sname))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._90_say, sname))
 						npc.unlock()
 						return
 					elseif opp_vid == pc.get_vid() then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._100_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._100_say)
 						npc.unlock()
 						return
 					end
@@ -59,31 +59,31 @@ quest arena_manager begin
 					pc. select(old , old )
 
 					if opp_level < useMinLevel then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._110_say, useMinLevel))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._110_say, useMinLevel))
 						npc.unlock()
 						return
 					end
 					if not npc.is_near_vid(opp_vid, 10) then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._120_say, sname))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._120_say, sname))
 						npc.unlock()
 						return ;
 					end
 
 					local a = arena.is_in_arena(opp_vid)
 					if a == 0 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._130_say, sname))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._130_say, sname))
 						npc.unlock()
 						return ;
 					end
-				say_title(gameforge.arena_manager._140_sayTitle)
-				say(string.format(gameforge.arena_manager._85_say, pc.name, sname))
-					local agree = confirm(opp_vid, string.format(gameforge.arena_manager._87_say, sname, pc.name), 30)
+				say_title(gameforge[get_language()].arena_manager._140_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._85_say, pc.name, sname))
+					local agree = confirm(opp_vid, string.format(gameforge[get_language()].arena_manager._87_say, sname, pc.name), 30)
 					if agree!= CONFIRM_OK then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(string.format(gameforge.arena_manager._150_say, sname))
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(string.format(gameforge[get_language()].arena_manager._150_say, sname))
 						npc.unlock()
 						return
 					end
@@ -91,43 +91,43 @@ quest arena_manager begin
 					s = arena.start_duel(sname, 3)
 			
 					if s == 0 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._160_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._160_say)
 					elseif s == 2 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._170_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._170_say)
 					elseif s == 3 then
-				say_title(gameforge.arena_manager._20_sayTitle)
-				say(gameforge.arena_manager._180_say)
+				say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+				say(gameforge[get_language()].arena_manager._180_say)
 					end
 				end
 			end
 			npc.unlock()
 		end
 
-		when 20017.chat.gameforge.arena_manager._190_npcChat begin
+		when 20017.chat.gameforge[get_language()].arena_manager._190_npcChat begin
 			local g = arena.get_duel_list()
 			local arena_name = {}
 			local arena_observer = {}
 
 			table.foreachi(g,
 				function(n, p)
-					arena_name[n] = string.format(gameforge.arena_manager._195_say, p[1], p[2])
+					arena_name[n] = string.format(gameforge[get_language()].arena_manager._195_say, p[1], p[2])
 					arena_observer[n] = { p[3], p[4], p[5] }
 				end
 			)
 
-			table.insert(arena_name, gameforge.arena_manager._200_tableInsert)
+			table.insert(arena_name, gameforge[get_language()].arena_manager._200_tableInsert)
 			table.insert(arena_observer, 0)
 
 			local count = table.getn(g)
 			if count == 0 then
-			say_title(gameforge.arena_manager._20_sayTitle)
-			say(gameforge.arena_manager._210_say)
+			say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+			say(gameforge[get_language()].arena_manager._210_say)
 			return ;
 			else
-			say_title(gameforge.arena_manager._20_sayTitle)
-			say(string.format(gameforge.arena_manager._220_say, count))
+			say_title(gameforge[get_language()].arena_manager._20_sayTitle)
+			say(string.format(gameforge[get_language()].arena_manager._220_say, count))
 			wait()
 			end
 

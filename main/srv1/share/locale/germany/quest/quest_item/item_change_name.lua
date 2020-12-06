@@ -1,37 +1,37 @@
 quest change_name_item begin
 	state start begin
 		when 71055.use begin
-			say_title(gameforge.changename.title)
+			say_title(gameforge[get_language()].changename.title)
 			say()
-			say(gameforge.changename.help_1)
-			say(gameforge.changename.help_2)
+			say(gameforge[get_language()].changename.help_1)
+			say(gameforge[get_language()].changename.help_2)
 			say()
-			say_reward(gameforge.changename.help_3)
+			say_reward(gameforge[get_language()].changename.help_3)
 			say()
-			local change = select(gameforge.locale.yes, gameforge.locale.no)
+			local change = select(gameforge[get_language()].locale.yes, gameforge[get_language()].locale.no)
 
 			if change == 1 then
-				say_reward(gameforge.changename.change_1)
+				say_reward(gameforge[get_language()].changename.change_1)
 				local c_name = input()
 
 				if c_name != "" then
 					local sicherheitsabfrage = pc.change_name(c_name)
 
 					if sicherheitsabfrage == 1 then
-						say_title(gameforge.changename.title)
+						say_title(gameforge[get_language()].changename.title)
 						say()
-						say(gameforge.changename.cantchange_1)
+						say(gameforge[get_language()].changename.cantchange_1)
 						wait()
 					elseif sicherheitsabfrage == 2 then
-						say_title(gameforge.changename.title)
+						say_title(gameforge[get_language()].changename.title)
 						say()
-						say(gameforge.changename.field_has_forbidden_chars)
+						say(gameforge[get_language()].changename.field_has_forbidden_chars)
 						say()
 						wait()
 					elseif sicherheitsabfrage == 3 then
-						say_title(gameforge.changename.title)
+						say_title(gameforge[get_language()].changename.title)
 						say()
-						say(gameforge.changename.namenot_1)
+						say(gameforge[get_language()].changename.namenot_1)
 						say()
 						wait()
 					elseif sicherheitsabfrage == 4 then

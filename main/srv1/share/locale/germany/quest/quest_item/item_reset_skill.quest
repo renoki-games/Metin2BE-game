@@ -1,18 +1,18 @@
 quest reset_scroll begin
     state start begin
 		when 71002.use or 76001.use  begin
-			say_title(gameforge.reset_scroll._10_sayTitle)
+			say_title(gameforge[get_language()].reset_scroll._10_sayTitle)
 
-			say(gameforge.reset_scroll._20_say)
-			local s =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+			say(gameforge[get_language()].reset_scroll._20_say)
+			local s =  select(gameforge[get_language()].locale.guild.yes, gameforge[get_language()].locale.guild.no)
 			if 2 == s then
 				return
 			end
 
-			say_title(gameforge.reset_scroll._30_sayTitle)
+			say_title(gameforge[get_language()].reset_scroll._30_sayTitle)
 
-			say(gameforge.reset_scroll._40_say)
-			local c =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+			say(gameforge[get_language()].reset_scroll._40_say)
+			local c =  select(gameforge[get_language()].locale.guild.yes, gameforge[get_language()].locale.guild.no)
 			if 2 == c then
 				return
 			end
@@ -27,8 +27,8 @@ quest reset_scroll begin
 		end
 
 		when 71003.use begin
-			say_title(gameforge.reset_scroll._50_sayTitle)
-            say(gameforge.reset_scroll._60_sayReward)
+			say_title(gameforge[get_language()].reset_scroll._50_sayTitle)
+            say(gameforge[get_language()].reset_scroll._60_sayReward)
             wait()
 
 			local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
@@ -37,13 +37,13 @@ quest reset_scroll begin
 			local name_list = result[2]
 
 			if table.getn(vnum_list) < 2 then
-				say_title(gameforge.reset_scroll._50_sayTitle)
-				say(gameforge.reset_scroll._70_say)
+				say_title(gameforge[get_language()].reset_scroll._50_sayTitle)
+				say(gameforge[get_language()].reset_scroll._70_say)
 				return
 			end
 	
-			say_title(gameforge.reset_scroll._50_sayTitle)
-			say(gameforge.reset_scroll._80_say)
+			say_title(gameforge[get_language()].reset_scroll._50_sayTitle)
+			say(gameforge[get_language()].reset_scroll._80_say)
 			local i = select_table(name_list)
 
 			if table.getn(name_list) == i then
@@ -53,20 +53,20 @@ quest reset_scroll begin
 			local name = name_list[i]
 			local vnum = vnum_list[i]
 
-			say_title(gameforge.reset_scroll._50_sayTitle)
+			say_title(gameforge[get_language()].reset_scroll._50_sayTitle)
 			
-			say(gameforge.reset_scroll._90_sayReward)
-			say_reward(string.format(gameforge.reset_scroll._100_say, name))
+			say(gameforge[get_language()].reset_scroll._90_sayReward)
+			say_reward(string.format(gameforge[get_language()].reset_scroll._100_say, name))
 
-			local s =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+			local s =  select(gameforge[get_language()].locale.guild.yes, gameforge[get_language()].locale.guild.no)
 			if 2 == s then
 				return
 			end
 
-			say_title(gameforge.reset_scroll._110_sayTitle)
+			say_title(gameforge[get_language()].reset_scroll._110_sayTitle)
 
-			say(gameforge.reset_scroll._120_say)
-			local c =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+			say(gameforge[get_language()].reset_scroll._120_say)
+			local c =  select(gameforge[get_language()].locale.guild.yes, gameforge[get_language()].locale.guild.no)
 
 			if 2 == c then
 				return
@@ -81,8 +81,8 @@ quest reset_scroll begin
 			char_log(0, "RESET_ONE_SKILL", "APPLY_17MASTER_BONUS")
 			pc.setqf("force_to_master_skill", 1)
 
-			say_title(gameforge.reset_scroll._140_sayTitle)
-			say_reward(string.format(gameforge.reset_scroll._150_say, name))
+			say_title(gameforge[get_language()].reset_scroll._140_sayTitle)
+			say_reward(string.format(gameforge[get_language()].reset_scroll._150_say, name))
 			end
 	end
 end

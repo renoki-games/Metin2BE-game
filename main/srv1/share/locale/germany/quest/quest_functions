@@ -997,3 +997,9 @@ item.get_socket
 item.get_attr_type
 item.get_attr_value
 get_language
+numtomoney
+say_green
+say_yellow
+say_cyan
+say_orange
+say_red

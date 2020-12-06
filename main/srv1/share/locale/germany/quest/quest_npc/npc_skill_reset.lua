@@ -1,19 +1,19 @@
 quest skill_reset2 begin
     state start begin
-        when 9006.chat.gameforge.skill_reset2._10_npcChat begin
+        when 9006.chat.gameforge[get_language()].skill_reset2._10_npcChat begin
             if pc.level < 5 then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(gameforge.skill_reset2._20_say)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(gameforge[get_language()].skill_reset2._20_say)
                 return
             end
             if pc.level >30 then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                 say(string.format(gameforge.skill_reset2._30_say, pc.level))
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                 say(string.format(gameforge[get_language()].skill_reset2._30_say, pc.level))
                  return
              end
             if  pc.get_skill_group()==0 then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(gameforge.skill_reset2._40_say)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(gameforge[get_language()].skill_reset2._40_say)
                 return
             end
 
@@ -21,24 +21,24 @@ quest skill_reset2 begin
             local s = 0
 
             if not pc.has_master_skill() then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(string.format(gameforge.skill_reset2._50_say, cost))
-                s =  select(gameforge.skill_reset2._10_npcChat, gameforge.skill_reset2._60_select)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(string.format(gameforge[get_language()].skill_reset2._50_say, cost))
+                s =  select(gameforge[get_language()].skill_reset2._10_npcChat, gameforge[get_language()].skill_reset2._60_select)
             else
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(gameforge.skill_reset2._70_say)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(gameforge[get_language()].skill_reset2._70_say)
                 wait()
-                say(string.format(gameforge.skill_reset2._80_say, cost))
-                s =  select(gameforge.skill_reset2._90_select, gameforge.locale.cancel)
+                say(string.format(gameforge[get_language()].skill_reset2._80_say, cost))
+                s =  select(gameforge[get_language()].skill_reset2._90_select, gameforge[get_language()].locale.cancel)
             end
             if 2==s then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(gameforge.skill_reset2._110_say)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(gameforge[get_language()].skill_reset2._110_say)
                 return
             end
             if pc.money < cost then
-                say_title(gameforge.couple_ring._20_sayTitle)
-                say(gameforge.skill_reset2._120_say)
+                say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+                say(gameforge[get_language()].skill_reset2._120_say)
                 return
             end
             pc.changegold(-cost)
@@ -50,18 +50,18 @@ quest skill_reset2 begin
         when 71100.use begin
             if pc.level <=31 or pc.level >=98 then
                 say_title(item_name(71100))
-                say(gameforge.skill_reset2._140_say)
+                say(gameforge[get_language()].skill_reset2._140_say)
                 return
             end
             
             if  pc.get_skill_group()==0 then
                 say_title(item_name(71100))
-                say(gameforge.skill_reset2._40_say)
+                say(gameforge[get_language()].skill_reset2._40_say)
                 return
             end
             
             say_title(item_name(71100))
-            say(gameforge.skill_reset2._130_say)
+            say(gameforge[get_language()].skill_reset2._130_say)
             s =  select(locale.yes, locale.no)
             if 2==s then
                 return

@@ -48,21 +48,21 @@ end
 
 function get_time_remaining(seconds)
 	if seconds <= 60 then
-		return string.format(gameforge.locale.time.seconds, seconds)
+		return string.format(gameforge[get_language()].locale.time.seconds, seconds)
 	else
 		local minutes = math.floor(seconds / 60)
 		seconds = math.mod(seconds, 60)
 		if minutes <= 60 then
-			return string.format(gameforge.locale.time.minutes_and_seconds, minutes, seconds)
+			return string.format(gameforge[get_language()].locale.time.minutes_and_seconds, minutes, seconds)
 		else
 			local hours = math.floor(minutes / 60)
 			minutes = math.mod(minutes, 60)
 			if hours <= 24 then
-				return string.format(gameforge.locale.time.hours_and_minutes, hours, minutes)
+				return string.format(gameforge[get_language()].locale.time.hours_and_minutes, hours, minutes)
 			else
 				local days = math.floor(hours / 24)
 				hours = math.mod(hours, 24)
-				return string.format(gameforge.locale.time.days_and_hours, days, hours)
+				return string.format(gameforge[get_language()].locale.time.days_and_hours, days, hours)
 			end
 		end
 	end

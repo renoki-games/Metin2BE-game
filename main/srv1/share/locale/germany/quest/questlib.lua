@@ -1583,7 +1583,7 @@ function BuildSkillList(job, group)
     end
 
     table.insert(skill_vnum_list, 0)
-    table.insert(skill_name_list, gameforge.locale.cancel)
+    table.insert(skill_name_list, gameforge[get_language()].locale.cancel)
 
     return { skill_vnum_list, skill_name_list }
 end
@@ -1621,9 +1621,9 @@ end
  function get_map_name_by_number(number)
 map_name = {
 --EmpireNr-MapNrs
-        [1] = {[1] = gameforge.functions._100_say, [2] = gameforge.functions._130_say, [3] = gameforge.functions._130_say,  [4] = gameforge.functions._160_say, [61] = gameforge.functions._200_say, [62] = gameforge.functions._210_say, [63] = gameforge.functions._220_say, [64] = gameforge.functions._190_say, [65] = gameforge.functions._230_say, [72] = gameforge.functions._240_say, [73] = gameforge.functions._240_say,},
-        [2] = {[1] = gameforge.functions._110_say, [2] = gameforge.functions._140_say, [3] = gameforge.functions._140_say,  [4] = gameforge.functions._170_say, [61] = gameforge.functions._200_say, [62] = gameforge.functions._210_say, [63] = gameforge.functions._220_say, [64] = gameforge.functions._190_say, [65] = gameforge.functions._230_say, [72] = gameforge.functions._240_say, [73] = gameforge.functions._240_say,},
-        [3] = {[1] = gameforge.functions._120_say, [2] = gameforge.functions._150_say, [3] = gameforge.functions._150_say,  [4] = gameforge.functions._180_say, [61] = gameforge.functions._200_say, [62] = gameforge.functions._210_say, [63] = gameforge.functions._220_say, [64] = gameforge.functions._190_say, [65] = gameforge.functions._230_say, [72] = gameforge.functions._240_say, [73] = gameforge.functions._240_say,},
+        [1] = {[1] = gameforge[get_language()].functions._100_say, [2] = gameforge[get_language()].functions._130_say, [3] = gameforge[get_language()].functions._130_say,  [4] = gameforge[get_language()].functions._160_say, [61] = gameforge[get_language()].functions._200_say, [62] = gameforge[get_language()].functions._210_say, [63] = gameforge[get_language()].functions._220_say, [64] = gameforge[get_language()].functions._190_say, [65] = gameforge[get_language()].functions._230_say, [72] = gameforge[get_language()].functions._240_say, [73] = gameforge[get_language()].functions._240_say,},
+        [2] = {[1] = gameforge[get_language()].functions._110_say, [2] = gameforge[get_language()].functions._140_say, [3] = gameforge[get_language()].functions._140_say,  [4] = gameforge[get_language()].functions._170_say, [61] = gameforge[get_language()].functions._200_say, [62] = gameforge[get_language()].functions._210_say, [63] = gameforge[get_language()].functions._220_say, [64] = gameforge[get_language()].functions._190_say, [65] = gameforge[get_language()].functions._230_say, [72] = gameforge[get_language()].functions._240_say, [73] = gameforge[get_language()].functions._240_say,},
+        [3] = {[1] = gameforge[get_language()].functions._120_say, [2] = gameforge[get_language()].functions._150_say, [3] = gameforge[get_language()].functions._150_say,  [4] = gameforge[get_language()].functions._180_say, [61] = gameforge[get_language()].functions._200_say, [62] = gameforge[get_language()].functions._210_say, [63] = gameforge[get_language()].functions._220_say, [64] = gameforge[get_language()].functions._190_say, [65] = gameforge[get_language()].functions._230_say, [72] = gameforge[get_language()].functions._240_say, [73] = gameforge[get_language()].functions._240_say,},
 }
     return map_name[pc.get_empire()][number]
 end

@@ -1,36 +1,36 @@
 quest fortune_telling begin
 	state start begin
-		when oldwoman.chat.gameforge.fortune_telling._10_npcChat begin
+		when oldwoman.chat.gameforge[get_language()].fortune_telling._10_npcChat begin
 			if pc.level<=20 then
-				say_title(gameforge.couple_ring._20_sayTitle)
-				say(gameforge.fortune_telling._20_say)
+				say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+				say(gameforge[get_language()].fortune_telling._20_say)
 				return
 			end
 
 			if get_time()-pc.getqf("time") < 8*60*60 then
 				local passed_time = get_time() - pc.getqf("time")
-				say_title(gameforge.couple_ring._20_sayTitle)
-				say(gameforge.fortune_telling._30_say)
+				say_title(gameforge[get_language()].couple_ring._20_sayTitle)
+				say(gameforge[get_language()].fortune_telling._30_say)
 				
 				wait()
 				local idx = pc.getqf("idx")
 				if idx!=0 then
-					say_title(gameforge.fortune_telling._40_sayTitle)
-					say(gameforge.fortune_telling._50_say)
+					say_title(gameforge[get_language()].fortune_telling._40_sayTitle)
+					say(gameforge[get_language()].fortune_telling._50_say)
 					say(locale.fortune_words[idx][1])
 					
 					wait()
 					
 					if pc.getqf("talisman") == 0 and special.fortune_telling[idx][5] > 0 then
 						local talisman_cost = special.fortune_telling[idx][5]
-						say_title(gameforge.fortune_telling._40_sayTitle)
-						say(gameforge.fortune_telling._60_say)
+						say_title(gameforge[get_language()].fortune_telling._40_sayTitle)
+						say(gameforge[get_language()].fortune_telling._60_say)
 						
-						local s =  select(gameforge.fortune_telling._70_select, gameforge.fortune_telling._80_select)
+						local s =  select(gameforge[get_language()].fortune_telling._70_select, gameforge[get_language()].fortune_telling._80_select)
 						if s == 1 then
 							if pc.gold < talisman_cost then
-								say_title(gameforge.fortune_telling._40_sayTitle)
-								say(gameforge.fortune_telling._90_say)
+								say_title(gameforge[get_language()].fortune_telling._40_sayTitle)
+								say(gameforge[get_language()].fortune_telling._90_say)
 								
 								pc.setqf("talisman", 0)
 							else
@@ -50,15 +50,15 @@ quest fortune_telling begin
 
 			local gold = 7777
 			
-			say_title(gameforge.fortune_telling._100_sayTitle)
+			say_title(gameforge[get_language()].fortune_telling._100_sayTitle)
 
 
-			say(gameforge.fortune_telling._110_say)
-			local s =  select(gameforge.fortune_telling._120_select, gameforge.fortune_telling._130_select)
+			say(gameforge[get_language()].fortune_telling._110_say)
+			local s =  select(gameforge[get_language()].fortune_telling._120_select, gameforge[get_language()].fortune_telling._130_select)
 
 			if s == 2 then
-				say_title(gameforge.fortune_telling._100_sayTitle)
-				say(gameforge.fortune_telling._140_say)
+				say_title(gameforge[get_language()].fortune_telling._100_sayTitle)
+				say(gameforge[get_language()].fortune_telling._140_say)
 				
 				return
 			end
@@ -77,7 +77,7 @@ quest fortune_telling begin
 			end
 			i = idx
 
-			say_title(gameforge.fortune_telling._100_sayTitle)
+			say_title(gameforge[get_language()].fortune_telling._100_sayTitle)
 			say(locale.fortune_words[i][2])
 			
 			local t = {}
@@ -102,14 +102,14 @@ quest fortune_telling begin
 			if special.fortune_telling[i][5]>0 then
 				wait()
 				
-				say_title(gameforge.fortune_telling._100_sayTitle)
+				say_title(gameforge[get_language()].fortune_telling._100_sayTitle)
 				say(locale.fortune_words[i][3])
 
 				local talisman_cost = special.fortune_telling[i][5]
-				local s =  select(gameforge.fortune_telling._150_select, gameforge.fortune_telling._160_select)
+				local s =  select(gameforge[get_language()].fortune_telling._150_select, gameforge[get_language()].fortune_telling._160_select)
 				if s == 1 then
 					if pc.gold < talisman_cost then
-						say(string.format(gameforge.fortune_telling._170_say, gold))
+						say(string.format(gameforge[get_language()].fortune_telling._170_say, gold))
 						pc.setqf("talisman", 0)
 						
 					else
@@ -120,8 +120,8 @@ quest fortune_telling begin
 					end
 
 				elseif s == 2 then
-					say_title(gameforge.fortune_telling._40_sayTitle)
-					say(gameforge.fortune_telling._180_say)
+					say_title(gameforge[get_language()].fortune_telling._40_sayTitle)
+					say(gameforge[get_language()].fortune_telling._180_say)
 					pc.setqf("talisman", 0)
 				end
 			end
