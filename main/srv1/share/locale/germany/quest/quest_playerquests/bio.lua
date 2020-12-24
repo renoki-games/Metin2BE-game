@@ -1773,7 +1773,7 @@ quest bio begin
 	-- LvL 92 / Juwelen der Magie --
 	--------------------------------
 	state collect_quest_lv92 begin
-		when login or levelup with pc.level ==92 begin
+		when login or levelup with pc.level > 91 begin
 			set_state(talk_to_disciple_lv92)
 		end	
 	end
@@ -1935,7 +1935,7 @@ quest bio begin
 	-- LvL 94 / Juwelen der Lebenskraft --
 	--------------------------------------
 	state collect_quest_lv94 begin
-		when login or levelup with pc.level>93 begin
+		when login or levelup with pc.level > 93 begin
 			set_state(talk_to_disciple_lv94)
 		end	
 	end
