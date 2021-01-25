@@ -3,6 +3,7 @@ quest horse_summon begin
 		
 function get_horse_summon_prob_pct()
 	local skill_level=pc.get_skill_level(131)
+
 	if skill_level==1 then
 		return 15
 	elseif skill_level==2 then
@@ -26,67 +27,69 @@ function get_horse_summon_prob_pct()
 	end
 	return 10
 end	
-
-		
-		when 20349.chat.gameforge[get_language()].horse_summon._10_npcChat with horse.get_grade()==1 and pc.countitem("50051")<1 begin
-			say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-			say(gameforge[get_language()].horse_summon._20_say)
-			local b= select(gameforge[get_language()].find_squareguard._50_select, gameforge[get_language()].find_brother_article._100_select)
-			if 1==b then
+	
+		when 20349.chat.gameforge.horse_summon._10_npcChat with horse.get_grade() == 1 and pc.countitem("50051") < 1 begin
+			say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+			say(gameforge.horse_summon._20_say)
+			local b = select(gameforge.find_squareguard._50_select, gameforge.find_brother_article._100_select)
+			if 1 == b then
 				if pc.money>=400000 then
 					pc.changemoney(-400000)
-					say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-					say(gameforge[get_language()].horse_summon._30_say)
+					say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+					say(gameforge.horse_summon._30_say)
 					pc.give_item2("50051", 1)
 				else
-					say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-					say(gameforge[get_language()].horse_summon._40_say)
+					say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+					say(gameforge.horse_summon._40_say)
 				end
 			elseif 2==b then
+				return
 			else
-				say(string.format(gameforge[get_language()].find_squareguard._70_say, b))
+				say(string.format(gameforge.find_squareguard._70_say, b))
 			end
 		end
-		when 20349.chat.gameforge[get_language()].horse_summon._50_npcChat with horse.get_grade()==2 and pc.countitem("50052")<1 begin
-			say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-			say(gameforge[get_language()].horse_summon._60_say)
-			local b= select(gameforge[get_language()].find_squareguard._50_select, gameforge[get_language()].find_brother_article._100_select)
+		when 20349.chat.gameforge.horse_summon._50_npcChat with horse.get_grade()==2 and pc.countitem("50052")<1 begin
+			say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+			say(gameforge.horse_summon._60_say)
+			local b= select(gameforge.find_squareguard._50_select, gameforge.find_brother_article._100_select)
 			if 1==b then
 				if pc.money>=50000 then
 					pc.changemoney(-50000)
-					say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-					say(gameforge[get_language()].horse_summon._70_say)
+					say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+					say(gameforge.horse_summon._70_say)
 					pc.give_item2("50052", 1)
 				else
-					say(gameforge[get_language()].horse_summon._80_say)
+					say(gameforge.horse_summon._80_say)
 				end
 			elseif 2==b then
+				return
 			else
-				say(string.format(gameforge[get_language()].find_squareguard._70_say, b))
+				say(string.format(gameforge.find_squareguard._70_say, b))
 			end
 		end
-		when 20349.chat.gameforge[get_language()].horse_summon._90_npcChat with horse.get_grade()==3 and pc.countitem("50053")<1 begin
-			say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-			say(gameforge[get_language()].horse_summon._100_say)
-			local b= select(gameforge[get_language()].find_squareguard._50_select, gameforge[get_language()].find_brother_article._100_select)
+		when 20349.chat.gameforge.horse_summon._90_npcChat with horse.get_grade()==3 and pc.countitem("50053")<1 begin
+			say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+			say(gameforge.horse_summon._100_say)
+			local b= select(gameforge.find_squareguard._50_select, gameforge.find_brother_article._100_select)
 			if 1==b then
 				if pc.money>=100000 then
 					pc.changemoney(-100000)
-					say_title(gameforge[get_language()].buy_fishrod._210_sayTitle)
-					say(gameforge[get_language()].horse_summon._110_say)
+					say_title(gameforge.buy_fishrod._210_sayTitle)
+					say(gameforge.horse_summon._110_say)
 					pc.give_item2("50053", 1)
 				else
-					say_title(gameforge[get_language()].horse_exchange_ticket._20_sayTitle)
-					say(gameforge[get_language()].horse_summon._80_say)
+					say_title(gameforge.horse_exchange_ticket._20_sayTitle)
+					say(gameforge.horse_summon._80_say)
 				end
 			elseif 2==b then
+				return
 			else
-				say(string.format(gameforge[get_language()].find_squareguard._70_say, b))
+				say(string.format(gameforge.find_squareguard._70_say, b))
 			end
 		end
 		when 50051.use with horse.get_grade()==0 begin
-			say_title(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._120_say)
+			say_title(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._120_say)
 		end
 		when 50051.use with horse.get_grade()==1 begin
 			if pc.get_map_index() >= 1100000 and pc.get_map_index() <= 1105000 or
@@ -117,20 +120,20 @@ end
 			end
 		end
 		when 50051.use with horse.get_grade()==2 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._160_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._160_sayReward)
 		end
 		when 50051.use with horse.get_grade()==3 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._170_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._170_sayReward)
 		end
 		when 50052.use with horse.get_grade()==0 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._180_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._180_sayReward)
 		end
 		when 50052.use with horse.get_grade()==1 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._190_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._190_sayReward)
 		end
 		when 50052.use with horse.get_grade()==2 begin
 			if pc.get_map_index() >= 1100000 and pc.get_map_index() <= 1105000 or
@@ -160,20 +163,20 @@ end
 			end
 		end
 		when 50052.use with horse.get_grade()==3 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._230_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._230_sayReward)
 		end
 		when 50053.use with horse.get_grade()==0 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._240_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._240_sayReward)
 		end
 		when 50053.use with horse.get_grade()==1 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._190_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._190_sayReward)
 		end
 		when 50053.use with horse.get_grade()==2 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._250_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._250_sayReward)
 		end
 		when 50053.use with horse.get_grade()==3 begin
 			if pc.get_map_index() >= 1100000 and pc.get_map_index() <= 1300000 then
@@ -203,20 +206,20 @@ end
 		end
 	
 		when 50053.use with horse.get_grade()==4 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._230_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._230_sayReward)
 		end
 		when 50069.use with horse.get_grade()==1 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._240_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._240_sayReward)
 		end
 		when 50069.use with horse.get_grade()==2 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._190_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._190_sayReward)
 		end
 		when 50069.use with horse.get_level()<30 begin
-			say(gameforge[get_language()].buy_fishrod._210_sayTitle)
-			say(gameforge[get_language()].horse_summon._250_sayReward)
+			say(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.horse_summon._250_sayReward)
 		end
 		when 50069.use with horse.get_level()==30 begin
 			if pc.get_map_index() >= 1100000 and pc.get_map_index() <= 1300000 then

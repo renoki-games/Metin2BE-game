@@ -1,240 +1,234 @@
-quest horse_mission4 begin
-	state start begin
-	end
-	
+-- Generals
+define MIN_LEVEL 75
+define QUEST_NPC 20349
+define HORSE_MEDALL 50050
+define KILL_STAGE_1 500
+define KILL_MOB 2402
+define REWARD_HORSE 50069
+define QUEST_COST 2000000
+
+
+quest horse_examination_75 begin
 	state run begin
-		when login or levelup with pc.get_level() >= 75 and horse.get_level() == 29 begin
-			send_letter("Das Schlachtross")
-		end
-		
-		when button or info begin
-			say_title("Das Schlachtross")
-			say("")
-			say("Du bist Level 75 und kannst")
-			say("nun deine Prüfung für dein")
-			say("Schlachtross absolvieren!")
-			say("Bringe dazu eine Pferdemedaille mit!")
-			say("")
-			clear_letter()
-			set_state(horse_mission4_begin)
+		when login or levelup with pc.get_level() >= MIN_LEVEL begin
+			set_state(quest_start)
 		end
 	end
-		
-	state horse_mission4_begin begin
-		when 20349.chat."Das Schlachtross" begin
-			say_title("Stallbursche:")
+
+	state quest_start begin
+		when login or letter begin
+			send_letter("Das Schlachtross")
+			setTarget(QUEST_NPC)
+		end
+
+		when button or info begin
+			printQuestHeader("Das Schlachtross")
+			sayQuestText("Du bist Level 75 und kannst nun die Prüfung für dein Schlachtross absolvieren!", true)
+			sayQuestText("Spreche dafür mit dem Stallburschen.")
+
+			printQuestInfo("Hinweis:")
+			say("Bringe dazu eine Pferdemedaille mit!")
+		end
+
+		when __TARGET__.target.click or	QUEST_NPC.chat."Das Schlachtross" begin
+			deleteTarget(QUEST_NPC)
+			say_size(350, 380)
+
+			printQuestHeader(mob_name(QUEST_NPC))
+			sayQuestText(string.format("Hallo %s, du möchtest dein Schlachtross erhalten?", pc.get_name()), true)
+			sayQuestText("Dafür musst du erstmal beweisen, dass du würdig bist", true)
+			sayQuestText("das Schlachtross zu führen!")
 			say("")
-			say("Hallo "..pc.get_name()..",")
-			say("du willst also das Schlachtross?")
-			say("Dann musst du erstmal beweisen,")
-			say("dass du würdig bist das Schlachtross zu führen.")
-			say("Diese Prüfung ist die letzte und härteste!")
-			say("Ohne eine Gruppe wirst du sie vermutlich nicht")
-			say("schaffen können.")
-				wait()
-			say_title("Stallbursche:")
-			say("")
-			say("Töte 500 Setaou-Jäger innerhalb von 30 Minuten!")
-			say("Dann werde ich dir das Schlachtross geben.")
-			say("")
+
+			printQuestInfo()
+			sayQuestText(string.format("Töte %d Setaou-Jäger innerhalb von 60 Minuten!", KILL_STAGE_1))
+
+			printQuestInfo("Hinweis:")
+			say("Diese Quest ist auch mit Hilfe einer Gruppe möglich.")
+			sayQuestText(string.format("Außerdem benötigst du dafür eine %s!", item_name(HORSE_MEDALL)))
+
 			say("Möchtest du die Prüfung jetzt beginnen?")
-			local v = select ("Ja", "Nein")
-			if v == 1 then
+
+			local s = select("Prüfung starten", "Abbrechen")
+			if s == 2 then return end
+
+			if s == 1 then
 				if horse.get_level() == 29 then
-					if pc.count_item(50050) >= 1 then
-						say_title("Stallbursche:")
-						say("")
-						say("Ok, ziehe jetzt los. Die 30 Minuten laufen ab jetzt!")
+					if pc.count_item(HORSE_MEDALL) >= 1 then
+
+						printQuestHeader(mob_name(QUEST_NPC))
+						say("Ok, ziehe jetzt los. Die 60 Minuten laufen ab jetzt!")
 						say("Viel Glück.")
-						pc.remove_item(50050, 1)
-						pc.setqf("limit_time4", get_time()+30*60)
-						pc.setqf("horse_ex_4", 500)
-						set_state(kill_bogie_mobs4)
+						wait()
+
+						horse_examination_75.setUpStage_1()
+						set_state(stage_first_task)
 					else
-						say_title("Stallbursche:")
-						say("")
+						printQuestHeader(mob_name(QUEST_NPC))
 						say("Du hast keine Pferdemedaille dabei!")
-						say("Komme wieder wenn du eine bei dir")
-						say("trägst.")
+						say("Komme wieder wenn du eine bei dir hast.")
 						return
 					end
-				else
-					say_title("Stallbursche:")
-					say("")
-					say("Dein Pferdelevel ist nicht hoch genug!")
-					say("Komme wieder wenn dein Pferd Level 29")
-					say("erreicht hat.")
+				else 
+					printQuestHeader(mob_name(QUEST_NPC))
+					say("Dein Pferd muss mindestens Level 29 erreicht haben!")
 					return
 				end
-			elseif v == 2 then
-				return
 			end
 		end
 	end
-	
-	state kill_bogie_mobs4 begin
+
+	state stage_first_task begin
 		when letter begin
-			send_letter("Die Pferdeprüfung")
-			q.set_counter("Bogenschützen.", pc.getqf("horse_ex_4"))
-			q.set_clock("Zeit", pc.getqf("limit_time4")-get_time())
+			send_letter("Die vierte Pferdeprüfung")
+			q.set_counter("Setaou-Jäger", pc.getqf("horseQuestKillMob"))
+			q.set_clock("Zeit", horse_examination_75.horseQuestTimer() - get_time())
 		end
-		
-		when login or levelup with get_time()>=pc.getqf("limit_time3") begin
-			clear_letter()
-			pc.delqf("limit_time4")
-			pc.delqf("horse_ex_4")
-			set_state(failure_quest4)
-		end
-		
-		when info or button begin
-			say_title("Die Pferdeprüfung")
-			say("")
+
+		when button or info begin
+			printQuestHeader("Die Pferdeprüfung:")
 			say("Um die Pferdeprüfung abzuschließen musst du")
-			say("innerhalb von 30 Minuten 500 Setaou-Jäger")
-			say("töten. Sie sind in der Grotte der Verbannung")
-			say("zu finden!")
+			say(string.format("innerhalb von 60 Minuten %d Setaou-Jäger", KILL_STAGE_1))
+			say("töten! Du findest sie in der Grotte der Verbannung.")
 			say("")
-			say_reward("Du musst noch "..pc.getqf("horse_ex_4").."")
-			say_reward("von 500 Setaou-Jägern töten!")
+
+			printQuestInfo()
+			sayQuestText(string.format("Du musst noch %s von %d Setaou-Jäger töten!", pc.getqf("horseQuestKillMob"), KILL_STAGE_1))
 		end
-		
-		when 2402.party_kill begin
-			pc.setqf("horse_ex_4", pc.getqf("horse_ex_4")-1)
-			local kill_count = pc.getqf("horse_ex_4") 
-			q.set_counter("Noch verbl.", kill_count)
-			if kill_count == 0 then
-				clear_letter()
-				pc.setqf("horse_ex_4", 0)
-				set_state(finish_kills4)
+
+		when login or levelup with horse_examination_75.horseQuestTimer() >= get_time() begin
+			horse_examination_75.clearQuest()
+			horse_examination_75.clearTimer()
+			set_state(stage_quest_fail)
+		end
+
+		when KILL_MOB.party_kill begin
+			pc.setqf("horseQuestKillMob", pc.getqf("horseQuestKillMob") -1)
+
+			local killCount = pc.getqf("horseQuestKillMob")
+			q.set_counter("Setaou-Jäger", killCount)
+
+			if killCount == 0 then
+				horse_examination_75.clearQuest()
+				set_state(stage_quest_finish)
 			end
-			if get_time()>=pc.getqf("limit_time4") then
-				clear_letter()
-				pc.setqf("horse_ex_4", 0)
-				set_state(failure_quest4)
+
+			if get_time() >= pc.getqf("horseQuestTimerLimit") then
+				horse_examination_75.clearQuest()
+				set_state(stage_quest_fail)
 			end
 		end
-	end 
-	
-	state finish_kills4 begin
+	end
+
+	state stage_quest_finish begin
 		when letter begin
-			cleartimer("limit_time4")
 			send_letter("Prüfung erfolgreich!")
-			local v = find_npc_by_vnum(20349)
-			if v != 0 then target.vid("__TARGET__", v, "Hauptmann3")
-			end
+			setTarget(QUEST_NPC)
 		end
-		
+
 		when button or info begin
-			say_title("Die Pferdeprüfung")
+			printQuestHeader("Die Pferdeprüfung:")
+			say(string.format("Du hattest die Aufgabe %d Setaou-Jäger", KILL_STAGE_1))
+			say("innerhalb von 60 Minuten zu töten.")
+			say("Berichte dem Stallburschen von deinem Erfolg.")
 			say("")
-			say("Du hast die 500 Setaou-Jäger")
-			say("innerhalb von 30 Minuten getötet.")
-			say("Gehe zum Stallburschen und berichte ihm")
-			say("davon.")
-			say("")
-			say_reward("Auf zum Stallburschen")
-			say("")
+
+			printQuestInfo()
+			sayQuestText("Sprich mit dem Stallburschen.")
 		end
-		
-		when __TARGET__.target.click or 20349.chat."Das Schlachtross" begin
-			target.delete(__TARGET__)
-			say_title("Stallbursche:")
-			say("")
+
+		when __TARGET__.target.click or QUEST_NPC.chat."Das Schlachtross" begin
+			deleteTarget(QUEST_NPC)
+
+			printQuestHeader(mob_name(QUEST_NPC))
 			say("Du hast die Aufgabe erledigt und bewiesen, dass")
-			say("du dein Schlachtross beherrschen kannst.")
-			say("Nun brauchst du noch das Schlachtross-Siegel.")
+			say("du würdig bist ein Schlachtross zu führen.")
+			say("Ich werde dir das Schlachtross-Siegel anfertigen.")
 			say("")
-			say("Für die Herstellung benötige ich 2.000.000 Yang.")
+
+			say(string.format("Für die Herstellung benötige ich %s Yang.", numberDot(QUEST_COST)))
 			say("")
-			local v = select ("Bezahlen", "Abbrechen")
-			if v == 1 then
-				if pc.money>=2000000 then
-					say_title("Stallbursche:")
-					say("")
-					say("Du erhälst das Schlachtross-Siegel!")
-					say_item_vnum(50069)
-					say("")
+
+			local s = select ("Bezahlen", "Abbrechen")
+			if s == 2 then return end
+
+			if s == 1 then
+				if pc.money >= QUEST_COST then
+					if not selectHorseAppearence(REWARD_HORSE) then return end
+
+					printQuestHeader(mob_name(QUEST_NPC))
+					say("Du erhälst:")
+
+					say_item_vnum(REWARD_HORSE)
+					wait()
+
 					horse.set_level(30)
-					pc.changemoney(-2000000)
+					pc.change_gold(-QUEST_COST)
 					pc.remove_item(50053, 1)
-					pc.give_item2(50069, 1)
+
+					clear_letter()
+					set_quest_state("horse_examination_75", "run")
 					set_state(__COMPLETE__)
 				else
-					say_title("Stallbursche:")
-					say("")
+					printQuestHeader(mob_name(QUEST_NPC))
 					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast, kannst du wiederkommen")
-					say("und das Schlachtross-Siegel kaufen!")
-					say("")
+					say("Komm zurück, sobald du genug Yang hast!")
+					return
 				end
-			elseif v == 2 then
-				clear_letter()
-				set_state(buy_horse_book)
 			end
 		end
 	end
-	
-	state buy_horse_book begin
-		when 20349.chat."Schlachtross-Siegel" begin
-			say_title("Stallbursche:")
-			say("")
-			say("Du hast die Aufgabe erledigt und bewiesen, dass")
-			say("du dein Schlachtross beherrschen kannst.")
-			say("Nun brauchst du noch das Schlachtross-Siegel.")
-			say("")
-			say("Für die Herstellung benötige ich 2.000.000 Yang.")
-			say("")
-			local v = select ("Bezahlen", "Abbrechen")
-			if v == 1 then
-				if pc.money>=2000000 then
-					say_title("Stallbursche:")
-					say("")
-					say("Du erhälst das Schlachtross-Siegel!")
-					say_item_vnum(50069)
-					say("")
-					horse.set_level(30)
-					pc.changemoney(-2000000)
-					pc.remove_item(50053, 1)
-					pc.give_item2(50069, 1)
-					set_state(__COMPLETE__)
-				else
-					say_title("Stallbursche:")
-					say("")
-					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast, kannst du wiederkommen")
-					say("und das Schlachtross-Siegel kaufen!")
-					say("")
-				end
-			elseif v == 2 then
-				return
-			end
+
+	state stage_quest_fail begin
+		when login or enter or letter begin
+			send_letter("Prüfung gescheitert!")
+			setTarget(QUEST_NPC)
 		end
-	end
-	
-	state failure_quest4 begin
-		when letter begin
-			send_letter("Die Pferdeprüfung")
-			pc.setqf("horse_ex_4", 0)
-			local v = find_npc_by_vnum(20349)
-			if v != 0 then target.vid("__TARGET__", v, "Hauptmann3")
-			end
-		end
-		
+
 		when button or info begin
-			say_title("Die Pferdeprüfung")
-			say("")
-			say("Du hast die 500 Setaou-Jäger innerhalb von 30")
+			printQuestHeader("Die Pferdeprüfung")
+			say("Du hast die 500 Setaou-Jäger innerhalb von 60")
 			say("Minuten nicht töten können. Geh zum")
 			say("Stallburschen und versuche es erneut!")
-			say("")
+		end
+
+		when __TARGET__.target.click or	QUEST_NPC.chat."Das Schlachtross" begin
+			deleteTarget(QUEST_NPC)
+
+			printQuestHeader(mob_name(QUEST_NPC))
+			say("Du hast die Aufgabe also nicht abschließen können,")
+			say("keine Sorge, ich gebe dir einen weiteren Versuch.")
+			say("Sprich mich einfach an, sobald du bereit bist!")
+			wait()
+
 			clear_letter()
-			set_state(start)
+			set_state(quest_start)
 		end
 	end
-	
+
 	state __COMPLETE__ begin
-		when enter begin
-			q.done()
+	end
+
+	state __FUNCTIONS__ begin
+		function setUpStage_1()
+			pc.remove_item(HORSE_MEDALL, 1)
+			pc.setqf("horseQuestTimerLimit", get_time()+60*60)
+			pc.setqf("horseQuestKillMob", KILL_STAGE_1)
+
+			q.set_clock("Zeit", pc.getqf("horseQuestClockTimer")-get_time())
+		end
+
+		function horseQuestTimer()
+			return pc.getqf("horseQuestTimerLimit")
+		end
+
+		function clearTimer()
+			pc.delqf(horseQuestTimerLimit)
+		end
+
+		function clearQuest()
+			clear_letter()
+			pc.delqf("horseQuestKillMob")
 		end
 	end
 end

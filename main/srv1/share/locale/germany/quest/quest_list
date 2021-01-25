@@ -47,7 +47,9 @@ quest_item/item_soulstone.lua
 quest_item/item_warpring.lua
 quest_item/item_shop_chests.lua
 
-quest_npc/npc_arena_manager.lua
+quest_npc/npc_arena_manager_blue.lua
+quest_npc/npc_arena_manager_red.lua
+quest_npc/npc_arena_manager_yellow.lua
 quest_npc/npc_fisher_buy_fishrod.lua
 quest_npc/npc_fisher_refine_fishrod.lua
 quest_npc/npc_fortune_telling.lua
@@ -63,7 +65,20 @@ quest_npc/npc_warp_arena.lua
 quest_npc/npc_warp_spiderdungeon_2.lua
 quest_npc/npc_warp_grotte.lua
 
-quest_playerquests/bio.lua
+#Biologen Quests
+quest_biologe/biologe_level_30.lua
+quest_biologe/biologe_level_40.lua
+quest_biologe/biologe_level_50.lua
+quest_biologe/biologe_level_60.lua
+quest_biologe/biologe_level_70.lua
+quest_biologe/biologe_level_80.lua
+quest_biologe/biologe_level_85.lua
+quest_biologe/biologe_level_90.lua
+quest_biologe/biologe_level_92.lua
+quest_biologe/biologe_level_94.lua
+quest_biologe/biologe_level_96.lua
+quest_biologe/biologe_level_98.lua
+
 
 quest_system/mining_bergbau.lua
 #quest_system/oxevent.lua

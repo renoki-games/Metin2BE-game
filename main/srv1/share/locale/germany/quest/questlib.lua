@@ -13,6 +13,9 @@ NAME_COLOR = 2
 TEXT_COLOR = 3
 ITEM_COLOR = 4
 
+dofile("locale/germany/quest/quest_horse/horse_quests_lib.lua")
+dofile("locale/germany/quest/quest_biologe/biologe_quests_lib.lua")
+
 tagColors = {
 	[SERVER_COLOR] = "|cffffc8c8",
 	[NAME_COLOR] = "|cffffd74c",

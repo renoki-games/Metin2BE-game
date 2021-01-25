@@ -1,236 +1,234 @@
+-- Generals
+define MIN_LEVEL 1
+define QUEST_NPC 20349
+define HORSE_MEDALL 50050
+define KILL_STAGE_1 30
+define KILL_MOB 302
+define REWARD_HORSE 50051
+define QUEST_COST 250000
+
+
 quest horse_examination_01 begin
 	state start begin
-		when login or levelup with pc.get_level() >= 2 begin
-			send_letter("Das Pferd")
-		end
-		
-		when button or info begin
-			say_title("Das Pferd")
-			say("")
-			say("Du kannst deine Prüfung für dein")
-			say("Pferd absolvieren!")
-			say("Bringe dazu eine Pferdemedaille mit!")
-			say("")
-			clear_letter()
-			set_state(horse_mission1_begin)
+		when login or levelup with pc.get_level() >= MIN_LEVEL begin
+			set_state(quest_start)
 		end
 	end
-		
-	state horse_mission1_begin begin
-		when 20349.chat."Das Pferd" begin
-			say_title("Stallbursche:")
-			say("")
-			say("Hallo "..pc.get_name()..",")
-			say("du willst also das Anfängerpferd?")
-			say("Dann musst du erstmal beweisen,")
-			say("dass du würdig bist das Anfängerpferd zu führen.")
-			say("Töte 30 Weißer-Eid Bogenschützen")
-			say("innerhalb von 10 Minuten!")
-			say("Dann werde ich dir das Anfängerpferd geben.")
-			say("Du kannst auch eine Gruppe leiten und")
-			say("mit ihr dann die Mission erfüllen!")
-			say("")
-			say("Möchtest du die Prüfung jetzt beginnen?")
-			local v = select ("Ja", "Nein")
-			if v == 1 then
-				if pc.count_item(50050) >= 1 then
-					if not selectHorseAppearence(50050) then return end
 
-					say_title("Stallbursche:")
-					say("")
+	state quest_start begin
+		when login or letter begin
+			send_letter("Das Pferd")
+			setTarget(QUEST_NPC)
+		end
+
+		when button or info begin
+			printQuestHeader("Das Pferd")
+			sayQuestText(string.format("Hallo %s! Du kannst die Prüfung für dein Pferd absolvieren! Spreche dafür mit dem Stallburschen.", pc.get_name()))
+
+
+			printQuestInfo("Hinweis:")
+			say("Bringe dazu eine Pferdemedaille mit!")
+		end
+
+		when __TARGET__.target.click or	QUEST_NPC.chat."Das Pferd" begin
+			deleteTarget(QUEST_NPC)
+			say_size(350, 380)
+
+			printQuestHeader(mob_name(QUEST_NPC))
+			sayQuestText(string.format("Hallo %s, du möchtest dein Pferd erhalten?", pc.get_name()), true)
+			sayQuestText("Dafür musst du erstmal beweisen, dass du würdig bist", true)
+			sayQuestText("das Pferd zu führen!")
+			say("")
+
+			printQuestInfo()
+			sayQuestText(string.format("Töte %d Weißer-Eid Bogenschützen innerhalb von 10 Minuten!", KILL_STAGE_1))
+
+			printQuestInfo("Hinweis:")
+			say("Diese Quest ist auch mit Hilfe einer Gruppe möglich.")
+			sayQuestText(string.format("Außerdem benötigst du dafür eine %s!", item_name(HORSE_MEDALL)))
+
+			say("Möchtest du die Prüfung jetzt beginnen?")
+
+			local s = select("Prüfung starten", "Abbrechen")
+			if s == 2 then return end
+
+			if s == 1 then
+				if pc.count_item(HORSE_MEDALL) >= 1 then
+					printQuestHeader(mob_name(QUEST_NPC))
 					say("Ok, ziehe jetzt los. Die 10 Minuten laufen ab jetzt!")
 					say("Viel Glück.")
 					wait()
 
-					pc.remove_item(50050, 1)
-					pc.setqf("limit_time1", get_time()+10*60)
-					pc.setqf("bogie_mobs1", 30)
-					q.set_clock("Zeit", pc.getqf("limit_time2")-get_time())
-					set_state(kill_bogie_mobs1)
+					horse_examination_01.setUpStage_1()
+					set_state(stage_first_task)
 				else
-					say_title("Stallbursche:")
-					say("")
+					printQuestHeader(mob_name(QUEST_NPC))
 					say("Du hast keine Pferdemedaille dabei!")
-					say("Komme wieder wenn du eine bei dir")
-					say("trägst.")
+					say("Komme wieder wenn du eine bei dir hast.")
 					return
 				end
-			elseif v == 2 then
-				return
 			end
 		end
 	end
-	
-	state kill_bogie_mobs1 begin
+
+
+
+
+
+
+
+
+	state stage_first_task begin
 		when letter begin
-			send_letter("Die Pferdeprüfung")
-			q.set_counter("W.Eid-Bogensch.", pc.getqf("bogie_mobs1"))
-			q.set_clock("Zeit", pc.getqf("limit_time1")-get_time())
+			send_letter("Die erste Pferdeprüfung")
+			q.set_counter("W.Eid-Bogensch.", pc.getqf("horseQuestKillMob"))
+			q.set_clock("Zeit", horse_examination_01.horseQuestTimer() - get_time())
 		end
-		
-		when login or levelup with get_time()>=pc.getqf("limit_time1") begin
-			clear_letter()
-			pc.delqf("limit_time1")
-			pc.delqf("bogie_mobs1")
-			set_state(failure_quest1)
-		end
-		
-		when info or button begin
-			say_title("Die Pferdeprüfung")
-			say("")
+
+		when button or info begin
+			printQuestHeader("Die Pferdeprüfung:")
 			say("Um die Pferdeprüfung abzuschließen musst du")
 			say("innerhalb von 10 Minuten 30 Weißer-Eid Bogenschützen")
-			say("töten. Sie sind auf der Map 2 zu finden!")
+			say("töten! Sie sind in dem angrenzenden Dorf zu finden!")
 			say("")
-			say_reward("Du musst noch "..pc.getqf("bogie_mobs1").."")
-			say_reward("von 30 Weißer-Eid Bogenschützen töten!")
+
+			printQuestInfo()
+			sayQuestText(string.format("Du musst noch %s von %d Weißer-Eid Bogenschützen töten!", pc.getqf("horseQuestKillMob"), KILL_STAGE_1))
 		end
-		
-		when 302.party_kill begin
-			pc.setqf("bogie_mobs1", pc.getqf("bogie_mobs1")-1)
-			local kill_count = pc.getqf("bogie_mobs1") 
-			q.set_counter("W.Eid Bogensch.", kill_count)
-			if kill_count == 0 then
-				clear_letter()
-				pc.delqf("bogie_mobs1")
-				set_state(finish_kills1)
+
+		when login or levelup with horse_examination_01.horseQuestTimer() >= get_time() begin
+			horse_examination_01.clearQuest()
+			horse_examination_01.clearTimer()
+			set_state(stage_quest_fail)
+		end
+
+		when KILL_MOB.party_kill begin
+			pc.setqf("horseQuestKillMob", pc.getqf("horseQuestKillMob") -1)
+
+			local killCount = pc.getqf("horseQuestKillMob")
+			q.set_counter("W.Eid Bogensch.", killCount)
+
+			if killCount == 0 then
+				horse_examination_01.clearQuest()
+				set_state(stage_quest_finish)
 			end
-			if get_time()>=pc.getqf("limit_time1") then
-				clear_letter()
-				pc.delqf("bogie_mobs1")
-				set_state(failure_quest1)
+
+			if get_time() >= pc.getqf("horseQuestTimerLimit") then
+				horse_examination_01.clearQuest()
+				set_state(stage_quest_fail)
 			end
 		end
 	end
-	
-	state finish_kills1 begin
+
+	state stage_quest_finish begin
 		when letter begin
-			cleartimer("limit_time1")
-			clear_letter()
 			send_letter("Prüfung erfolgreich!")
-			local v = find_npc_by_vnum(20349)
-			if v != 0 then target.vid("__TARGET__", v, "Hauptmann3")
-			end
+			setTarget(QUEST_NPC)
 		end
-		
-		when button or info begin
-			say_title("Die Pferdeprüfung")
-			say("")
-			say("Du hast die 30 Weißer-Eid Bogenschützen")
-			say("innerhalb von 10 Minuten getötet.")
-			say("Gehe zum Stallburschen und berichte ihm")
-			say("davon.")
-			say("")
-			say_reward("Auf zum Stallburschen")
-			say("")
-		end
-		
-		when __TARGET__.target.click or 20349.chat."Das Pferd" begin
-			target.delete(__TARGET__)
-			say_title("Stallbursche:")
-			say("")
-			say("Du hast die Aufgabe erledigt und bewiesen, dass")
-			say("du das Anfängerpferd beherrschen kannst.")
-			say("Nun brauchst du noch das Pferdebild.")
-			say("")
-			say("Für die Herstellung benötige ich 250.000 Yang.")
-			say("")
-			local v = select ("Bezahlen", "Abbrechen")
-			if v == 1 then
-				if pc.money>=250000 then
 
-					say_title("Stallbursche:")
-					say("")
-					say("Du erhälst das Pferdebild!")
-					say_item_vnum(50051)
-					say("")
+		when button or info begin
+			printQuestHeader("Die Pferdeprüfung:")
+			say(string.format("Du hattest die Aufgabe %d Weißer-Eid Bogenschützen", KILL_STAGE_1))
+			say("innerhalb von 10 Minuten zu töten.")
+			say("Berichte dem Stallburschen von deinem Erfolg.")
+			say("")
+
+			printQuestInfo()
+			sayQuestText("Sprich mit dem Stallburschen.")
+		end
+
+		when __TARGET__.target.click or QUEST_NPC.chat."Das Pferd" begin
+			deleteTarget(QUEST_NPC)
+
+			printQuestHeader(mob_name(QUEST_NPC))
+			say("Du hast die Aufgabe erledigt und bewiesen, dass")
+			say("du würdig bist ein Pferd zu führen.")
+			say("Ich werde dir das Pferdebild anfertigen.")
+			say("")
+
+			say(string.format("Für die Herstellung benötige ich %s Yang.", numberDot(QUEST_COST)))
+			say("")
+
+			local s = select ("Bezahlen", "Abbrechen")
+			if s == 2 then return end
+
+			if s == 1 then
+				if pc.money >= QUEST_COST then
+					if not selectHorseAppearence(REWARD_HORSE) then return end
+
+					printQuestHeader(mob_name(QUEST_NPC))
+					say("Du erhälst:")
+
+					say_item_vnum(REWARD_HORSE)
 					wait()
 
+
 					horse.set_level(1)
-					pc.changemoney(-250000)
-					pc.give_item2(50051)
-					set_quest_state("horse_mission2", "run")
-					set_state(__complete)
+					pc.change_gold(-QUEST_COST)
+
+					clear_letter()
+					set_quest_state("horse_examination_25", "run")
+					set_state(__COMPLETE__)
 				else
-					say_title("Stallbursche:")
-					say("")
+					printQuestHeader(mob_name(QUEST_NPC))
 					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast, kannst du wiederkommen")
-					say("und das Pferdebild kaufen!")
-					say("")
+					say("Komm zurück, sobald du genug Yang hast!")
+					return
 				end
-			elseif v == 2 then
-				clear_letter()
-				set_quest_state("horse_mission2", "run")
-				set_state(buy_horse_book)
 			end
 		end
 	end
-	
-	state buy_horse_book begin
-		when 20349.chat."Waffen-Pferdebuch" begin
-			say_title("Stallbursche:")
-			say("")
-			say("Du hast die Aufgabe erledigt und bewiesen, dass")
-			say("du dein Anfängerpferd beherrschen kannst.")
-			say("Nun brauchst du noch das Pferdebild.")
-			say("")
-			say("Für die Herstellung benötige ich 250.000 Yang.")
-			say("")
-			local v = select ("Bezahlen", "Abbrechen")
-			if v == 1 then
-				if pc.money>=250000 then
-					say_title("Stallbursche:")
-					say("")
-					say("Du erhälst das Pferdebild!")
-					say_item_vnum(50051)
-					say("")
-					wait()
 
-					horse.set_level(1)
-					pc.give_item2(50051)
-					pc.changemoney(-250000)
+	state stage_quest_fail begin
+		when login or enter or letter begin
+			send_letter("Prüfung gescheitert!")
+			setTarget(QUEST_NPC)
+		end
 
-					set_quest_state("horse_mission2", "run")
-					set_state(__complete)
-				else
-					say_title("Stallbursche:")
-					say("")
-					say("Du hast leider nicht genug Yang bei dir.")
-					say("Wenn du genug Yang hast, kannst du wiederkommen")
-					say("und das Pferdebild kaufen!")
-					say("")
-				end
-			elseif v == 2 then
-				return
-			end
-		end
-	end
-	
-	state failure_quest1 begin
-		when letter begin
-			send_letter("Die Pferdeprüfung")
-			pc.delqf("bogie_mobs1")
-			local v = find_npc_by_vnum(20349)
-			if v != 0 then target.vid("__TARGET__", v, "Hauptmann3")
-			end
-		end
-		
 		when button or info begin
-			say_title("Die Pferdeprüfung")
-			say("")
+			printQuestHeader("Die Pferdeprüfung")
 			say("Du hast die 30 Weißer-Eid Bogenschützen innerhalb von 10")
 			say("Minuten nicht töten können. Geh zum")
 			say("Stallburschen und versuche es erneut!")
-			say("")
+		end
+
+		when __TARGET__.target.click or	QUEST_NPC.chat."Das Pferd" begin
+			deleteTarget(QUEST_NPC)
+
+			printQuestHeader(mob_name(QUEST_NPC))
+			say("Du hast die Aufgabe also nicht abschließen können,")
+			say("keine Sorge, ich gebe dir einen weiteren Versuch.")
+			say("Sprich mich einfach an, sobald du bereit bist!")
+			wait()
+
 			clear_letter()
-			set_state(start)
+			set_state(quest_start)
 		end
 	end
-	
-	state __complete begin
-		when enter begin
-			q.done()
+
+	state __COMPLETE__ begin
+	end
+
+	state __FUNCTIONS__ begin
+		function setUpStage_1()
+			pc.remove_item(HORSE_MEDALL, 1)
+			pc.setqf("horseQuestTimerLimit", get_time()+10*60)
+			pc.setqf("horseQuestKillMob", KILL_STAGE_1)
+
+			q.set_clock("Zeit", pc.getqf("horseQuestTimerLimit_2")-get_time())
+		end
+
+		function horseQuestTimer()
+			return pc.getqf("horseQuestTimerLimit")
+		end
+
+		function clearTimer()
+			pc.delqf(horseQuestTimerLimit)
+		end
+
+		function clearQuest()
+			clear_letter()
+			pc.delqf("horseQuestKillMob")
 		end
 	end
 end

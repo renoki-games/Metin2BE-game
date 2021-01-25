@@ -1,6 +1,9 @@
+define QUEST_CHEST 50132
+define TIME_NEXT_USE 30
+
 quest itemshop_items begin
 	state start begin
-		when 50132.use begin
+		when QUEST_CHEST.use begin
 			local item_reward = 
 			{
 				{72726,	1},		-- Elixier der Sonne (S) 30 Tage
@@ -17,12 +20,12 @@ quest itemshop_items begin
 			local mysql_bonus_reward = 
 			{
 			--  { BONUS 	,	Zeit in Tage ,			Text 		}
-				{"gold_expire",					30 , "doppelte Chance Gegenstände zu erbeuten" },
-				{"silver_expire",				30 , "50% mehr Erfahrung" },
-				{"autoloot_expire",				30 , "automatisch Yang aufheben" },
-				{"fish_mind_expire",			30 , "doppelte Chance bessere Fische zu fangen" },
-				{"marriage_fast_expire",		30 , "doppelt so schnell wachsende Liebespunkte" },
-				{"money_drop_rate_expire",		30 , "doppelte Chance auf Yang" },
+				{"gold_expire",					TIME_NEXT_USE , "doppelte Chance Gegenstände zu erbeuten" },
+				{"silver_expire",				TIME_NEXT_USE , "50% mehr Erfahrung" },
+				{"autoloot_expire",				TIME_NEXT_USE , "automatisch Yang aufheben" },
+				{"fish_mind_expire",			TIME_NEXT_USE , "doppelte Chance bessere Fische zu fangen" },
+				{"marriage_fast_expire",		TIME_NEXT_USE , "doppelt so schnell wachsende Liebespunkte" },
+				{"money_drop_rate_expire",		TIME_NEXT_USE , "doppelte Chance auf Yang" },
 			}
 			
 			local loop_item_count = 1
@@ -46,23 +49,24 @@ quest itemshop_items begin
 			say("")
 			say_reward("Möchtest du die Truhe jetzt öffnen?")
 			say("")
-			local sel = select("Öffnen", "Abbrechen")
-			if sel == 1 then
-				loop_item_count = 1
-				loop_bonus_count = 1
-				while loop_item_count <= item_count do
-					pc.give_item2(item_reward[loop_item_count][1], item_reward[loop_item_count][2])
-					loop_item_count = loop_item_count + 1
-				end
-				while loop_bonus_count <= bonus_count do
-					mysql_direct_query("UPDATE account.account SET "..mysql_bonus_reward[loop_bonus_count][1].." = NOW() + INTERVAL "..mysql_bonus_reward[loop_bonus_count][2].." DAY WHERE id = "..pc.get_account_id()..";")
-					loop_bonus_count = loop_bonus_count + 1
-				end
 
-				item.remove()
-			else
-				return
+			local s = select("Öffnen", "Abbrechen")
+			if s == 2 then return end
+
+			loop_item_count = 1
+			loop_bonus_count = 1
+
+			while loop_item_count <= item_count do
+				pc.give_item2(item_reward[loop_item_count][1], item_reward[loop_item_count][2])
+				loop_item_count = loop_item_count + 1
 			end
+
+			while loop_bonus_count <= bonus_count do
+				mysql_direct_query("UPDATE account.account SET "..mysql_bonus_reward[loop_bonus_count][1].." = NOW() + INTERVAL "..mysql_bonus_reward[loop_bonus_count][2].." DAY WHERE id = "..pc.get_account_id()..";")
+				loop_bonus_count = loop_bonus_count + 1
+			end
+
+			item.remove()
 		end 
 	end
 end

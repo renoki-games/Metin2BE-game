@@ -1,6 +1,6 @@
 quest first_login begin
 	state start begin
-		when login with pc.getqf("done") == 0 begin
+		when login begin
 			pc.set_skill_level(126, 20)
 			pc.set_skill_level(127, 20)
 			pc.set_skill_level(128, 20)
@@ -11,7 +11,9 @@ quest first_login begin
 
 			text = string.format("|cffa7ffd4Wir begrüßen|r %s |cffa7ffd4als neuen %s in %s. Herzlich Willkommen!|r", name, job, empire)
 			notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. text)
-			pc.setqf("done", 1)
+			complete_quest()
 		end
+	end
+	state __COMPLETE__ begin
 	end
 end

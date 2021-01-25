@@ -1,8 +1,9 @@
 quest game_option begin
     state start begin
         when login begin
-            local val=0
+            local val = 0
             local msg = gameforge.game_option._100_say .. " "
+
             if pc.getqf("block_exchange") == 1 then
                 msg = msg..gameforge.game_option._110_say
                 val = val + 1

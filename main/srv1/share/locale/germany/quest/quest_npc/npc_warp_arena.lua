@@ -1,6 +1,6 @@
 quest warp_arena begin
 	state start begin
-		when 11001.chat."In die Arena" or 11003.chat."In die Arena" or 11005.chat."In die Arena" begin
+		when 11001.chat."In die Arena" or 11003.chat."In die Arena" or 11005.chat."In die Arena" with pc.is_gm() begin
 			say_title("Schlachtenverwalter:")
 			say("")
 			say("Möchtest du in die Arena teleportiert werden?")
