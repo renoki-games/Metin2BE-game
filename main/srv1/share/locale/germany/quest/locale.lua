@@ -546,6 +546,8 @@ locale.blacksmith.refine_info = gameforge[get_language()].locale.blacksmith.refi
 
 dofile(get_locale_base_path() .. "/monster_texts_de.lua")
 dofile(get_locale_base_path() .. "/monster_texts_en.lua")
+dofile(get_locale_base_path() .. "/monster_texts_tr.lua")
+dofile(get_locale_base_path() .. "/monster_texts_ru.lua")
 
 special.questscroll = {
 	{ 
