@@ -15,6 +15,7 @@ ITEM_COLOR = 4
 
 dofile("locale/germany/quest/quest_horse/horse_quests_lib.lua")
 dofile("locale/germany/quest/quest_biologe/biologe_quests_lib.lua")
+dofile("locale/germany/quest/quest_announcements/apprentice_chest_settings.lua")
 
 tagColors = {
 	[SERVER_COLOR] = "|cffffc8c8",

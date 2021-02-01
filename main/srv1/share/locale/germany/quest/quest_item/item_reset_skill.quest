@@ -83,6 +83,6 @@ quest reset_scroll begin
 
 			say_title(gameforge[get_language()].reset_scroll._140_sayTitle)
 			say_reward(string.format(gameforge[get_language()].reset_scroll._150_say, name))
-			end
+		end
 	end
 end

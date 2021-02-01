@@ -1,29 +1,39 @@
+define VOUCHER_100 80014
+define VOUCHER_500 80015
+define VOUCHER_1000 80016
+define VOUCHER_50 80017
+
 quest item_dr_voucher begin
 	state start begin
-		when 80014.use or 80015.use or 80016.use or 80017.use begin
-			local dr_table = {
-				[80014] = 100,
-				[80015] = 500,
-				[80016] = 1000,
-				[80017] = 50,
-			}
+		when VOUCHER_100.use or VOUCHER_500.use or VOUCHER_1000.use or VOUCHER_50.use begin
+			local itemVnum = item.vnum
 
-			local iVnum = item.vnum
-			
-			say_title("DR-Gutschein:")
-			say("")
+			printQuestHeader("DR-Gutschein:")
 			say_item_vnum(item.get_vnum())
 			say("")
-			say(string.format("Möchtest du diesen Gutschein für %sDR einlösen?", (dr_table[iVnum])))
-			say("")
-			local sel = select("Einlösen", "Abbrechen")
+			sayQuestText(string.format("Möchtest du diesen Gutschein für %s DR einlösen?", (item_dr_voucher.dr_table[itemVnum])))
 
-			if sel == 1 then
-				pc.remove_item(item.get_vnum(), 1)
-				pc.give_dr(dr_table[iVnum])
-			else
-				return
-			end
+			local s = select("Einlösen", "Abbrechen")
+			if s == 2 then return end
+
+			local dr = item_dr_voucher.dr_table[itemVnum]
+			item_dr_voucher.giveDR(dr)
+			item.remove()
+		end
+	end
+
+	state __FUNCTIONS__ begin
+		function giveDR(dr)
+			mysql_query(string.format("UPDATE account.account SET DR = DR + %d WHERE id = %d", dr, pc.get_account_id()))
+		end
+
+		function dr_table()
+			return {
+				[VOUCHER_100] = 100,
+				[VOUCHER_500] = 500,
+				[VOUCHER_1000] = 1000,
+				[VOUCHER_50] = 50,
+			}
 		end
 	end
 end

@@ -1,80 +1,76 @@
-----------------------------------
---   Regenbogenstein Quest by [SA]Goku
---		(c) by [SA]Goku
-----------------------------------
-quest rainbowstone begin
-    state start begin
-            when 50512.use  begin
-				
-				say_title ( "Regenbogenstein" )
-				say ( "Hiermit kannst du eine" ) 
-				say ( "Fertigkeit deiner Wahl perfektionieren!" ) 
-				say ( "" ) 
-				wait ( ) 
-				say_title ( "Regenbogenstein" ) 
-				local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+define QUEST_ITEM 50512
+define MIN_SKILL_LEVEL 30
+define SKILL_LEVEL_P 40
 
-				local vnum_list = result[1]
-				local name_list = result[2]
+quest item_rainbowstone begin
+	state start begin
+		when QUEST_ITEM.use begin
+			item_rainbowstone.updateGrandMasterSkill()
+		end
+	end
 
-				if table.getn(vnum_list) < 2 then
-				say("Es gibt keine Fertigkeiten!")
-				say("")
-				return
-				end
-				say("Welche Fertigkeit willst du perfektionieren?")
-				say("")
+	state __FUNCTIONS__ begin
+		function updateGrandMasterSkill()
+			printQuestHeader("Regenbogenstein:")
 
-				local i = select_table(name_list)
+			local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+			local vnumList = result[1]
+			local nameList = result[2]
 
-				if table.getn(name_list) == i then
-				return
-				end
+			if item_rainbowstone.checkSkillGroup(vnumList) == false then return end
+			sayQuestText("Welche Fertigkeit willst du perfektionieren?")
 
-				local name = name_list[i]
-				local vnum = vnum_list[i]
+			local i = select_table(nameList)
+			if table.getn(nameList) == i then return end
 
-				if pc.get_skill_level(vnum) < 30 then
-					say_title("Regenbogenstein:")
-					say("")
-					say("Es können nur Großmeister Fertigkeiten auf")
-					say("die perfekte Stufe gesetzt werden.")
-					say("")
-					return
-				end
-				
-				say_title("Regenbogenstein:")
-				say_reward("Dieser Stein ermöglicht es dir,")
-				say_reward("deine Fertigkeit ab G1 auf P zu perfektionieren!")
-				say(string.format("%s auf Perfekten Meister?", name))
-				say("")
+			local name = nameList[i]
+			local vnum = vnumList[i]
+			
+			if item_rainbowstone.checkSkillLevel(vnum) == false then return end
 
-				local s = select("Ja", "Nein")
-				if 2 == s then
-				return
-				end
+			printQuestHeader("Regenbogenstein:")
+			sayQuestText("Dieser Stein ermöglicht es dir,", true)
+			sayQuestText("eine Fertigkeit ab G1 auf P zu perfektionieren!")
+			sayQuestText(string.format("%s auf Perfekten Meister verbessern?", name))
 
-				if 1 == s then
-				say_title("Regenbogenstein:")
-				say("Einmal benutzt, ist dies nicht mehr rückgängig zu machen.")
-				say("Trotzdem benutzen?")
-				say("")
+			local s = select("Ja", "Nein")
+			if s == 2 then return end
 
-				local c = select("Ja", "Nein")
+			printQuestHeader("Regenbogenstein:")
+			sayQuestText("Einmal benutzt, ist dies nicht mehr rückgängig zu machen.", true)
+			sayQuestText("Möchtest du fortfahren?")
 
-				if 2 == c then
-				return
-				end
+			local c = select("Ja", "Nein")
+			if 2 == c then return end
 
+			printQuestHeader("Regenbogenstein:")
+			sayQuestText("Deine Fertigkeit wurde perfektioniert!", true)
+			sayQuestText("Viel Spaß weiterhin auf Metin2 - Black Edition.")
 
-				if 1 == c then
-				pc.set_skill_level((vnum) ,40) 
-				say_reward("Deine Fertigkeit wurde perfektioniert!")
-				say_reward("Viel Spaß weiterhin auf unserem Server.")
-				notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %s perfektioniert!", name)))
-				pc.removeitem("50512", 1)
-				end
+			notice_all(tag(SERVER_COLOR, "[Server]") .. " " .. clickable_pn_tag(NAME_COLOR, pc.get_name()) .. " " .. tag(TEXT_COLOR, string.format("hat erfolgreich %s perfektioniert!", name)))
+
+			item.remove()
+			pc.set_skill_level((vnum), SKILL_LEVEL_P)
+		end
+		
+		function checkSkillLevel(val)
+			if pc.get_skill_level(val) < MIN_SKILL_LEVEL then
+				printQuestHeader("Regenbogenstein:")
+				sayQuestText("Deine Fertigkeit muss mindestens auf Großmeister sein!")
+				return false
+
+			elseif pc.get_skill_level(val) == SKILL_LEVEL_P then
+				printQuestHeader("Regenbogenstein:")
+				sayQuestText("Deine Fertigkeit ist bereits auf Perfekter Meister!")
+				return false
 			end
 		end
-    end
+		
+		function checkSkillGroup(val)
+			if table.getn(val) < 2 then
+			sayQuestText("Du hast noch keine Fertigkeiten!")
+				return false
+			end
+		end	
+	end
 end

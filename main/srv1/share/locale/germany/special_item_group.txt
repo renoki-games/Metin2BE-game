@@ -65,7 +65,7 @@ Group	Truhe_Gold_Plus
 {
 	Vnum	50012
 	1	13040	1	1	-- Schwarzes Rundschild+0
-	2	1140	1	1	-- Chakram+0 (Sägezahnmesser)
+	2	1090	1	1	-- Chakram+0
 	3	130	1	1	-- Halbmondschwert+0
 	4	3120	1	1	-- Löwentöter+0
 	5	2120	1	1	-- Riesenflügelbogen+0
@@ -917,14 +917,14 @@ Group	Truhe_des_Sensenmanns
 	9	250	1	1	-- Dämonenklinge+0
 	10	7150	1	1	-- Ekstasefächer+0
 	11	3150	1	1	-- Halbmenschklinge+0
-	12	1150	1	1	-- Siamesenmesser+0 (Sonnenstrahlmesser+0)
+	12	1120	1	1	-- Siamesenmesser+0
 	13	170	1	1	-- Stichschwert+0
 	14	180	1	1	-- Giftschwert+0
 	15	3160	1	1	-- Grollschwert+0
 	16	2170	1	1	-- Krähenstahlbogen+0
 	17	190	1	1	-- Löwenschwert+0
 	18	5120	1	1	-- Orchideenglocke+0
-	19	4030	1	1	-- Teufelsflügel-Chakram+0 (Mondzwillingsdolche+0)
+	19	1130	1	1	-- Teufelsflügel-Chakram+0
 	20	11280	1	1	-- Drachengott-Panzer+0
 	21	11480	1	1	-- Fuchsienanzug+0
 	22	11880	1	1	-- Kleidung der Baronin+0
@@ -942,15 +942,15 @@ Group	Truhe_des_elite_Neunschwanz
 	2	250	1	1	-- Dämonenklinge+0
 	3	7150	1	1	-- Ekstasefächer+0
 	4	3150	1	1	-- Halbmenschklinge+0
-	5	1150	1	1	-- Siamesenmesser+0 (Sonnenstrahlmesser+0)
+	5	1120	1	1	-- Siamesenmesser+0
 	6	170	1	1	-- Stichschwert+0
 	7	11690	1	1	-- Magie-Plattenpanzer+0
 	8	11890	1	1	-- Schwarze Kleidung+0
 	9	11290	1	1	-- Schwarzstahl-Panzer+0
 	10	11490	1	1	-- Schwarzwindanzug+0
-	11	14204	1	1	-- Himmelstranenarmband+4
-	12	16204	1	1	-- Himmelstranenhalskette+4
-	13	17204	1	1	-- Himmelstranenohrringe+4
+	11	14200	1	1	-- Himmelstranenarmband+0
+	12	16200	1	1	-- Himmelstranenhalskette+0
+	13	17200	1	1	-- Himmelstranenohrringe+0
 }
 
 Group	Truhe_des_Azraels
@@ -960,9 +960,9 @@ Group	Truhe_des_Azraels
 	2	27993	1	1	-- Blaue Perle
 	3	27994	1	1	-- Blutrote Perle
 	4	30319	4	1	-- Schrumpfkopf
-	5	14202	1	1	-- Himmelstranenarmband+2
-	6	16202	1	1	-- Himmelstranenhalskette+2
-	7	17202	1	1	-- Himmelstranenohrringe+2
+	5	14200	1	1	-- Himmelstranenarmband+0
+	6	16200	1	1	-- Himmelstranenhalskette+0
+	7	17200	1	1	-- Himmelstranenohrringe+0
 	8	12260	1	1	-- Furchtmaske+0
 	9	12530	1	1	-- Gehörnter Helm+0
 	10	12670	1	1	-- Kardinalshut+0

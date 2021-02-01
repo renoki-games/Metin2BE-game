@@ -38,7 +38,7 @@ quest change_empire begin
 					end
 
 					if change_empire.move_pc() == true then
-							pc.setqf("next_use_time", get_time() + 86400 * 7)
+							pc.setqf("next_use_time", get_time() + 60)
 					end
 			end
 

@@ -56,7 +56,7 @@ quest item_change_sex begin
 				say_reward(gameforge[get_language()].change_empire._230_sayReward)
 				
 				pc.remove_item("71048",1)
-				pc.setqf("next_time", get_time() + 86400 * 3)
+				pc.setqf("next_time", get_time() + 60)
 
 				pc.change_sex()
 

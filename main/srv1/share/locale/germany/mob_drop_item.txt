@@ -2107,7 +2107,7 @@ Group	Schwarzer_Ork
 	1	1070	1	0.50	-- Blutige Dolche+0
 	2	100	1	0.50		-- Blutiges Schwert+0
 	3	2100	1	0.50	-- Bullenhornbogen+0
-	4	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	4	1090	1	0.50	-- Chakram+0
 	5	2090	1	0.50	-- Dornblattbogen+0
 	6	3110	1	0.50	-- Erlösungsklinge+0
 	7	3090	1	0.50	-- Gletscherpicke+0
@@ -2226,7 +2226,7 @@ Group	Mutiger_Schwarzer_Ork
 	mob	656
 	kill_drop	24
 	1	1070	1	0.50	-- Blutige Dolche+0
-	2	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	0.50	-- Chakram+0
 	3	2090	1	0.50	-- Dornblattbogen+0
 	4	2110	1	0.50	-- Einhornbogen+0
 	5	3090	1	0.50	-- Gletscherpicke+0
@@ -2669,7 +2669,7 @@ Group	Plagenschwertkaempfer
 	type	drop
 	mob	905
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	1060	1	0.50	-- Teufelsfaustdolche+0
 	3	30039	1	2.0	-- Stück Gewebe
 }
@@ -2679,7 +2679,7 @@ Group	Plagenspeerkaempfer
 	type	drop
 	mob	905
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	30085	1	2.0	-- Stück Gewebe+
 }
 
@@ -2789,7 +2789,7 @@ Group	Daemonensoldat
 	type	drop
 	mob	1001
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	5060	1	0.50	-- Magische Glocke+0
 	3	11430	1	0.50	-- Roter Ameisenanzug+0
 	4	17140	1	0.50	-- Weißgoldohrringe+0
@@ -2819,7 +2819,7 @@ Group	Daemonenspeerkaempfer
 	type	drop
 	mob	1003
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	3120	1	0.50	-- Löwentöter+0
 	3	11440	1	0.50	-- Ameisenlöwenanzug+0
 	4	30015	1	2.0	-- Dämonenandenken
@@ -2832,7 +2832,7 @@ Group	Daemonenschamane
 	mob	1004
 	kill_drop	24
 	1	2100	1	0.50	-- Bullenhornbogen+0
-	2	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	0.50	-- Chakram+0
 	3	3120	1	0.50	-- Löwentöter+0
 	4	14200	1	0.50	-- Himmelstränenarmband+0
 	5	30015	1	2.0	-- Dämonenandenken
@@ -3079,7 +3079,7 @@ Group	Eisloewe
 	type	drop
 	mob	1104
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	5060	1	0.50	-- Magische Glocke+0
 	3	2120	1	0.50	-- Riesenflügelbogen+0
 	4	11850	1	0.50	-- Sonnenkleidung+0
@@ -3145,7 +3145,7 @@ Group	Unterwelt_Eissplitter
 	mob	1131
 	kill_drop	24
 	1	100	1	0.50		-- Blutiges Schwert+0
-	2	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	0.50	-- Chakram+0
 	3	11280	1	0.02	-- Drachengott-Panzer+0
 	4	11480	1	0.02	-- Fuchsienanzug+0
 	5	11880	1	0.02	-- Kleidung der Baronin+0
@@ -3270,7 +3270,7 @@ Group	Seol_Gu
 	type	drop
 	mob	1154
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	5060	1	0.50	-- Magische Glocke+0
 	3	2120	1	0.50	-- Riesenflügelbogen+0
 	4	11850	1	0.50	-- Sonnenkleidung+0
@@ -3360,7 +3360,7 @@ Group	Boeser_Eisloewe
 	type	drop
 	mob	1174
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	5060	1	0.50	-- Magische Glocke+0
 	3	2120	1	0.50	-- Riesenflügelbogen+0
 	4	11850	1	0.50	-- Sonnenkleidung+0
@@ -3623,10 +3623,10 @@ Group	Kleine_Giftspinne_Stark
 	type	drop
 	mob	2061
 	kill_drop	24
-	1	2104	1	0.50	-- Bullenhornbogen+4
-	2	114	1	0.50		-- Großschwert+4
-	3	134	1	0.50		-- Halbmondschwert+4
-	4	124	1	0.50		-- Zaubererschwert+4
+	1	2100	1	0.50	-- Bullenhornbogen+0
+	2	110	1	0.50		-- Großschwert+0
+	3	130	1	0.50		-- Halbmondschwert+0
+	4	120	1	0.50		-- Zaubererschwert+0
 	5	13120	1	0.50	-- Drachenschuppenschild+0
 	6	13060	1	0.50	-- Falkenschild+0
 	7	13190	1	0.50	-- Fünfeckschild+0
@@ -3640,7 +3640,7 @@ Group	Toedliche_Giftspinne_Stark
 	type	drop
 	mob	2062
 	kill_drop	24
-	1	1144	1	0.50	-- Chakram+4 (Sägezahnmesser+4)
+	1	1090	1	0.50	-- Chakram+0
 	2	12640	1	0.50	-- Phönixhut+0
 	3	12660	1	0.50	-- Sonnenlichthut+0
 }
@@ -3658,10 +3658,10 @@ Group	Klaufengiftspinne_Stark
 	type	drop
 	mob	2064
 	kill_drop	24
-	1	1144	1	0.50	-- Chakram+4 (Sägezahnmesser+4)
-	2	3124	1	0.50	-- Löwentöter+4
-	3	5064	1	0.50	-- Magische Glocke+4
-	4	3104	1	0.50	-- Zwölfgeisterschwert+4
+	1	1090	1	0.50	-- Chakram+0
+	2	3120	1	0.50	-- Löwentöter+0
+	3	5060	1	0.50	-- Magische Glocke+0
+	4	3100	1	0.50	-- Zwölfgeisterschwert+0
 	5	13100	1	0.50	-- Löwenkantenschild+0
 	6	15160	1	0.50	-- Ekstaseschuhe+0
 }
@@ -3671,22 +3671,22 @@ Group	Soldatengiftspinne_Stark
 	type	drop
 	mob	2064
 	kill_drop	24
-	1	1074	1	0.50	-- Blutige Dolche+4
-	2	104	1	0.50		-- Blutiges Schwert+4
-	3	2104	1	0.50	-- Bullenhornbogen+4
+	1	1070	1	0.50	-- Blutige Dolche+0
+	2	100	1	0.50		-- Blutiges Schwert+0
+	3	2100	1	0.50	-- Bullenhornbogen+0
 	4	1100	1	0.50	-- Drachenmesser+0
-	5	2114	1	0.50	-- Einhornbogen+4
-	6	3114	1	0.50	-- Erlösungsklinge+4
+	5	2110	1	0.50	-- Einhornbogen+0
+	6	3110	1	0.50	-- Erlösungsklinge+0
 	7	150	1	0.02		-- Geisterzahnklinge+0
-	8	3094	1	0.50	-- Gletscherpicke+4
-	9	3124	1	0.50	-- Löwentöter+4
+	8	3090	1	0.50	-- Gletscherpicke+0
+	9	3120	1	0.50	-- Löwentöter+0
 	10	160	1	0.02		-- Nymphenschwert+0
 	11	3130	1	0.025	-- Partisane+0
-	12	1084	1	0.50	-- Rippenmesser+4
+	12	1080	1	0.50	-- Rippenmesser+0
 	13	140	1	0.025		-- Schlachtschwert+0
-	14	5084	1	0.50	-- Stahlkäferglocke+4
-	15	1064	1	0.50	-- Teufelsfaustdolche+4
-	16	3104	1	0.50	-- Zwölfgeisterschwert+4
+	14	5080	1	0.50	-- Stahlkäferglocke+0
+	15	1060	1	0.50	-- Teufelsfaustdolche+0
+	16	3100	1	0.50	-- Zwölfgeisterschwert+0
 	17	12520	1	0.50	-- Burghelm+0
 	18	13120	1	0.02	-- Drachenschuppenschild+0
 	19	12240	1	0.50	-- Geistermaskenschaller+0
@@ -3703,7 +3703,7 @@ Group	Brutale_Babygiftspinne
 	type	drop
 	mob	2071
 	kill_drop	24
-	1	1074	1	0.50	-- Blutiger Dolch+4
+	1	1070	1	0.50	-- Blutiger Dolch+0
 	2	5070	1	0.50	-- Goldkäferglocke+0
 	3	11840	1	0.50	-- Kleidung des Himmels+0
 	4	15220	1	0.50	-- Feuervogelschuhe+0
@@ -3714,7 +3714,7 @@ Group	Brutale_toedliche_Giftspinne
 	type	drop
 	mob	2072
 	kill_drop	24
-	1	1064	1	0.50	-- Teufelsfaustdolche+4
+	1	1060	1	0.50	-- Teufelsfaustdolche+0
 }
 
 Group	Brutale_rote_Giftspinne
@@ -3722,7 +3722,7 @@ Group	Brutale_rote_Giftspinne
 	type	drop
 	mob	2073
 	kill_drop	24
-	1	2114	1	0.50	-- Einhornbogen+4
+	1	2110	1	0.50	-- Einhornbogen+0
 }
 
 Group	Brutale_Klauengiftspinne
@@ -3730,7 +3730,7 @@ Group	Brutale_Klauengiftspinne
 	type	drop
 	mob	2074
 	kill_drop	24
-	1	1084	1	0.50	-- Rippenmesser+4
+	1	1080	1	0.50	-- Rippenmesser+0
 }
 
 Group	Brutale_Soldatenspinne
@@ -3750,7 +3750,7 @@ Group	Brutale_starke_Giftspinne
 	type	drop
 	mob	2076
 	kill_drop	24
-	1	114	1	0.50	-- Großschwert+4
+	1	110	1	0.50	-- Großschwert+0
 }
 
 Group	Brutaler_Skorpionmann_Stark
@@ -3884,7 +3884,7 @@ Group	Junger_Skorpionmann
 	kill_drop	24
 	1	5110	1	1.0	-- Antike Glocke+0
 	2	90	1	0.50		-- Barbarenschwert+0
-	3	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	3	1090	1	0.50	-- Chakram+0
 	4	3090	1	0.50	-- Gletscherpicke+0
 	5	130	1	0.50		-- Halbmondschwert+0
 	6	7160	1	1.0	-- Herbstwindfächer+0
@@ -4006,7 +4006,7 @@ Group	Starker_Skorpionmann
 	kill_drop	24
 	1	5110	1	1.0	-- Antike Glocke+0
 	2	90	1	0.50		-- Barbarenschwert+0
-	3	1140	1	0.02	-- Chakram+0 (Sägezahnmesser+0)
+	3	1090	1	0.02	-- Chakram+0
 	4	3090	1	0.50	-- Gletscherpicke+0
 	5	130	1	0.50		-- Halbmondschwert+0
 	6	7160	1	1.0	-- Herbstwindfächer+0
@@ -4128,7 +4128,7 @@ Group	Flamme
 	mob	2204
 	kill_drop	24
 	1	1070	1	0.50	-- Blutige Dolche+0
-	2	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	0.50	-- Chakram+0
 	3	2090	1	0.50	-- Dornblattbogen+0
 	4	3090	1	0.50	-- Gletscherpicke+0
 	5	3120	1	0.50	-- Löwentöter+0
@@ -4141,7 +4141,7 @@ Group	Flammenkrieger
 	type	drop
 	mob	2205
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	3090	1	0.50	-- Gletscherpicke+0
 	3	5070	1	0.50	-- Goldkäferglocke+0
 	4	3120	1	0.50	-- Löwentöter+0
@@ -4202,7 +4202,7 @@ Group	Starke_Flamme
 	mob	2234
 	kill_drop	24
 	1	1070	1	0.50	-- Blutige Dolche+0
-	2	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	0.50	-- Chakram+0
 	3	2090	1	0.50	-- Dornblattbogen+0
 	4	3090	1	0.50	-- Gletscherpicke+0
 	5	3120	1	0.50	-- Löwentöter+0
@@ -4215,7 +4215,7 @@ Group	Starker_Flammenkrieger
 	type	drop
 	mob	2235
 	kill_drop	24
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	3090	1	0.50	-- Gletscherpicke+0
 	3	5070	1	0.50	-- Goldkäferglocke+0
 	4	3120	1	0.50	-- Löwentöter+0
@@ -4241,16 +4241,16 @@ Group	Setaou_Kaempfer
 	type	drop
 	mob	2401
 	kill_drop	24
-	1	2134	1	0.02	-- Aprikosen-Bogen+4
-	2	164	1	0.02		-- Nymphenschwert+4
-	3	144	1	0.02		-- Schlachtschwert+4
-	4	12524	1	0.02	-- Burghelm+4
-	5	11284	1	0.02	-- Drachengott-Panzer+4
-	6	11484	1	0.02	-- Fuchsienanzug+4
-	7	11884	1	0.02	-- Kleidung der Baronin+4
-	8	11684	1	0.02	-- Seelen-Plattenpanzer+4
-	9	12384	1	0.02	-- Stahlkapuze+4
-	10	15184	1	0.02	-- Nimbus-Stiefel+4
+	1	2130	1	0.02	-- Aprikosen-Bogen+0
+	2	160	1	0.02		-- Nymphenschwert+0
+	3	140	1	0.02		-- Schlachtschwert+0
+	4	12520	1	0.02	-- Burghelm+0
+	5	11280	1	0.02	-- Drachengott-Panzer+0
+	6	11480	1	0.02	-- Fuchsienanzug+0
+	7	11880	1	0.02	-- Kleidung der Baronin+0
+	8	11680	1	0.02	-- Seelen-Plattenpanzer+0
+	9	12380	1	0.02	-- Stahlkapuze+0
+	10	15180	1	0.02	-- Nimbus-Stiefel+0
 	11	70050	1	0.50	-- Symbol d. weisen Kaisers
 	12	70031	1	0.50	-- Traktat zur Fechtkunst
 	13	50121	1	0.50	-- Eisenkiste
@@ -4261,13 +4261,13 @@ Group	Setaou_Jaeger
 	type	drop
 	mob	2402
 	kill_drop	24
-	1	1104	1	0.02	-- Drachenmesser+4
-	2	11284	1	0.02	-- Drachengott-Panzer+4
-	3	11484	1	0.02	-- Fuchsienanzug+4
-	4	11884	1	0.02	-- Kleidung der Baronin+4
-	5	11684	1	0.02	-- Seelen-Plattenpanzer+4
-	6	12384	1	0.02	-- Stahlkapuze+4
-	7	12244	1	0.02	-- Geistermaskenschaller+4
+	1	1100	1	0.02	-- Drachenmesser+0
+	2	11280	1	0.02	-- Drachengott-Panzer+0
+	3	11480	1	0.02	-- Fuchsienanzug+0
+	4	11880	1	0.02	-- Kleidung der Baronin+0
+	5	11680	1	0.02	-- Seelen-Plattenpanzer+0
+	6	12380	1	0.02	-- Stahlkapuze+0
+	7	12240	1	0.02	-- Geistermaskenschaller+0
 	8	50121	1	0.50	-- Eisenkiste
 }
 
@@ -4276,15 +4276,15 @@ Group	Setaou_Seherin
 	type	drop
 	mob	2403
 	kill_drop	24
-	1	7134	1	0.02	-- Himmelsvogelfächer+4
-	2	5094	1	0.02	-- Donnervogelglocke+4
-	3	1064	1	0.02	-- Teufelsfaustdolche+4
-	4	11284	1	0.02	-- Drachengott-Panzer+4
-	5	11484	1	0.02	-- Fuchsienanzug+4
-	6	11884	1	0.02	-- Kleidung der Baronin+4
-	7	11684	1	0.02	-- Seelen-Plattenpanzer+4
-	8	12664	1	0.02	-- Sonnenlichthut+4
-	9	15224	1	0.02	-- Feuervogelschuhe+4
+	1	7130	1	0.02	-- Himmelsvogelfächer+0
+	2	5090	1	0.02	-- Donnervogelglocke+0
+	3	1060	1	0.02	-- Teufelsfaustdolche+0
+	4	11280	1	0.02	-- Drachengott-Panzer+0
+	5	11480	1	0.02	-- Fuchsienanzug+0
+	6	11880	1	0.02	-- Kleidung der Baronin+0
+	7	11680	1	0.02	-- Seelen-Plattenpanzer+0
+	8	12660	1	0.02	-- Sonnenlichthut+0
+	9	15220	1	0.02	-- Feuervogelschuhe+0
 	10	70031	1	0.50	-- Traktat zur Fechtkunst
 	11	50121	1	0.50	-- Eisenkiste
 }
@@ -4294,24 +4294,24 @@ Group	Setaou_Anfuehrer
 	type	drop
 	mob	2404
 	kill_drop	24
-	1	1074	1	0.02	-- Blutige Dolche+4
-	2	104	1	0.02		-- Blutiges Schwert+4
-	3	1144	1	0.02	-- Chakram+4 (Sägezahnmesser+4)
-	4	3094	1	0.02	-- Gletscherpicke+4
-	5	114	1	0.02		-- Großschwert+4
-	6	3144	1	0.02	-- Magnetische Klinge+4
-	7	5064	1	0.02	-- Magische Glocke+4
-	8	3134	1	0.02	-- Partisane+4
-	9	2124	1	0.02	-- Riesenflügelbogen+4
-	10	5084	1	0.02	-- Stahlkäferglocke+4
-	11	7124	1	0.02	-- Sonnenfächer+4
-	12	3104	1	0.02	-- Zwölfgeisterschwert+4
-	13	11284	1	0.02	-- Drachengott-Panzer+4
-	14	11484	1	0.02	-- Fuchsienanzug+4
-	15	12244	1	0.02	-- Geistermaskenschaller+4
-	16	14104	1	0.02	-- Ebenholzarmband+4
-	17	15084	1	0.02	-- Lederstiefel+4
-	18	15204	1	0.02	-- Phönixschuhe+4
+	1	1070	1	0.02	-- Blutige Dolche+0
+	2	100	1	0.02		-- Blutiges Schwert+0
+	3	1090	1	0.02	-- Chakram+0
+	4	3090	1	0.02	-- Gletscherpicke+0
+	5	110	1	0.02		-- Großschwert+0
+	6	3140	1	0.02	-- Magnetische Klinge+0
+	7	5060	1	0.02	-- Magische Glocke+0
+	8	3130	1	0.02	-- Partisane+0
+	9	2120	1	0.02	-- Riesenflügelbogen+0
+	10	5080	1	0.02	-- Stahlkäferglocke+0
+	11	7120	1	0.02	-- Sonnenfächer+0
+	12	3100	1	0.02	-- Zwölfgeisterschwert+0
+	13	11280	1	0.02	-- Drachengott-Panzer+0
+	14	11480	1	0.02	-- Fuchsienanzug+0
+	15	12240	1	0.02	-- Geistermaskenschaller+0
+	16	14100	1	0.02	-- Ebenholzarmband+0
+	17	15080	1	0.02	-- Lederstiefel+0
+	18	15200	1	0.02	-- Phönixschuhe+0
 	19	70048	1	0.01	-- Flüchtlingsumhang
 	20	50006	1	0.02	-- Goldene Schatztruhe
 	21	70051	1	0.0		-- Handschuh weiser Kaiser
@@ -4326,16 +4326,16 @@ Group	Setaou_Soldat
 	type	drop
 	mob	2411
 	kill_drop	24
-	1	244	1	0.02		-- Exorzismusschwert+4
-	2	154	1	0.02		-- Geisterzahnklinge+4
-	3	2144	1	0.02	-- Großgelbdrachenbogen+4
-	4	1114	1	0.02	-- Blitzmesser+4
-	5	7144	1	0.02	-- Erlösungsfächer+4
-	6	5104	1	0.02	-- Himmel-&-Erde-Glocke+4
-	7	12524	1	0.02	-- Burghelm+4
-	8	14204	1	0.02	-- Himmelstränenarmband+4
-	9	14164	1	0.02	-- Kristallarmband+4
-	10	14104	1	0.02	-- Ebenholzarmband+4
+	1	240	1	0.02		-- Exorzismusschwert+0
+	2	150	1	0.02		-- Geisterzahnklinge+0
+	3	2140	1	0.02	-- Großgelbdrachenbogen+0
+	4	1110	1	0.02	-- Blitzmesser+0
+	5	7140	1	0.02	-- Erlösungsfächer+0
+	6	5100	1	0.02	-- Himmel-&-Erde-Glocke+0
+	7	12520	1	0.02	-- Burghelm+0
+	8	14200	1	0.02	-- Himmelstränenarmband+0
+	9	14160	1	0.02	-- Kristallarmband+0
+	10	14100	1	0.02	-- Ebenholzarmband+0
 	11	70031	1	0.50	-- Traktat zur Fechtkunst
 	12	50121	1	0.50	-- Eisenkiste
 	13	30196	1	2.0	-- Dämonenasche
@@ -4346,11 +4346,11 @@ Group	Setaou_Bogenschuetze
 	type	drop
 	mob	2412
 	kill_drop	24
-	1	1114	1	0.02	-- Blitzmesser+4
-	2	3144	1	0.02	-- Magnetische Klinge+4
-	3	144	1	0.02		-- Schlachtschwert+4
-	4	12384	1	0.02	-- Stahlkapuze+4
-	5	14204	1	0.02	-- Himmelstränenarmband+4
+	1	1110	1	0.02	-- Blitzmesser+0
+	2	3140	1	0.02	-- Magnetische Klinge+0
+	3	140	1	0.02		-- Schlachtschwert+0
+	4	12380	1	0.02	-- Stahlkapuze+0
+	5	14200	1	0.02	-- Himmelstränenarmband+0
 }
 
 Group	Setaou_Magistra
@@ -4358,11 +4358,11 @@ Group	Setaou_Magistra
 	type	drop
 	mob	2413
 	kill_drop	24
-	1	7144	1	0.02	-- Erlösungsfächer+4
-	2	12664	1	0.02	-- Sonnenlichthut+4
-	3	14204	1	0.02	-- Himmelstränenarmband+4
-	4	14164	1	0.02	-- Kristallarmband+4
-	5	17164	1	0.02	-- Kristallohrringe+4
+	1	7140	1	0.02	-- Erlösungsfächer+0
+	2	12660	1	0.02	-- Sonnenlichthut+0
+	3	14200	1	0.02	-- Himmelstränenarmband+0
+	4	14160	1	0.02	-- Kristallarmband+0
+	5	17160	1	0.02	-- Kristallohrringe+0
 	6	30199	1	2.0		-- Blauer Kristall
 }
 
@@ -4371,20 +4371,20 @@ Group	Setaou_Kommandant
 	type	drop
 	mob	2414
 	kill_drop	24
-	1	144	1	0.02		-- Schlachtschwert+4
-	2	2094	1	0.02	-- Dornblattbogen+4
-	3	5084	1	0.02	-- Stahlkäferglocke+4
-	4	114	1	0.02		-- Großschwert+4
-	5	124	1	0.02		-- Zaubererschwert+4
-	6	3094	1	0.02	-- Gletscherpicke+4
-	7	104	1	0.02		-- Blutiges Schwert+4
-	8	2114	1	0.02	-- Einhornbogen+4
-	9	1144	1	0.02	-- Chakram+4 (Sägezahnmesser+4)
-	10	5064	1	0.02	-- Magische Glocke+4
-	11	15164	1	0.02	-- Ekstaseschuhe+4
-	12	14124	1	0.02	-- Perlenarmband+4
-	13	16184	1	0.02	-- Amethysthalskette+4
-	14	17164	1	0.02	-- Kristallohrringe+4
+	1	140	1	0.02		-- Schlachtschwert+0
+	2	2090	1	0.02	-- Dornblattbogen+0
+	3	5080	1	0.02	-- Stahlkäferglocke+0
+	4	110	1	0.02		-- Großschwert+0
+	5	120	1	0.02		-- Zaubererschwert+0
+	6	3090	1	0.02	-- Gletscherpicke+0
+	7	100	1	0.02		-- Blutiges Schwert+0
+	8	2110	1	0.02	-- Einhornbogen+0
+	9	1090	1	0.02	-- Chakram+0
+	10	5060	1	0.02	-- Magische Glocke+0
+	11	15160	1	0.02	-- Ekstaseschuhe+0
+	12	14120	1	0.02	-- Perlenarmband+0
+	13	16180	1	0.02	-- Amethysthalskette+0
+	14	17160	1	0.02	-- Kristallohrringe+0
 	15	30199	1	2.0		-- Blauer Kristall
 	16	30196	1	2.0		-- Dämonenasche
 }
@@ -4412,7 +4412,7 @@ Group	Baumfrosch_Anfuehrer
 	type	drop
 	mob	1302
 	kill_drop	24	
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	3090	1	0.50	-- Gletscherpicke+0
 	3	2110	1	0.50	-- Einhornbogen+0
 	4	5060	1	0.50	-- Magische Glocke+0
@@ -4500,7 +4500,7 @@ Group	Zerstoerer
 	type	drop
 	mob	1401
 	kill_drop	24	
-	1	13124	1	0.50	-- Drachenschuppenschild+4
+	1	13120	1	0.50	-- Drachenschuppenschild+0
 }
 
 Group	Axtkaempfer
@@ -5022,7 +5022,7 @@ Group	Metin_des_Sturzes
 	type	drop
 	mob	8012
 	kill_drop	1
-	1	1140	1	6.0		-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	6.0		-- Chakram+0
 	2	7120	1	6.0		-- Sonnenfächer+0
 	3	50129	1	1000.0	-- Fertigkeitsbuch-Truhe
 	4	70014	1	5.0		-- Bluttablette
@@ -5056,7 +5056,7 @@ Group	Metin_des_Mordes
 	mob	8014
 	kill_drop	1
 	1	130	1	6.0			-- Halbmondschwert+0
-	2	1140	1	6.0		-- Chakram+0 (Sägezahnmesser+0)
+	2	1090	1	6.0		-- Chakram+0
 	3	2120	1	6.0		-- Riesenflügelbogen+0
 	4	3120	1	6.0		-- Löwentöter+0
 	5	5080	1	6.0		-- Stahlkäferglocke+0
@@ -5226,14 +5226,14 @@ Group	Shinsoo_Felsen
 	6	250	1	0.50		-- Dämonenklinge+0
 	7	7150	1	0.50	-- Ekstasefächer+0
 	8	3150	1	0.50	-- Halbmenschklinge+0
-	9	1150	1	0.50	-- Siamesenmesser+0 (Sonnenstrahlmesser+0)
+	9	1120	1	0.50	-- Siamesenmesser+0
 	10	170	1	0.50		-- Stichschwert+0
 	11	180	1	0.50		-- Giftschwert+0
 	12	3160	1	0.50	-- Grollschwert+0
 	13	2170	1	0.50	-- Krähenstahlbogen+0
 	14	190	1	0.50		-- Löwenschwert+0
 	15	5120	1	0.50	-- Orchideenglocke+0
-	16	4030	1	0.50	-- Teufelsflügel-Chakram+0 (Mondzwillingsdolch+0)
+	16	1130	1	0.50	-- Teufelsflügel-Chakram+0
 }
 
 Group	Cunjo_Felsen
@@ -5288,27 +5288,28 @@ Group	Kaiserfelsen
 	15	28441	1	0.50	-- Stein der Lebenskraft+4
 	16	28442	1	0.50	-- Stein des Schutzes+4
 	17	28443	1	0.50	-- Stein der Hast+4
-	18	50513	1	5.0		-- Seelenstein
-	19	12260	1	0.50	-- Furchtmaske+0
-	20	12530	1	0.50	-- Gehörnter Helm+0
-	21	12670	1	0.50	-- Kardinalshut+0
-	22	12390	1	0.50	-- Orkkapuze+0
-	23	11690	1	0.50	-- Magie-Plattenpanzer+0
-	24	11890	1	0.50	-- Schwarze Kleidung+0
-	25	11290	1	0.50	-- Schwarzstahl-Panzer+0
-	26	11490	1	0.50	-- Schwarzwindanzug+0
-	27	2180	1	0.50	-- Blaudrachenbogen+0
-	28	250	1	0.50		-- Dämonenklinge+0
-	29	7150	1	0.50	-- Ekstasefächer+0
-	30	3150	1	0.50	-- Halbmenschklinge+0
-	31	1150	1	0.50	-- Siamesenmesser+0 (Sonnenstrahlmesser+0)
-	32	170	1	0.50		-- Stichschwert+0
-	33	180	1	0.50		-- Giftschwert+0
-	34	3160	1	0.50	-- Grollschwert+0
-	35	2170	1	0.50	-- Krähenstahlbogen+0
-	36	190	1	0.50		-- Löwenschwert+0
-	37	5120	1	0.50	-- Orchideenglocke+0
-	38	4030	1	0.50	-- Teufelsflügel-Chakram+0 (Mondzwillingsdolch+0)
+	18	28446	1	0.50	-- Stein der Halbmenschen+4
+	19	50513	1	5.0		-- Seelenstein
+	20	12260	1	0.50	-- Furchtmaske+0
+	21	12530	1	0.50	-- Gehörnter Helm+0
+	22	12670	1	0.50	-- Kardinalshut+0
+	23	12390	1	0.50	-- Orkkapuze+0
+	24	11690	1	0.50	-- Magie-Plattenpanzer+0
+	25	11890	1	0.50	-- Schwarze Kleidung+0
+	26	11290	1	0.50	-- Schwarzstahl-Panzer+0
+	27	11490	1	0.50	-- Schwarzwindanzug+0
+	28	2180	1	0.50	-- Blaudrachenbogen+0
+	29	250	1	0.50		-- Dämonenklinge+0
+	30	7150	1	0.50	-- Ekstasefächer+0
+	31	3150	1	0.50	-- Halbmenschklinge+0
+	32	1120	1	0.50	-- Siamesenmesser+0
+	33	170	1	0.50		-- Stichschwert+0
+	34	180	1	0.50		-- Giftschwert+0
+	35	3160	1	0.50	-- Grollschwert+0
+	36	2170	1	0.50	-- Krähenstahlbogen+0
+	37	190	1	0.50		-- Löwenschwert+0
+	38	5120	1	0.50	-- Orchideenglocke+0
+	39	1130	1	0.50	-- Teufelsflügel-Chakram+0
 }
 
 ########################################
@@ -5930,7 +5931,7 @@ Group	Daemonenkoenig
 	Type	limit
 	mob	1091
 	level_limit 50
-	1	1140	1	0.50	-- Chakram+0 (Sägezahnmesser+0)
+	1	1090	1	0.50	-- Chakram+0
 	2	130	1	0.50		-- Halbmondschwert+0
 	3	3120	1	0.50	-- Löwentöter+0
 	4	2120	1	0.50	-- Riesenflügelbogen+0
@@ -5983,20 +5984,20 @@ Group	Grosse_Eishexe
 	Type	limit
 	mob	1192
 	level_limit 75
-	1	13124	1	80.0	-- Drachenschuppenschild+4
-	2	13064	1	80.0	-- Falkenschild+4
-	3	13104	1	80.0	-- Löwenkantenschild+4
-	4	13084	1	80.0	-- Tigerschild+4
-	5	16184	1	80.0	-- Amethysthalskette+4
-	6	17184	1	80.0	-- Amethystohrringe+4
-	7	15164	1	80.0	-- Ekstaseschuhe+4
-	8	15224	1	80.0	-- Feuervogelschuhe+4
-	9	15184	1	80.0	-- Nimbus-Stiefel+4
-	10	15204	1	80.0	-- Phönixschuhe+4
-	11	16204	1	80.0	-- Himmelstränenhalskette+4
-	12	17204	1	80.0	-- Himmelstränenohrringe+4
-	13	16164	1	80.0	-- Kristallhalskette+4
-	14	17164	1	80.0	-- Kristallohrringe+4
+	1	13120	1	80.0	-- Drachenschuppenschild+0
+	2	13060	1	80.0	-- Falkenschild+0
+	3	13100	1	80.0	-- Löwenkantenschild+0
+	4	13080	1	80.0	-- Tigerschild+0
+	5	16180	1	80.0	-- Amethysthalskette+0
+	6	17180	1	80.0	-- Amethystohrringe+0
+	7	15160	1	80.0	-- Ekstaseschuhe+0
+	8	15220	1	80.0	-- Feuervogelschuhe+0
+	9	15180	1	80.0	-- Nimbus-Stiefel+0
+	10	15200	1	80.0	-- Phönixschuhe+0
+	11	16200	1	80.0	-- Himmelstränenhalskette+0
+	12	17200	1	80.0	-- Himmelstränenohrringe+0
+	13	16160	1	80.0	-- Kristallhalskette+0
+	14	17160	1	80.0	-- Kristallohrringe+0
 	15	30191	1	20.0	-- Blutstein
 	16	28430	1	40.0	-- Stein des Durchbruchs+4
 	17	28431	1	40.0	-- Stein des Todesstoß+4
@@ -6102,19 +6103,19 @@ Group	Spinnenbaroness
 	Type	limit
 	mob	2092
 	level_limit 50
-	1	13124	1	20.0	-- Drachenschuppenschild+4
-	2	13064	1	20.0	-- Falkenschild+4
-	3	13104	1	20.0	-- Löwenkantenschild+4
-	4	13084	1	20.0	-- Tigerschild+4
-	5	14184	1	20.0	-- Amethystarmband+4
-	6	16184	1	20.0	-- Amethysthalskette+4
-	7	17184	1	20.0	-- Amethystohrringe+4
-	8	14204	1	20.0	-- Himmelstränenarmband+4
-	9	16204	1	20.0	-- Himmelstränenhalskette+4
-	10	17204	1	20.0	-- Himmelstränenohrringe+4
-	11	14164	1	20.0	-- Kristallarmband+4
-	12	16164	1	20.0	-- Kristallhalskette+4
-	13	17164	1	20.0	-- Kristallohrringe+4
+	1	13120	1	20.0	-- Drachenschuppenschild+0
+	2	13060	1	20.0	-- Falkenschild+0
+	3	13100	1	20.0	-- Löwenkantenschild+0
+	4	13080	1	20.0	-- Tigerschild+0
+	5	14180	1	20.0	-- Amethystarmband+0
+	6	16180	1	20.0	-- Amethysthalskette+0
+	7	17180	1	20.0	-- Amethystohrringe+0
+	8	14200	1	20.0	-- Himmelstränenarmband+0
+	9	16200	1	20.0	-- Himmelstränenhalskette+0
+	10	17200	1	20.0	-- Himmelstränenohrringe+0
+	11	14160	1	20.0	-- Kristallarmband+0
+	12	16160	1	20.0	-- Kristallhalskette+0
+	13	17160	1	20.0	-- Kristallohrringe+0
 	14	71130	1	60.0	-- Passierschein
 	15	50513	1	40.0	-- Seelenstein
 }
@@ -6182,15 +6183,15 @@ Group	Hae_Tae
 	Type	limit
 	mob	5002
 	level_limit 40
-	1	5084	1	0.50	-- Stahlkäferglocke+4
-	2	7124	1	0.50	-- Sonnenfächer+4
-	3	134	1	0.50		-- Halbmondschwert+4
-	4	3124	1	0.50	-- Löwentöter+4
-	5	2124	1	0.50	-- Riesenflügelbogen+4
-	6	11464	1	0.50	-- Jungdrachenanzug+4
-	7	11864	1	0.50	-- Kleidung der Moral+4
-	8	11664	1	0.50	-- Nebelplattenpanzer+4
-	9	11264	1	0.50	-- Schuppenplattenpanzer+4
+	1	5080	1	0.50	-- Stahlkäferglocke+0
+	2	7120	1	0.50	-- Sonnenfächer+0
+	3	130	1	0.50		-- Halbmondschwert+0
+	4	3120	1	0.50	-- Löwentöter+0
+	5	2120	1	0.50	-- Riesenflügelbogen+0
+	6	11460	1	0.50	-- Jungdrachenanzug+0
+	7	11860	1	0.50	-- Kleidung der Moral+0
+	8	11660	1	0.50	-- Nebelplattenpanzer+0
+	9	11260	1	0.50	-- Schuppenplattenpanzer+0
 	10	13040	1	40.0	-- Schwarzer Rundschild+0
 	11	50513	1	40.0	-- Seelenstein
 	12	70051	1	10.0	-- Handschuh weiser Kaiser
@@ -6222,10 +6223,10 @@ Group	Beran_Setaou
 	Type	limit
 	mob	2493
 	level_limit 75
-	1	15224	1	80.0	-- Feuervogelschuhe+4
-	2	15164	1	80.0	-- Ekstaseschuhe+4
-	3	15184	1	80.0	-- Nimbus-Stiefel+4
-	4	15204	1	80.0	-- Phönixschuhe+4
+	1	15220	1	80.0	-- Feuervogelschuhe+0
+	2	15160	1	80.0	-- Ekstaseschuhe+0
+	3	15180	1	80.0	-- Nimbus-Stiefel+0
+	4	15200	1	80.0	-- Phönixschuhe+0
 	5	27992	1	50.0	-- Weiße Perle
 	6	27993	1	50.0	-- Blaue Perle
 	7	27994	1	50.0	-- Rote Perle
@@ -6249,18 +6250,18 @@ Group	General_Yonghan
 	Type	limit
 	mob	2492
 	level_limit 75
-	1	13124	1	80.0	-- Drachenschuppenschild+4
-	2	13064	1	80.0	-- Falkenschild+4
-	3	13104	1	80.0	-- Löwenkantenschild+4
-	4	13084	1	80.0	-- Tigerschild+4
-	5	16184	1	80.0	-- Amethysthalskette+4
-	6	17184	1	80.0	-- Amethystohrringe+4
-	7	15164	1	80.0	-- Ekstaseschuhe+4
-	8	14204	1	80.0	-- Himmelstränenarmband+4
-	9	16204	1	80.0	-- Himmelstränenhalskette+4
-	10	17204	1	80.0	-- Himmelstränenohrringe+4
-	11	15204	1	80.0	-- Phönixschuhe+4
-	12	14144	1	80.0	-- Weißgoldarmband+4
+	1	13120	1	80.0	-- Drachenschuppenschild+0
+	2	13060	1	80.0	-- Falkenschild+0
+	3	13100	1	80.0	-- Löwenkantenschild+0
+	4	13080	1	80.0	-- Tigerschild+0
+	5	16180	1	80.0	-- Amethysthalskette+0
+	6	17180	1	80.0	-- Amethystohrringe+0
+	7	15160	1	80.0	-- Ekstaseschuhe+0
+	8	14200	1	80.0	-- Himmelstränenarmband+0
+	9	16200	1	80.0	-- Himmelstränenhalskette+0
+	10	17200	1	80.0	-- Himmelstränenohrringe+0
+	11	15200	1	80.0	-- Phönixschuhe+0
+	12	14140	1	80.0	-- Weißgoldarmband+0
 	13	30190	1	20.0	-- Blutstein
 	14	30179	1	20.0	-- Gewundener Schlüssel
 	15	70051	1	10.0	-- Handschuh weiser Kaiser
@@ -6281,17 +6282,17 @@ Group	General_Huashin
 	Type	limit
 	mob	2495
 	level_limit 75
-	1	13124	1	80.0	-- Drachenschuppenschild+4
-	2	13064	1	80.0	-- Falkenschild+4
-	3	13104	1	80.0	-- Löwenkantenschild+4
-	4	13084	1	80.0	-- Tigerschild+4
-	5	16184	1	80.0	-- Amethysthalskette+4
-	6	15164	1	80.0	-- Ekstaseschuhe+4
-	7	14204	1	80.0	-- Himmelstränenarmband+4
-	8	16204	1	80.0	-- Himmelstränenhalskette+4
-	9	17204	1	80.0	-- Himmelstränenohrringe+4
-	10	15204	1	80.0	-- Phönixschuhe+4
-	11	14144	1	80.0	-- Weißgoldarmband+4
+	1	13120	1	80.0	-- Drachenschuppenschild+0
+	2	13060	1	80.0	-- Falkenschild+0
+	3	13100	1	80.0	-- Löwenkantenschild+0
+	4	13080	1	80.0	-- Tigerschild+0
+	5	16180	1	80.0	-- Amethysthalskette+0
+	6	15160	1	80.0	-- Ekstaseschuhe+0
+	7	14200	1	80.0	-- Himmelstränenarmband+0
+	8	16200	1	80.0	-- Himmelstränenhalskette+0
+	9	17200	1	80.0	-- Himmelstränenohrringe+0
+	10	15200	1	80.0	-- Phönixschuhe+0
+	11	14140	1	80.0	-- Weißgoldarmband+0
 	12	30190	1	20.0	-- Blutstein
 	13	30179	1	20.0	-- Gewundener Schlüssel
 	14	70051	1	10.0	-- Handschuh weiser Kaiser

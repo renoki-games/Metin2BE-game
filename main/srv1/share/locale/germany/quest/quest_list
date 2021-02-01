@@ -3,12 +3,11 @@
 ### OR
 ## python pre_qc.py -ac
 
-quest_announcements/chest_beginer.lua
-quest_announcements/first_login.lua
 quest_announcements/level_100_notice.lua
 quest_announcements/refine_item_lv9_notice.lua
+quest_announcements/apprentice_chests.lua
 
-quest_dungeon/deviltower_zone.quest
+quest_dungeon/deviltower_zone.lua
 quest_dungeon/devilcatacomb_zone.quest
 quest_dungeon/blue_dragon_zone.quest
 
