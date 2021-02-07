@@ -9,7 +9,7 @@ quest_announcements/apprentice_chests.lua
 
 quest_dungeon/deviltower_zone.lua
 quest_dungeon/devilcatacomb_zone.quest
-quest_dungeon/blue_dragon_zone.quest
+quest_dungeon/dragon_lair_entry.lua
 
 quest_guild/guild_building_alter_of_power.quest
 quest_guild/guild_building_melt.quest
